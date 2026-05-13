@@ -37,6 +37,16 @@ const BLOG_SLUGS = [
   'dance-recital-costume-guide',
   'kids-karate-ballet-guide',
   'gifu-nagano-kids-dance-school',
+  'nagano-shiga-kids-dance-school',
+  'wakayama-kids-activity',
+  'kids-activity-ranking-all',
+  'kids-soccer-guide',
+  'kids-karate-guide',
+  'kids-ballet-guide',
+  'dance-hip-hop-kpop-diff',
+  'lydia-dance-osaka-review',
+  'kids-activity-cost-annual',
+  'kids-dance-school-change-guide',
 ];
 
 const GENRE_SLUGS = [
