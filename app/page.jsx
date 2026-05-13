@@ -648,15 +648,35 @@ export default function TopPage() {
               </p>
             </div>
             <div style={{ minWidth: 130 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", marginBottom: 12 }}>🗾 都道府県</div>
+              {[
+                { label: "大阪府", href: "/osaka" },
+                { label: "東京都", href: "/tokyo" },
+                { label: "神奈川県", href: "/kanagawa" },
+                { label: "愛知県", href: "/aichi" },
+                { label: "兵庫県", href: "/hyogo" },
+                { label: "京都府", href: "/kyoto" },
+              ].map(item => (
+                <Link key={item.label} href={item.href} style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>{item.label}</Link>
+              ))}
+            </div>
+            <div style={{ minWidth: 130 }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", marginBottom: 12 }}>📍 主要エリア</div>
-              {["大阪市", "箕面市", "世田谷区", "柏市", "金沢市", "つくば市"].map(c => (
-                <div key={c} style={{ fontSize: 12, color: "#6a7d9a", marginBottom: 7, cursor: "pointer" }}>{c}</div>
+              {[
+                { label: "大阪市", href: "/osaka/osaka-city" },
+                { label: "箕面市", href: "/osaka/minoh" },
+                { label: "世田谷区", href: "/tokyo/setagaya" },
+                { label: "柏市", href: "/chiba/kashiwa" },
+                { label: "金沢市", href: "/ishikawa/kanazawa" },
+                { label: "つくば市", href: "/ibaraki/tsukuba" },
+              ].map(item => (
+                <Link key={item.label} href={item.href} style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>{item.label}</Link>
               ))}
             </div>
             <div style={{ minWidth: 130 }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", marginBottom: 12 }}>🏷️ 習い事ジャンル</div>
               {CATEGORIES.slice(0, 6).map(c => (
-                <div key={c.name} style={{ fontSize: 12, color: "#6a7d9a", marginBottom: 7, cursor: "pointer" }}>{c.icon} {c.name}</div>
+                <Link key={c.name} href={`/genre/${c.slug || c.name}`} style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>{c.icon} {c.name}</Link>
               ))}
             </div>
             <div style={{ minWidth: 130 }}>
