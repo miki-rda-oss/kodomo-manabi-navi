@@ -18,7 +18,7 @@ const SCHOOLS = {
       desc: "現役プロダンサー講師100名以上在籍。初心者クラスから本格コースまで充実。ヒップホップ・ジャズ・K-POP・ブレイクダンスなど多ジャンル対応。",
       tags: ["初心者OK", "無料体験あり", "全国46校", "プロ講師", "少人数制"],
       genres: ["ヒップホップ", "ジャズ", "K-POP", "ブレイクダンス", "ポップ"],
-      badge: "人気No.1", badgeColor: "#FF8A00",
+      badge: "人気No.1", badgeColor: "#FF8A00", url: "https://re-dia.jp/",
     },
     {
       id: "d2", name: "EXPG（エグザイルプロフェッショナルジム）",
@@ -65,7 +65,7 @@ const SCHOOLS = {
       desc: "K-POPダンスクラスが充実。最新の楽曲・振付を週替わりで取り入れ。プロ講師による丁寧な指導で初心者から上級者まで対応。",
       tags: ["初心者OK", "無料体験あり", "最新振付", "プロ講師", "全国46校"],
       genres: ["K-POP", "ヒップホップ", "ジャズ", "ポップ"],
-      badge: "人気No.1", badgeColor: "#FF8A00",
+      badge: "人気No.1", badgeColor: "#FF8A00", url: "https://re-dia.jp/",
     },
     {
       id: "k2", name: "NOAダンスアカデミー K-POPクラス",
@@ -215,6 +215,54 @@ const GENRE_META = {
   juku:        { name: "学習塾",         icon: "📝", color: "#1B2A4A", bg: "linear-gradient(135deg, #1B2A4A 0%, #243a60 100%)", desc: "基礎学力・思考力・受験対策",     count: "5,200+" },
 };
 
+const GENRE_FAQ = {
+  dance: [
+    { q: "子どものダンス教室はいつから通えますか？", a: "多くの教室では2〜3歳から通えるリトルクラスを設けています。まずは無料体験レッスンで雰囲気を確認するのがおすすめです。" },
+    { q: "ダンス教室の月謝の相場はいくらですか？", a: "子ども向けダンス教室の月謝は5,000〜12,000円程度が一般的です。週1回のクラスで5,500円〜、受け放題プランは20,000円台のところもあります。" },
+    { q: "習い事にダンスを選ぶメリットは何ですか？", a: "リズム感・表現力・協調性が身につきます。また、身体を動かすことで体力・柔軟性も向上し、発表会などで自信もつきます。" },
+    { q: "男の子でもダンスを習えますか？", a: "もちろんです。ヒップホップやブレイクダンスは特に男の子に人気が高く、多くの教室で男女問わず楽しめるクラスを用意しています。" },
+  ],
+  kpop: [
+    { q: "K-POPダンスは何歳から習えますか？", a: "多くの教室では5歳頃から対応しています。K-POPの動きはリズム感が重要なため、ある程度の年齢からが理想ですが、教室によって異なります。" },
+    { q: "K-POPダンス教室の費用はどのくらいですか？", a: "月謝は8,000〜15,000円程度が相場です。グループレッスンとプライベートレッスンで大きく異なります。" },
+    { q: "K-POPダンスを習う効果は何ですか？", a: "リズム感・表現力・自信が身につきます。また、韓国文化への興味から語学学習につながるケースも多いです。" },
+    { q: "発表会はありますか？", a: "多くの教室で年1〜2回の発表会を開催しています。舞台に立つ経験は子どもの自信と成長につながります。" },
+  ],
+  swimming: [
+    { q: "スイミングは何歳から始められますか？", a: "ベビースイミングは生後6ヶ月頃から対応している教室もあります。一般的なキッズクラスは3〜4歳からが多いです。" },
+    { q: "スイミングスクールの月謝はいくらですか？", a: "週1回で6,000〜10,000円程度が相場です。施設によってプール設備や指導レベルが異なります。" },
+    { q: "スイミングを習うメリットは何ですか？", a: "全身運動で体力・心肺機能が向上します。水難防止の観点からも安全面で重要で、姿勢改善や喘息改善にも効果があるとされています。" },
+    { q: "進級制度はありますか？", a: "ほとんどのスイミングスクールでは段階的な進級制度があります。バタ足→クロール→背泳ぎ→平泳ぎ→バタフライの順で上達を実感できます。" },
+  ],
+  programming: [
+    { q: "プログラミング教室は何歳から通えますか？", a: "ビジュアルプログラミング（Scratchなど）を使う教室では5〜6歳から対応しています。本格的なテキストコーディングは小学校高学年〜が多いです。" },
+    { q: "プログラミング教室の月謝はいくらですか？", a: "月謝は8,000〜20,000円程度と幅があります。週1回通塾タイプと、オンライン受講タイプで費用が異なります。" },
+    { q: "プログラミングを習う意味はありますか？", a: "論理的思考力・問題解決力・創造力が育ちます。2020年から小学校でプログラミング教育が必修化されており、将来のデジタル社会への対応力が身につきます。" },
+    { q: "パソコンを持っていなくても通えますか？", a: "多くの教室では教室内のパソコンを使用するため、自宅にパソコンがなくても問題ありません。オンライン教室の場合は自宅のPC・タブレットが必要です。" },
+  ],
+  default: [
+    { q: "子どもの習い事はいつから始めるのがいいですか？", a: "習い事の種類によりますが、一般的には3〜5歳頃から始める方が多いです。本人が興味を持ったタイミングが最適です。まずは無料体験で試してみましょう。" },
+    { q: "習い事の月謝の相場はいくらですか？", a: "習い事の種類によって異なりますが、月5,000〜15,000円程度が一般的な相場です。入会金や教材費が別途かかる場合もあります。" },
+    { q: "無料体験はできますか？", a: "掲載している多くの教室では無料体験レッスンを実施しています。入会前に雰囲気や指導スタイルを確認できるので、ぜひ体験してみてください。" },
+    { q: "習い事は何個まで掛け持ちできますか？", a: "子どもの体力・集中力に合わせて週2〜3個程度が一般的です。本人の意欲を大切にしながら無理のないペースで進めましょう。" },
+  ],
+};
+
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const genre = GENRE_META[slug];
+  if (!genre) return {};
+  return {
+    title: `子供の${genre.name}教室おすすめ${genre.count}件｜口コミ・料金比較【コドモならいごと】`,
+    description: `全国の子ども向け${genre.name}教室を口コミ・料金・体験情報で比較。${genre.desc}。無料体験申込みも簡単。`,
+    openGraph: {
+      title: `子供の${genre.name}教室おすすめ${genre.count}件｜コドモならいごと`,
+      description: `全国の子ども向け${genre.name}教室を口コミ・料金で比較。${genre.desc}。`,
+      url: `https://www.kodomo-navi.com/genre/${slug}`,
+    },
+  };
+}
+
 export default function GenrePage({ params }) {
   const { slug } = params;
   const genre = GENRE_META[slug];
@@ -298,12 +346,56 @@ export default function GenrePage({ params }) {
           </div>
         )}
 
+        {/* FAQ Section */}
+        <div style={{ marginTop: 52 }}>
+          <div style={{ textAlign: "center", marginBottom: 28 }}>
+            <div style={{ display: "inline-block", background: "#fff7ee", borderRadius: 6, padding: "3px 12px", fontSize: 11, fontWeight: 700, color: "#FF8A00", marginBottom: 8, letterSpacing: ".5px" }}>FAQ</div>
+            <h2 style={{ fontSize: 20, fontWeight: 900, color: "#1B2A4A" }}>{genre.name}教室によくある質問</h2>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {(GENRE_FAQ[slug] || GENRE_FAQ.default).map((faq, i) => (
+              <div key={i} style={{ background: "#fff", borderRadius: 14, padding: "18px 20px", border: "1.5px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.04)" }}>
+                <div style={{ fontSize: 14, fontWeight: 800, color: "#1B2A4A", marginBottom: 8, display: "flex", gap: 8 }}>
+                  <span style={{ color: "#FF8A00", flexShrink: 0 }}>Q.</span>{faq.q}
+                </div>
+                <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8, display: "flex", gap: 8 }}>
+                  <span style={{ color: "#4CAF50", fontWeight: 800, flexShrink: 0 }}>A.</span>{faq.a}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div style={{ marginTop: 40, textAlign: "center" }}>
           <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 28px", background: "#fff", border: "1.5px solid #e8edf4", borderRadius: 20, color: "#1B2A4A", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,.05)" }}>
             ← トップページへ戻る
           </Link>
         </div>
       </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": (GENRE_FAQ[slug] || GENRE_FAQ.default).map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        })),
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": `${genre.name}教室一覧`,
+        "description": `全国の子ども向け${genre.name}教室`,
+        "numberOfItems": schools.length,
+        "itemListElement": schools.map((s, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": s.name,
+          "description": s.desc,
+        })),
+      }) }} />
     </div>
   );
 }

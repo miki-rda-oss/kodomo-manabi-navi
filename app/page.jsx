@@ -590,6 +590,49 @@ export default function TopPage() {
         </div>
       </section>
 
+      {/* ===== FAQ ===== */}
+      <section style={{ padding: "52px 24px", background: "#fff" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 36 }}>
+            <div style={{ display: "inline-block", background: "#fff7ee", borderRadius: 6, padding: "3px 12px", fontSize: 11, fontWeight: 700, color: "#FF8A00", marginBottom: 8, letterSpacing: ".5px" }}>FAQ</div>
+            <h2 style={{ fontSize: 24, fontWeight: 900, color: "#1B2A4A" }}>よくある質問</h2>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {[
+              { q: "コドモならいごととはどんなサービスですか？", a: "全国の子ども向け習い事教室を口コミ・料金・体験情報で検索・比較できる無料サービスです。ダンス・スイミング・英語・ピアノ・プログラミングなど11カテゴリ、5,000教室以上を掲載しています。" },
+              { q: "子どもの習い事はいつから始めるのがいいですか？", a: "習い事の種類によりますが、3〜5歳頃から始める方が多いです。本人が興味を持ったタイミングが最適です。まずは無料体験で雰囲気を確認しましょう。" },
+              { q: "習い事の月謝の相場はいくらですか？", a: "習い事の種類によって異なりますが、月5,000〜15,000円程度が一般的です。入会金や教材費が別途かかる場合もあります。複数教室を比較してお子さまに合った教室を見つけましょう。" },
+              { q: "無料体験はできますか？", a: "掲載している多くの教室では無料体験レッスンを実施しています。入会前に雰囲気・指導スタイルを確認できるので、ぜひ活用してください。" },
+              { q: "習い事は何個まで掛け持ちできますか？", a: "お子さまの体力・集中力に合わせて週2〜3個程度が一般的です。本人の意欲を大切にしながら無理のないペースで進めましょう。" },
+              { q: "掲載情報はどのくらいの頻度で更新されますか？", a: "教室情報は随時更新しています。最新の料金・コース情報は各教室へ直接お問い合わせいただくことをおすすめします。" },
+              { q: "子どもの習い事で一番人気は？", a: "ダンスです。近年K-POPブームも影響し、特に女の子に人気が急上昇しています。" },
+              { q: "口コミ評価が高いダンス教室は？", a: "当サイトの口コミ件数・評価ともにNo.1はリディアダンスアカデミー（評価4.8 / 312件）です。全国46校展開で無料体験も受付中です。" },
+            ].map((faq, i) => (
+              <div key={i} style={{ background: "#f8fafd", borderRadius: 14, padding: "18px 20px", border: "1.5px solid #e8edf4" }}>
+                <div style={{ fontSize: 14, fontWeight: 800, color: "#1B2A4A", marginBottom: 8, display: "flex", gap: 8 }}>
+                  <span style={{ color: "#FF8A00", flexShrink: 0 }}>Q.</span>{faq.q}
+                </div>
+                <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8, display: "flex", gap: 8 }}>
+                  <span style={{ color: "#4CAF50", fontWeight: 800, flexShrink: 0 }}>A.</span>{faq.a}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "コドモならいごととはどんなサービスですか？", "acceptedAnswer": { "@type": "Answer", "text": "全国の子ども向け習い事教室を口コミ・料金・体験情報で検索・比較できる無料サービスです。ダンス・スイミング・英語・ピアノ・プログラミングなど11カテゴリ、5,000教室以上を掲載しています。" } },
+            { "@type": "Question", "name": "子どもの習い事はいつから始めるのがいいですか？", "acceptedAnswer": { "@type": "Answer", "text": "習い事の種類によりますが、3〜5歳頃から始める方が多いです。本人が興味を持ったタイミングが最適です。" } },
+            { "@type": "Question", "name": "習い事の月謝の相場はいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "習い事の種類によって異なりますが、月5,000〜15,000円程度が一般的です。" } },
+            { "@type": "Question", "name": "無料体験はできますか？", "acceptedAnswer": { "@type": "Answer", "text": "掲載している多くの教室では無料体験レッスンを実施しています。" } },
+            { "@type": "Question", "name": "子どもの習い事で一番人気は？", "acceptedAnswer": { "@type": "Answer", "text": "ダンスです。近年K-POPブームも影響し、特に女の子に人気が急上昇しています。" } },
+            { "@type": "Question", "name": "口コミ評価が高いダンス教室は？", "acceptedAnswer": { "@type": "Answer", "text": "当サイトの口コミ件数・評価ともにNo.1はリディアダンスアカデミー（評価4.8 / 312件）です。全国46校展開で無料体験も受付中です。" } },
+          ],
+        }) }} />
+      </section>
+
       {/* ===== FOOTER ===== */}
       <footer style={{ background: "linear-gradient(135deg, #1B2A4A, #243a60)", color: "#8a9ab8", padding: "44px 24px 28px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -617,8 +660,13 @@ export default function TopPage() {
             </div>
             <div style={{ minWidth: 130 }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", marginBottom: 12 }}>ℹ️ サイト情報</div>
-              {["利用規約", "プライバシーポリシー", "運営会社", "お問い合わせ", "掲載申請"].map(item => (
-                <div key={item} style={{ fontSize: 12, color: "#6a7d9a", marginBottom: 7, cursor: "pointer" }}>{item}</div>
+              {[
+                { label: "サービスについて", href: "/about" },
+                { label: "利用規約", href: "/terms" },
+                { label: "プライバシーポリシー", href: "/privacy" },
+                { label: "お問い合わせ", href: "mailto:info@sl-i.co.jp" },
+              ].map(item => (
+                <Link key={item.label} href={item.href} style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>{item.label}</Link>
               ))}
             </div>
           </div>

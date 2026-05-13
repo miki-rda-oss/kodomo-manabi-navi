@@ -77,12 +77,14 @@ export function SchoolCard({ school, color }) {
       </div>
 
       <div style={{ display: "flex", gap: 8 }}>
-        <button style={{ flex: 1, padding: "10px", background: `linear-gradient(135deg, ${color}, ${color}cc)`, border: "none", borderRadius: 10, color: "#fff", fontWeight: 800, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>
-          📝 無料体験に申し込む
-        </button>
-        <button style={{ padding: "10px 14px", background: "#f4f7fc", border: "1.5px solid #e8edf4", borderRadius: 10, color: "#555", fontWeight: 700, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>
-          詳細 ›
-        </button>
+        {school.url
+          ? <a href={school.url} target="_blank" rel="noopener noreferrer" style={{ flex: 1, padding: "10px", background: `linear-gradient(135deg, ${color}, ${color}cc)`, borderRadius: 10, color: "#fff", fontWeight: 800, fontSize: 13, fontFamily: "inherit", textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center" }}>📝 無料体験に申し込む</a>
+          : <button style={{ flex: 1, padding: "10px", background: `linear-gradient(135deg, ${color}, ${color}cc)`, border: "none", borderRadius: 10, color: "#fff", fontWeight: 800, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>📝 無料体験に申し込む</button>
+        }
+        {school.url
+          ? <a href={school.url} target="_blank" rel="noopener noreferrer" style={{ padding: "10px 14px", background: "#f4f7fc", border: "1.5px solid #e8edf4", borderRadius: 10, color: "#555", fontWeight: 700, fontSize: 13, fontFamily: "inherit", textDecoration: "none", display: "flex", alignItems: "center" }}>詳細 ›</a>
+          : <button style={{ padding: "10px 14px", background: "#f4f7fc", border: "1.5px solid #e8edf4", borderRadius: 10, color: "#555", fontWeight: 700, fontSize: 13, cursor: "pointer", fontFamily: "inherit" }}>詳細 ›</button>
+        }
       </div>
     </div>
   );
