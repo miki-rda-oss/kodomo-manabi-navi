@@ -27,6 +27,16 @@ const BLOG_SLUGS = [
   'aichi-kids-dance-school',
   'kids-dance-school-trial-guide',
   'kids-english-guide',
+  'hyogo-kids-dance-school',
+  'kyoto-shiga-kids-dance-school',
+  'ibaraki-tsukuba-kids-dance-school',
+  'ishikawa-kanazawa-kids-dance-school',
+  'saitama-chiba-kids-dance-school',
+  'kids-dance-quit-guide',
+  'kids-activities-how-many',
+  'dance-recital-costume-guide',
+  'kids-karate-ballet-guide',
+  'gifu-nagano-kids-dance-school',
 ];
 
 const GENRE_SLUGS = [
@@ -56,6 +66,12 @@ const AREA_PATHS = [
   '/wakayama/wakayama-city',
 ];
 
+const PREF_PATHS = [
+  '/osaka', '/tokyo', '/kanagawa', '/aichi', '/gifu',
+  '/hyogo', '/ibaraki', '/ishikawa', '/kyoto', '/nagano',
+  '/shiga', '/wakayama', '/saitama', '/chiba',
+];
+
 export default function sitemap() {
   const now = new Date().toISOString();
 
@@ -65,6 +81,12 @@ export default function sitemap() {
     url: `${BASE_URL}/genre/${slug}`,
     lastModified: now,
     priority: 0.8,
+  }));
+
+  const prefs = PREF_PATHS.map(path => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: now,
+    priority: 0.75,
   }));
 
   const areas = AREA_PATHS.map(path => ({
@@ -82,5 +104,5 @@ export default function sitemap() {
     })),
   ];
 
-  return [...top, ...blogs, ...genres, ...areas];
+  return [...top, ...blogs, ...genres, ...prefs, ...areas];
 }

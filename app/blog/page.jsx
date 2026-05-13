@@ -1,10 +1,30 @@
 import { ARTICLES } from "./articles";
 import Link from "next/link";
 
+const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+
 export const metadata = {
-  title: "ダンス習い事コラム・ブログ｜コドモならいごと",
-  description: "子供のダンス教室の選び方、おすすめスクール、費用相場など役立つ情報を発信。大阪・東京をはじめ全国のキッズダンス情報満載。",
-  keywords: ["子供","ダンス","習い事","選び方","おすすめ","大阪","東京","ブログ"],
+  title: "子供の習い事コラム・選び方ガイド｜コドモならいごと",
+  description: "子供のダンス・スイミング・英語・ピアノ教室の選び方、おすすめスクール、費用相場など役立つ情報を発信。大阪・横浜・名古屋をはじめ全国の習い事情報満載。",
+  keywords: ["子供","ダンス","習い事","選び方","おすすめ","大阪","東京","横浜","名古屋","スイミング","英語","ピアノ","ブログ"],
+  openGraph: {
+    title: "子供の習い事コラム・選び方ガイド｜コドモならいごと",
+    description: "子供の習い事の選び方・費用・おすすめスクール情報を発信。全国36記事掲載。",
+    url: `${BASE_URL}/blog`,
+  },
+};
+
+const blogListSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "コドモならいごと コラム",
+  "url": `${BASE_URL}/blog`,
+  "description": "子供の習い事選び方・費用・おすすめスクール情報",
+  "publisher": {
+    "@type": "Organization",
+    "name": "コドモならいごと",
+    "url": BASE_URL,
+  },
 };
 
 const CATEGORY_COLORS = {
@@ -13,6 +33,11 @@ const CATEGORY_COLORS = {
   "スイミング": "#0288D1",
   "英語": "#FF8A00",
   "全国": "#4CAF50",
+  "地域ガイド": "#1565C0",
+  "費用・料金": "#E65100",
+  "選び方ガイド": "#2E7D32",
+  "神奈川県": "#1B5E20",
+  "愛知県": "#4527A0",
 };
 
 export default function BlogIndex() {
@@ -125,6 +150,7 @@ export default function BlogIndex() {
       </footer>
 
       {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Blog",
