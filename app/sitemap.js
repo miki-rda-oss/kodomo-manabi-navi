@@ -7,6 +7,16 @@ const BLOG_SLUGS = [
   'kids-kpop-dance-school',
   'lydia-dance-academy-review',
   'kanto-kids-dance-school-ranking',
+  'minoh-kids-dance-school',
+  'setagaya-kids-dance-school',
+  'kids-dance-recital-guide',
+  'dance-vs-ballet-kids',
+  'osaka-kids-activity-ranking',
+  'nakahara-kids-dance-school',
+  'kids-dance-benefits-brain',
+  'kids-multiple-activities-dance',
+  'kashiwa-kids-dance-school',
+  'toddler-dance-rhythmics-guide',
 ];
 
 const GENRE_SLUGS = [

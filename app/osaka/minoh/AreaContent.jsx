@@ -288,6 +288,17 @@ export default function App(){
     </div></section>
 
 
+
+    <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #f0f0f0"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>📍 箕面市の子供ダンス習い事事情</h2>
+      <p style={{fontSize:14,color:"#555",lineHeight:2,marginBottom:20}}>箕面市は大阪北部の住宅都市。北大阪急行の延伸（2024年）により、箕面萱野・箕面船場阪大前の2駅が開業しました。スタジオや習い事教室も続々と進出しており、以前より格段に選択肢が増えています。</p>
+      <div style={{background:"#f8f9fb",borderRadius:14,padding:"16px 20px",border:"1px solid #e8f0fe",marginBottom:20}}>
+        <div style={{fontSize:13,fontWeight:700,color:"#1565C0",marginBottom:8}}>📝 詳しい選び方はこちら</div>
+        <a href="/blog/minoh-kids-dance-school" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 箕面市のダンス教室詳細ガイドを見る</a>
+      </div>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 箕面市のダンス教室 よくある質問</h2>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><button onClick={()=>{}} style={{width:"100%",padding:"14px 18px",border:"none",background:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",fontSize:14,fontWeight:600,color:"#333",textAlign:"left",gap:10}}><span>Q. 箕面市でおすすめのキッズダンス教室は？</span></button><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミー箕面船場阪大前校が地域No.1の評価を受けています。2022年開業の新しいスタジオで、充実した設備が特徴です。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><button onClick={()=>{}} style={{width:"100%",padding:"14px 18px",border:"none",background:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",fontSize:14,fontWeight:600,color:"#333",textAlign:"left",gap:10}}><span>Q. 箕面市のダンス教室の月謝相場は？</span></button><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月5,000〜9,000円が一般的です。入会金を無料にしているスクールも増えています。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><button onClick={()=>{}} style={{width:"100%",padding:"14px 18px",border:"none",background:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",fontSize:14,fontWeight:600,color:"#333",textAlign:"left",gap:10}}><span>Q. 箕面市から大阪市内のダンス教室へ通えますか？</span></button><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 北大阪急行（箕面萱野駅〜なんば駅方面）が便利です。ただし小学生以下は送迎が必要なため、箕面市内のスクールを優先的に検討しましょう。</div></div>
+    </div></section>
     <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 箕面市でダンス教室を選ぶポイント</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:12,marginBottom:24}}>

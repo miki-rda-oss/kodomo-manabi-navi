@@ -190,6 +190,17 @@ export default function App(){
     </div></section>
 
 
+
+    <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #f0f0f0"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>📍 川崎市中原区の子供ダンス習い事事情</h2>
+      <p style={{fontSize:14,color:"#555",lineHeight:2,marginBottom:20}}>川崎市中原区は南武線・東急東横線が通る交通便利なエリア。武蔵中原・武蔵新城は子育て世代の人口が多く、習い事施設も充実しています。横浜・渋谷へのアクセスも良好。</p>
+      <div style={{background:"#f8f9fb",borderRadius:14,padding:"16px 20px",border:"1px solid #e8f0fe",marginBottom:20}}>
+        <div style={{fontSize:13,fontWeight:700,color:"#1565C0",marginBottom:8}}>📝 詳しい選び方はこちら</div>
+        <a href="/blog/nakahara-kids-dance-school" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 川崎市中原区のダンス教室詳細ガイドを見る</a>
+      </div>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 川崎市中原区のダンス教室 よくある質問</h2>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><button onClick={()=>{}} style={{width:"100%",padding:"14px 18px",border:"none",background:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",fontSize:14,fontWeight:600,color:"#333",textAlign:"left",gap:10}}><span>Q. 川崎市中原区でおすすめのキッズダンス教室は？</span></button><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミー、NAYUTAS、JDACダンススクールが人気です。武蔵中原・武蔵新城エリアに複数校展開しています。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><button onClick={()=>{}} style={{width:"100%",padding:"14px 18px",border:"none",background:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",fontSize:14,fontWeight:600,color:"#333",textAlign:"left",gap:10}}><span>Q. 武蔵中原・武蔵新城エリアのダンス教室の月謝は？</span></button><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月5,000〜10,000円が相場です。電車通いに便利な駅近スクールが多数あります。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><button onClick={()=>{}} style={{width:"100%",padding:"14px 18px",border:"none",background:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",fontSize:14,fontWeight:600,color:"#333",textAlign:"left",gap:10}}><span>Q. 川崎市中原区で3歳からダンスを習えますか？</span></button><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. はい。リディアダンスアカデミーをはじめ3歳からのクラスを設けているスクールが複数あります。</div></div>
+    </div></section>
     <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 川崎市中原区でダンス教室を選ぶポイント</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:12,marginBottom:24}}>
