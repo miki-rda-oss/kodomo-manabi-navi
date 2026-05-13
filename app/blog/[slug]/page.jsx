@@ -6,6 +6,8 @@ export async function generateStaticParams() {
   return ARTICLES.map(a => ({ slug: a.slug }));
 }
 
+const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+
 export async function generateMetadata({ params }) {
   const article = getArticle(params.slug);
   if (!article) return {};
@@ -13,11 +15,19 @@ export async function generateMetadata({ params }) {
     title: `${article.title}｜コドモならいごと`,
     description: article.description,
     keywords: article.keywords,
+    alternates: { canonical: `${BASE_URL}/blog/${params.slug}` },
     openGraph: {
       title: article.title,
       description: article.description,
+      url: `${BASE_URL}/blog/${params.slug}`,
       type: "article",
       publishedTime: article.date,
+      siteName: "コドモならいごと",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.description,
     },
   };
 }
@@ -186,18 +196,26 @@ export default function ArticlePage({ params }) {
 
   const articleSchemaData = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": article.title,
     "description": article.description,
     "datePublished": article.date,
     "dateModified": article.date,
-    "author": { "@type": "Organization", "name": "コドモならいごと編集部" },
+    "keywords": (article.keywords || []).join(","),
+    "author": {
+      "@type": "Organization",
+      "name": "コドモならいごと編集部",
+      "url": BASE_URL,
+    },
     "publisher": {
       "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
       "name": "コドモならいごと",
-      "url": "https://kodomo-manabi-navi.vercel.app",
+      "url": BASE_URL,
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kodomo-manabi-navi.vercel.app/blog/${article.slug}` },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `${BASE_URL}/blog/${article.slug}` },
+    "url": `${BASE_URL}/blog/${article.slug}`,
+    "isPartOf": { "@type": "Blog", "name": "コドモならいごと コラム", "url": `${BASE_URL}/blog` },
   };
 
   const breadcrumbSchema = {
