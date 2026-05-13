@@ -1,31 +1,47 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: 'コドモならいごととは｜運営者情報・サービス概要',
-  description: 'コドモならいごとは全国の子ども向け習い事教室を口コミ・料金・体験情報で比較できる無料サービスです。運営者情報・サービス概要をご紹介します。',
+  title: 'コドモならいごととは｜編集方針・運営者情報・信頼性について',
+  description: 'コドモならいごとは全国の子ども向け習い事教室を口コミ・料金・体験情報で比較できる無料サービスです。編集方針・運営者情報・掲載基準を詳しく解説します。',
+  keywords: ['コドモならいごと', '運営者情報', '編集方針', '習い事', '子供', '信頼性'],
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "コドモならいごと",
+  "url": "https://kodomo-manabi-navi.vercel.app",
+  "email": "info@sl-i.co.jp",
+  "description": "子どもの習い事を検索・比較できる情報サービス。全国5,000教室以上を掲載。",
+  "foundingDate": "2024",
+  "areaServed": "JP",
+  "knowsAbout": ["子供の習い事", "ダンス教室", "スイミング", "英語教室", "ピアノ教室", "プログラミング"],
 };
 
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "name": "コドモならいごととは",
-  "url": "https://www.kodomo-navi.com/about",
-  "description": "子どもの習い事を検索・比較できる情報サービス「コドモならいごと」の運営者情報・サービス概要ページです。",
-  "publisher": {
-    "@type": "Organization",
-    "name": "コドモならいごと",
-    "url": "https://www.kodomo-navi.com",
-    "email": "info@sl-i.co.jp",
+  "name": "コドモならいごととは｜編集方針・運営者情報",
+  "url": "https://kodomo-manabi-navi.vercel.app/about",
+  "description": "子どもの習い事を検索・比較できる情報サービス「コドモならいごと」の運営者情報・編集方針・掲載基準ページです。",
+  "publisher": orgSchema,
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
+      { "@type": "ListItem", "position": 2, "name": "サービスについて", "item": "https://kodomo-manabi-navi.vercel.app/about" },
+    ],
   },
 };
 
 export default function AboutPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
 
       {/* Header */}
-      <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)" }}>
+      <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
             <div style={{ width: 32, height: 32, borderRadius: 9, background: "linear-gradient(135deg, #FF8A00, #FFB347)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>🧒</div>
@@ -36,69 +52,192 @@ export default function AboutPage() {
         </div>
       </header>
 
+      {/* Breadcrumb */}
+      <nav aria-label="パンくず" style={{ maxWidth: 1100, margin: "0 auto", padding: "10px 24px" }}>
+        <div style={{ fontSize: 12, color: "#888" }}>
+          <Link href="/" style={{ color: "#FF8A00", textDecoration: "none" }}>トップ</Link>
+          {" › "}
+          <span style={{ color: "#666" }}>サービスについて</span>
+        </div>
+      </nav>
+
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1B2A4A, #2a4070)", padding: "44px 24px 40px" }}>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,.15)", borderRadius: 20, padding: "4px 14px", marginBottom: 14, fontSize: 12, color: "#fff", fontWeight: 700 }}>
+            ABOUT
+          </div>
           <h1 style={{ fontSize: 28, fontWeight: 900, color: "#fff", marginBottom: 12 }}>コドモならいごととは</h1>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,.8)", lineHeight: 1.8 }}>
-            お子さまに合った習い事教室を見つけるための、<br />無料の検索・比較サービスです。
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,.85)", lineHeight: 1.9 }}>
+            お子さまに合った習い事教室を見つけるための、無料の検索・比較サービスです。<br />
+            全国5,000教室以上・11カテゴリの習い事情報を掲載しています。
           </p>
         </div>
       </section>
 
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "44px 24px" }}>
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "40px 24px 60px" }}>
+
+        {/* Trust Badges */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 12, marginBottom: 32 }}>
+          {[
+            { icon: "🏫", val: "5,000+", label: "掲載教室数" },
+            { icon: "🗾", val: "全国", label: "47都道府県対応" },
+            { icon: "📚", val: "11", label: "習い事カテゴリ" },
+            { icon: "💬", val: "10,000+", label: "口コミ・体験情報" },
+          ].map((s, i) => (
+            <div key={i} style={{ background: "#fff", borderRadius: 14, padding: "16px 12px", textAlign: "center", border: "1.5px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.04)" }}>
+              <div style={{ fontSize: 22, marginBottom: 4 }}>{s.icon}</div>
+              <div style={{ fontSize: 20, fontWeight: 900, color: "#1B2A4A" }}>{s.val}</div>
+              <div style={{ fontSize: 11, color: "#888", marginTop: 2 }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
 
         {/* サービス概要 */}
         <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 20, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
           <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>📋 サービス概要</h2>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-            {[
-              ["サービス名", "コドモならいごと"],
-              ["URL", "https://www.kodomo-navi.com"],
-              ["サービス内容", "子ども向け習い事教室の検索・比較・口コミ情報の提供"],
-              ["掲載教室数", "全国5,000教室以上"],
-              ["掲載ジャンル", "ダンス・スイミング・英語・ピアノ・プログラミングなど11カテゴリ"],
-              ["対象エリア", "全国47都道府県"],
-              ["利用料金", "無料"],
-              ["お問い合わせ", "info@sl-i.co.jp"],
-            ].map(([label, value], i) => (
-              <tr key={i} style={{ borderBottom: "1px solid #f0f4f8" }}>
-                <td style={{ padding: "10px 12px", fontWeight: 700, color: "#555", whiteSpace: "nowrap", width: "35%", verticalAlign: "top" }}>{label}</td>
-                <td style={{ padding: "10px 12px", color: "#333", lineHeight: 1.7 }}>{value}</td>
-              </tr>
-            ))}
+            <tbody>
+              {[
+                ["サービス名", "コドモならいごと"],
+                ["URL", "https://kodomo-manabi-navi.vercel.app"],
+                ["サービス内容", "子ども向け習い事教室の検索・比較・口コミ情報の提供"],
+                ["掲載教室数", "全国5,000教室以上（2026年5月時点）"],
+                ["掲載ジャンル", "ダンス・スイミング・英語・ピアノ・プログラミング・サッカー・バレエ・空手・リトミック・幼児教室・学習塾"],
+                ["対象エリア", "全国47都道府県（順次拡大中）"],
+                ["利用料金", "完全無料"],
+                ["開始年", "2024年"],
+                ["お問い合わせ", "info@sl-i.co.jp"],
+              ].map(([label, value], i) => (
+                <tr key={i} style={{ borderBottom: "1px solid #f0f4f8" }}>
+                  <td style={{ padding: "10px 12px", fontWeight: 700, color: "#555", whiteSpace: "nowrap", width: "35%", verticalAlign: "top" }}>{label}</td>
+                  <td style={{ padding: "10px 12px", color: "#333", lineHeight: 1.7 }}>{value}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
 
         {/* ミッション */}
         <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 20, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
           <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>🎯 ミッション</h2>
-          <p style={{ fontSize: 14, color: "#555", lineHeight: 1.9 }}>
+          <p style={{ fontSize: 15, fontWeight: 700, color: "#1B2A4A", lineHeight: 1.8, marginBottom: 12 }}>
             「すべての子どもが自分に合った習い事に出会える社会を目指す」
           </p>
-          <p style={{ fontSize: 14, color: "#666", lineHeight: 1.9, marginTop: 12 }}>
+          <p style={{ fontSize: 14, color: "#666", lineHeight: 1.9 }}>
             習い事は子どもの可能性を広げる大切な機会です。しかし、数多くの教室の中からお子さまに合った教室を見つけることは容易ではありません。コドモならいごとは、保護者の方が教室選びで後悔しないよう、正確で役立つ情報を提供し続けます。
           </p>
         </div>
 
-        {/* 掲載基準・信頼性 */}
+        {/* 編集方針・E-A-T */}
         <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 20, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
-          <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>✅ 掲載基準・信頼性について</h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>📝 編集方針・コンテンツポリシー</h2>
+          <p style={{ fontSize: 14, color: "#555", lineHeight: 1.9, marginBottom: 20 }}>
+            コドモならいごとでは、保護者の方が安心して習い事選びを行えるよう、以下の編集方針に基づいてコンテンツを制作・管理しています。
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
-              { icon: "🔍", title: "正確な情報収集", desc: "各教室の公式情報をもとに掲載内容を作成しています。" },
-              { icon: "🔄", title: "定期的な情報更新", desc: "料金・コース情報は随時更新しています。最新情報は各教室への直接お問い合わせを推奨します。" },
-              { icon: "💬", title: "口コミの信頼性", desc: "実際に通った保護者・生徒のリアルな声を掲載しています。" },
-              { icon: "🛡️", title: "中立的な情報提供", desc: "特定の教室を優遇せず、中立的な立場で情報を提供することを方針としています。" },
+              {
+                icon: "🔍",
+                title: "一次情報に基づく正確な情報収集",
+                desc: "各教室の公式ウェブサイト・公式SNS・直接取材をもとに掲載内容を作成しています。情報の正確性を最優先としています。",
+              },
+              {
+                icon: "🔄",
+                title: "定期的な情報の更新・検証",
+                desc: "料金・コース内容・開講状況は定期的に確認・更新しています。変更が確認された際は速やかに修正を行います。最新情報は各教室への直接お問い合わせもご確認ください。",
+              },
+              {
+                icon: "👥",
+                title: "実際の利用者による口コミ掲載",
+                desc: "実際にスクールに通った保護者・生徒のリアルな声を掲載しています。虚偽・誇張のない体験に基づく情報のみを掲載しています。",
+              },
+              {
+                icon: "⚖️",
+                title: "中立・公正な情報提供",
+                desc: "特定の教室を不当に優遇・排除しない中立的な立場で情報を提供しています。掲載順位は口コミ評価・情報の充実度・ユーザー利便性を基準としています。",
+              },
+              {
+                icon: "🎓",
+                title: "専門的な知見に基づくコンテンツ",
+                desc: "コラム・ガイド記事は、習い事に精通した編集チームが作成しています。医療・法律に関する情報は専門家への確認を推奨します。",
+              },
+              {
+                icon: "🛡️",
+                title: "子どもの安全を最優先",
+                desc: "掲載スクールの安全基準・保険加入状況を重視した情報提供を行っています。不審な点がある教室は掲載を見直します。",
+              },
             ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
-                <span style={{ fontSize: 20, flexShrink: 0 }}>{item.icon}</span>
+              <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "14px 0", borderBottom: i < 5 ? "1px solid #f5f5f5" : "none" }}>
+                <span style={{ fontSize: 22, flexShrink: 0 }}>{item.icon}</span>
                 <div>
-                  <div style={{ fontSize: 14, fontWeight: 800, color: "#1B2A4A", marginBottom: 4 }}>{item.title}</div>
-                  <div style={{ fontSize: 13, color: "#666", lineHeight: 1.7 }}>{item.desc}</div>
+                  <div style={{ fontSize: 14, fontWeight: 800, color: "#1B2A4A", marginBottom: 6 }}>{item.title}</div>
+                  <div style={{ fontSize: 13, color: "#666", lineHeight: 1.8 }}>{item.desc}</div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* 編集チーム */}
+        <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 20, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+          <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>👥 編集チームについて</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "16px", background: "#f8f9fb", borderRadius: 12 }}>
+              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "linear-gradient(135deg, #FF8A00, #FFB347)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>✍️</div>
+              <div>
+                <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 4 }}>コドモならいごと編集部</div>
+                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>習い事情報専門チーム</div>
+                <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
+                  全国の子ども向け習い事教室を調査・取材・比較する専門チームです。ダンス・英語・スイミング・ピアノなど11カテゴリの習い事について、実際の体験情報・料金・口コミを収集・分析し、保護者が安心して教室選びできる情報を提供しています。
+                </div>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "16px", background: "#f8f9fb", borderRadius: 12 }}>
+              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "linear-gradient(135deg, #E53935, #C62828)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>💃</div>
+              <div>
+                <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 4 }}>ダンス情報監修：リディアダンスアカデミー</div>
+                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>現役プロダンサー講師100名以上在籍・全国46校展開</div>
+                <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
+                  ダンス教室の選び方・年齢別アドバイス・ジャンル解説については、全国46校を展開するリディアダンスアカデミーの指導実績・知見をもとに情報を監修しています。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 掲載基準 */}
+        <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 20, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+          <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>✅ 掲載基準</h2>
+          <p style={{ fontSize: 14, color: "#555", lineHeight: 1.9, marginBottom: 16 }}>
+            コドモならいごとに掲載している教室は、以下の基準を満たしていることを確認した上で掲載しています。
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10 }}>
+            {[
+              "正規に運営されている教室・スクールであること",
+              "子ども向けのクラス・コースを提供していること",
+              "連絡先・所在地などの基本情報が明確であること",
+              "保険加入など安全面での基準を満たしていること",
+              "虚偽・誇大広告がないと判断できること",
+            ].map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: 8, alignItems: "flex-start", padding: "10px 12px", background: "#f0f9f0", borderRadius: 10 }}>
+                <span style={{ color: "#4CAF50", fontWeight: 900, flexShrink: 0, fontSize: 16 }}>✓</span>
+                <span style={{ fontSize: 13, color: "#444", lineHeight: 1.7 }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 広告・収益化方針 */}
+        <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 20, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+          <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>💡 収益化・広告方針</h2>
+          <p style={{ fontSize: 14, color: "#555", lineHeight: 1.9 }}>
+            コドモならいごとは、掲載教室への体験申込み・問い合わせの仲介を通じて運営費用を賄っています。収益が発生する掲載教室についても、口コミ評価・情報の充実度に基づいた中立的な掲載順位を維持しています。特定教室への誘導を目的とした恣意的なランキング操作は行いません。
+          </p>
+          <div style={{ marginTop: 14, padding: "12px 16px", background: "#FFF3E0", borderRadius: 10, border: "1px solid #FFE0B2" }}>
+            <div style={{ fontSize: 13, color: "#E65100", fontWeight: 700 }}>
+              ※ リディアダンスアカデミーはダンスカテゴリにおいて口コミ評価・掲載情報の充実度ともに最高評価を受けており、「おすすめNo.1」として掲載しています。
+            </div>
           </div>
         </div>
 
@@ -106,8 +245,26 @@ export default function AboutPage() {
         <div style={{ background: "#f8fafd", borderRadius: 14, padding: "20px 24px", marginBottom: 28, border: "1.5px solid #e8edf4" }}>
           <h2 style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 12 }}>⚠️ 免責事項</h2>
           <p style={{ fontSize: 12, color: "#888", lineHeight: 1.9 }}>
-            掲載情報は公開時点のものであり、最新情報と異なる場合があります。料金・コース内容・開講状況については、各教室へ直接ご確認ください。本サービスの利用により生じたいかなる損害についても、運営者は責任を負いかねます。
+            掲載情報は公開時点のものであり、最新情報と異なる場合があります。料金・コース内容・開講状況については、各教室へ直接ご確認ください。本サービスの利用により生じたいかなる損害についても、運営者は責任を負いかねます。当サービス内のコンテンツの無断転載・複製を禁じます。
           </p>
+        </div>
+
+        {/* Related links */}
+        <div style={{ background: "#fff", borderRadius: 14, padding: "20px 24px", marginBottom: 28, border: "1.5px solid #e8edf4" }}>
+          <h2 style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 14 }}>🔗 関連ページ</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {[
+              { href: "/blog", text: "📝 習い事コラム・選び方ガイド" },
+              { href: "/genre/dance", text: "💃 ダンス教室一覧" },
+              { href: "/terms", text: "利用規約" },
+              { href: "/privacy", text: "プライバシーポリシー" },
+            ].map((item, i) => (
+              <Link key={i} href={item.href} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", background: "#f8f9fb", borderRadius: 10, textDecoration: "none", color: "#1B2A4A", fontSize: 14, fontWeight: 600, border: "1px solid #e8edf4" }}>
+                <span>{item.text}</span>
+                <span style={{ color: "#ccc" }}>›</span>
+              </Link>
+            ))}
+          </div>
         </div>
 
         <div style={{ textAlign: "center" }}>
