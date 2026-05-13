@@ -255,6 +255,7 @@ export default function TopPage() {
             {["エリアから探す", "ジャンルから探す", "口コミを見る"].map(item => (
               <span key={item} className="nav-link" style={{ fontSize: 13, fontWeight: 600, color: "#444", cursor: "pointer", transition: "color .2s" }}>{item}</span>
             ))}
+            <Link href="/blog" style={{ fontSize: 13, fontWeight: 600, color: "#444", textDecoration: "none" }}>📝 コラム</Link>
             <button style={{ padding: "8px 18px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", borderRadius: 20, border: "none", color: "#fff", fontWeight: 800, fontSize: 13, cursor: "pointer", boxShadow: "0 3px 10px rgba(255,138,0,.3)", whiteSpace: "nowrap" }}>
               無料体験を探す →
             </button>
@@ -657,6 +658,13 @@ export default function TopPage() {
               {CATEGORIES.slice(0, 6).map(c => (
                 <div key={c.name} style={{ fontSize: 12, color: "#6a7d9a", marginBottom: 7, cursor: "pointer" }}>{c.icon} {c.name}</div>
               ))}
+            </div>
+            <div style={{ minWidth: 130 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", marginBottom: 12 }}>📝 コラム・ブログ</div>
+              <Link href="/blog" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>習い事コラム一覧</Link>
+              <Link href="/blog/osaka-kids-dance-school-ranking" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>大阪ダンス教室ランキング</Link>
+              <Link href="/blog/kids-dance-age-guide" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>何歳からダンスを習う？</Link>
+              <Link href="/blog/lydia-dance-academy-review" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>リディア口コミ・料金</Link>
             </div>
             <div style={{ minWidth: 130 }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", marginBottom: 12 }}>ℹ️ サイト情報</div>
