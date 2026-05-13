@@ -190,7 +190,17 @@ export default function App(){
     </div></section>
 
 
-    <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+        <section style={{background:"#f8fafd",padding:"32px 20px",borderTop:"1px solid #f0f0f0"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>📍 吹田市の子供ダンス習い事事情</h2>
+      <p style={{fontSize:14,color:"#555",lineHeight:2,marginBottom:20}}>吹田市は大阪北部に位置し、江坂・千里山・千里丘エリアを中心に子ども向けダンス教室が充実しています。阪急・大阪メトロ御堂筋線が通り駅近の教室が多く、共働き家庭でも通いやすい環境です。リディアダンスアカデミーは市内3校（江坂・千里山西・千里山）を展開しており、初心者クラスも充実しています。</p>
+      <div style={{background:"#f8f9fb",borderRadius:14,padding:"16px 20px",border:"1px solid #e8f0fe",marginBottom:20}}>
+        <div style={{fontSize:13,fontWeight:700,color:"#1565C0",marginBottom:8}}>📝 詳しい選び方はこちら</div>
+        <a href="/blog/osaka-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 大阪のキッズダンス教室おすすめランキングを見る</a>
+      </div>
+      <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 吹田市のダンス教室 よくある質問</h3>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 吹田市でダンス教室の月謝相場は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝相場は5,000〜10,000円程度です。リディアダンスアカデミーは月会員プラン5,500円〜（回数制）で始められます。発表会費用が別途かかるかどうかも事前に確認しましょう。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 吹田市でおすすめの子供ダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミー（江坂・千里山西・千里山の3校）が口コミ評価4.8と最高評価です。3歳から通えるリトルクラスがあり、初回体験無料で気軽に試せます。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 吹田市で何歳からダンスを習えますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 3歳から通えるスクールが多数あります。リディアダンスアカデミーは3歳〜6歳の「リトルクラス」が充実しており、ダンスが初めてのお子さまも安心して始められます。</div></div>
+    </div></section>
+<section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 吹田市でダンス教室を選ぶポイント</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:12,marginBottom:24}}>
         <div style={{background:"#E3F2FD",borderRadius:14,padding:16}}><div style={{fontSize:13,fontWeight:800,color:"#1565C0",marginBottom:6}}>① 通いやすさを確認</div><div style={{fontSize:13,color:"#444",lineHeight:1.8}}>自宅・学校から徒歩・自転車で通える距離かを優先。長距離通学は親子ともに負担になります。</div></div>

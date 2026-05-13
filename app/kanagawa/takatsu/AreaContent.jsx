@@ -189,7 +189,17 @@ export default function App(){
     </div></section>
 
 
-    <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+        <section style={{background:"#f8fafd",padding:"32px 20px",borderTop:"1px solid #f0f0f0"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>📍 高津区の子供ダンス習い事事情</h2>
+      <p style={{fontSize:14,color:"#555",lineHeight:2,marginBottom:20}}>川崎市高津区は溝の口・武蔵溝ノ口・梶が谷エリアを含む人気の住宅地で、東急田園都市線・大井町線・JR南武線が交わる交通拠点です。溝の口駅周辺には大型商業施設が集まり、ダンス教室も数多く展開しています。田園都市線沿線の子育て環境の良さで知られるエリアです。</p>
+      <div style={{background:"#f8f9fb",borderRadius:14,padding:"16px 20px",border:"1px solid #e8f0fe",marginBottom:20}}>
+        <div style={{fontSize:13,fontWeight:700,color:"#1565C0",marginBottom:8}}>📝 詳しい選び方はこちら</div>
+        <a href="/blog/kanto-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 関東のキッズダンス教室おすすめランキングを見る</a>
+      </div>
+      <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 高津区のダンス教室 よくある質問</h3>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 高津区（溝の口）でおすすめのダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが溝の口エリアに展開。3歳から通えるクラスがあります。溝の口駅周辺は複数のダンス教室が集中しており比較しやすいエリアです。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 高津区のダンス教室の月謝相場は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝7,000〜13,000円程度が相場です。田園都市線沿線は教育への関心が高いファミリーが多く、質の高いスクールが揃っています。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 高津区でK-POPダンスを習わせたいのですが？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーはK-POPクラスが充実しています。溝の口・二子玉川エリアにはK-POP専門のダンススタジオもあります。体験レッスンで確認しましょう。</div></div>
+    </div></section>
+<section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 川崎市高津区でダンス教室を選ぶポイント</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:12,marginBottom:24}}>
         <div style={{background:"#E3F2FD",borderRadius:14,padding:16}}><div style={{fontSize:13,fontWeight:800,color:"#1565C0",marginBottom:6}}>① 通いやすさを確認</div><div style={{fontSize:13,color:"#444",lineHeight:1.8}}>自宅・学校から徒歩・自転車で通える距離かを優先。長距離通学は親子ともに負担になります。</div></div>

@@ -188,7 +188,17 @@ export default function App(){
     </div></section>
 
 
-    <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+        <section style={{background:"#f8fafd",padding:"32px 20px",borderTop:"1px solid #f0f0f0"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>📍 和歌山市の子供ダンス習い事事情</h2>
+      <p style={{fontSize:14,color:"#555",lineHeight:2,marginBottom:20}}>和歌山市は和歌山県の県庁所在地で、JR阪和線・紀勢本線・南海電鉄が通りアクセスが充実しています。和歌山・宮前・本渡・岩出エリアにダンス教室が展開しており、南紀の豊かな自然環境と都市的な習い事が共存するエリアです。リディアダンスアカデミーも和歌山市に展開しています。</p>
+      <div style={{background:"#f8f9fb",borderRadius:14,padding:"16px 20px",border:"1px solid #e8f0fe",marginBottom:20}}>
+        <div style={{fontSize:13,fontWeight:700,color:"#1565C0",marginBottom:8}}>📝 詳しい選び方はこちら</div>
+        <a href="/blog/osaka-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 大阪・関西のキッズダンス教室ランキングを見る</a>
+      </div>
+      <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 和歌山市のダンス教室 よくある質問</h3>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 和歌山市でおすすめのキッズダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが和歌山市内に展開。3歳から通えるリトルクラスがあります。JR和歌山・南海和歌山市駅周辺のスクールがアクセス便利です。初回体験無料。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 和歌山市のダンス教室の月謝は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝5,000〜9,000円程度が相場です。大阪府より若干リーズナブルな傾向があります。コスパよく本格的なダンスを習えます。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 和歌山市でダンスを習うのに適した年齢は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 3〜4歳から始めるのがおすすめです。中学でダンスが必修化されているため、小学生のうちに基礎を身につけておくと大きな自信につながります。</div></div>
+    </div></section>
+<section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 和歌山市でダンス教室を選ぶポイント</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:12,marginBottom:24}}>
         <div style={{background:"#E3F2FD",borderRadius:14,padding:16}}><div style={{fontSize:13,fontWeight:800,color:"#1565C0",marginBottom:6}}>① 通いやすさを確認</div><div style={{fontSize:13,color:"#444",lineHeight:1.8}}>自宅・学校から徒歩・自転車で通える距離かを優先。長距離通学は親子ともに負担になります。</div></div>

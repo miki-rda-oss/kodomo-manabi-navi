@@ -190,7 +190,17 @@ export default function App(){
     </div></section>
 
 
-    <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+        <section style={{background:"#f8fafd",padding:"32px 20px",borderTop:"1px solid #f0f0f0"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>📍 青葉区の子供ダンス習い事事情</h2>
+      <p style={{fontSize:14,color:"#555",lineHeight:2,marginBottom:20}}>横浜市青葉区は神奈川北東部の閑静な住宅地で、たまプラーザ・青葉台・市が尾エリアを中心に高品質なダンス教室が充実しています。東急田園都市線沿線は子育て世帯に人気が高く、習い事への需要も旺盛です。リディアダンスアカデミーをはじめ複数のスクールが展開し、比較検討しやすい環境です。</p>
+      <div style={{background:"#f8f9fb",borderRadius:14,padding:"16px 20px",border:"1px solid #e8f0fe",marginBottom:20}}>
+        <div style={{fontSize:13,fontWeight:700,color:"#1565C0",marginBottom:8}}>📝 詳しい選び方はこちら</div>
+        <a href="/blog/kanto-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 関東のキッズダンス教室おすすめランキングを見る</a>
+      </div>
+      <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 青葉区のダンス教室 よくある質問</h3>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 青葉区でおすすめのキッズダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミー（たまプラーザ・青葉台エリア）が口コミ評価4.8と高評価です。3歳〜のリトルクラスと小学生向けキッズクラスがあり、初回体験無料で始められます。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 青葉区のダンス教室の月謝は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝7,000〜14,000円程度が相場です。田園都市線沿線は習い事のニーズが高く、質の高いスクールが揃っています。コスパで選ぶならリディアダンスアカデミー（月5,500円〜）がおすすめです。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 青葉区で何歳からダンスを始めるのがいいですか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 3〜4歳が習い始めに最適です。運動能力が発達する時期にダンスを始めると、リズム感・柔軟性・協調性が自然に育ちます。まずは体験レッスンで子供の反応を見てみましょう。</div></div>
+    </div></section>
+<section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 横浜市青葉区でダンス教室を選ぶポイント</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:12,marginBottom:24}}>
         <div style={{background:"#E3F2FD",borderRadius:14,padding:16}}><div style={{fontSize:13,fontWeight:800,color:"#1565C0",marginBottom:6}}>① 通いやすさを確認</div><div style={{fontSize:13,color:"#444",lineHeight:1.8}}>自宅・学校から徒歩・自転車で通える距離かを優先。長距離通学は親子ともに負担になります。</div></div>

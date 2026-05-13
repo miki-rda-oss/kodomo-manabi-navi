@@ -194,7 +194,17 @@ export default function App(){
     </div></section>
 
 
-    <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+        <section style={{background:"#f8fafd",padding:"32px 20px",borderTop:"1px solid #f0f0f0"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
+      <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>📍 豊中市の子供ダンス習い事事情</h2>
+      <p style={{fontSize:14,color:"#555",lineHeight:2,marginBottom:20}}>豊中市は大阪府北部の住宅都市で、千里中央・服部緑地・曽根エリアを中心に子ども向けダンス教室が点在しています。阪急宝塚線・北大阪急行が通り、駅から徒歩圏内のスクールが多いのが特徴です。千里ニュータウンエリアには特にファミリー層に人気の習い事教室が集中しています。</p>
+      <div style={{background:"#f8f9fb",borderRadius:14,padding:"16px 20px",border:"1px solid #e8f0fe",marginBottom:20}}>
+        <div style={{fontSize:13,fontWeight:700,color:"#1565C0",marginBottom:8}}>📝 詳しい選び方はこちら</div>
+        <a href="/blog/osaka-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 大阪のキッズダンス教室おすすめランキングを見る</a>
+      </div>
+      <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 豊中市のダンス教室 よくある質問</h3>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 豊中市でおすすめのダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが千里中央エリアに展開しています。3歳から通えるリトルクラスと小学生向けキッズクラスがあり、初回体験無料で気軽にスタートできます。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 豊中市のダンス教室の月謝は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝相場は5,000〜10,000円程度です。スクールによってはファミリー割引や兄弟割引がある場合もあります。体験レッスン時に費用体系を詳しく確認しましょう。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 豊中市で土日にダンスを習える教室はありますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. はい、多くのスクールが土日クラスを設けています。共働き家庭でも通いやすい週末クラスの有無は、体験予約時にスタッフに確認してみてください。</div></div>
+    </div></section>
+<section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 豊中市でダンス教室を選ぶポイント</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:12,marginBottom:24}}>
         <div style={{background:"#E3F2FD",borderRadius:14,padding:16}}><div style={{fontSize:13,fontWeight:800,color:"#1565C0",marginBottom:6}}>① 通いやすさを確認</div><div style={{fontSize:13,color:"#444",lineHeight:1.8}}>自宅・学校から徒歩・自転車で通える距離かを優先。長距離通学は親子ともに負担になります。</div></div>
