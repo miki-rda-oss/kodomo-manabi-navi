@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const REGIONS = [
@@ -240,6 +241,92 @@ export default function TopPage() {
   const [searchGenre2, setSearchGenre2] = useState("");
   const [searchAge2, setSearchAge2] = useState("");
   const areaRef = useRef(null);
+  const router = useRouter();
+  const [searchError, setSearchError] = useState("");
+  const [searchError2, setSearchError2] = useState("");
+
+  // 全エリア一覧（フラット）
+  const allCities = REGIONS.flatMap(r => r.areas.flatMap(a => a.cities));
+
+  const PREF_MAP = [
+    { keys: ["東京", "tokyo"], slug: "/tokyo" },
+    { keys: ["大阪", "osaka"], slug: "/osaka" },
+    { keys: ["神奈川", "kanagawa"], slug: "/kanagawa" },
+    { keys: ["愛知", "aichi"], slug: "/aichi" },
+    { keys: ["岐阜", "gifu"], slug: "/gifu" },
+    { keys: ["兵庫", "hyogo"], slug: "/hyogo" },
+    { keys: ["茨城", "ibaraki"], slug: "/ibaraki" },
+    { keys: ["石川", "ishikawa"], slug: "/ishikawa" },
+    { keys: ["京都", "kyoto"], slug: "/kyoto" },
+    { keys: ["長野", "nagano"], slug: "/nagano" },
+    { keys: ["滋賀", "shiga"], slug: "/shiga" },
+    { keys: ["和歌山", "wakayama"], slug: "/wakayama" },
+    { keys: ["埼玉", "saitama"], slug: "/saitama" },
+    { keys: ["千葉", "chiba"], slug: "/chiba" },
+  ];
+
+  const findSlug = (areaInput, genre) => {
+    const q = (areaInput || "").trim().replace(/\s+/g, "");
+
+    if (q) {
+      // 完全一致
+      let found = allCities.find(c => c.name === q);
+      // 末尾の市区町村を除去して比較
+      if (!found) found = allCities.find(c =>
+        c.name.replace(/[都道府県市区町村郡町]/g, "") === q.replace(/[都道府県市区町村郡町]/g, "")
+      );
+      // 部分一致
+      if (!found) found = allCities.find(c =>
+        c.name.includes(q) || q.includes(c.name.replace(/[都道府県市区町村郡町]/g, ""))
+      );
+      if (found) return found.slug;
+
+      // 都道府県一致
+      const qLow = q.toLowerCase();
+      const prefMatch = PREF_MAP.find(p =>
+        p.keys.some(k => qLow.includes(k.toLowerCase()) || k.toLowerCase().includes(qLow))
+      );
+      if (prefMatch) return prefMatch.slug;
+
+      return null; // 見つからない
+    }
+
+    // エリア未入力→ジャンルで飛ぶ
+    if (genre) {
+      const cat = CATEGORIES.find(c => c.name === genre);
+      if (cat) return `/genre/${cat.slug}`;
+    }
+
+    return "SCROLL";
+  };
+
+  const handleSearch = () => {
+    setSearchError("");
+    const slug = findSlug(searchArea, searchGenre);
+    if (slug === null) {
+      setSearchError(`「${searchArea}」は見つかりませんでした。下のエリア一覧からお選びください。`);
+      return;
+    }
+    if (slug === "SCROLL") {
+      areaRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    router.push(slug);
+  };
+
+  const handleSearch2 = () => {
+    setSearchError2("");
+    const slug = findSlug(searchArea2, searchGenre2);
+    if (slug === null) {
+      setSearchError2(`「${searchArea2}」は見つかりませんでした。下のエリア一覧からお選びください。`);
+      return;
+    }
+    if (slug === "SCROLL") {
+      areaRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    router.push(slug);
+  };
 
   const handleRegionClick = (region) => {
     setActiveRegion(region);
@@ -340,8 +427,9 @@ export default function TopPage() {
                     type="text"
                     placeholder="例：大阪市、世田谷区、箕面市"
                     value={searchArea}
-                    onChange={e => setSearchArea(e.target.value)}
-                    style={{ padding: "12px 14px", border: "1.5px solid #e0eaf4", borderRadius: 10, fontSize: 14, color: "#333", background: "#f8fafd", transition: "all .2s", fontFamily: "inherit" }}
+                    onChange={e => { setSearchArea(e.target.value); setSearchError(""); }}
+                    onKeyDown={e => e.key === "Enter" && handleSearch()}
+                    style={{ padding: "12px 14px", border: `1.5px solid ${searchError ? "#e53935" : "#e0eaf4"}`, borderRadius: 10, fontSize: 14, color: "#333", background: "#f8fafd", transition: "all .2s", fontFamily: "inherit" }}
                   />
                 </div>
 
@@ -377,12 +465,16 @@ export default function TopPage() {
 
                 {/* Button */}
                 <div style={{ flex: "0 0 auto" }}>
-                  <button className="search-btn" style={{ padding: "12px 28px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", border: "none", borderRadius: 10, color: "#fff", fontWeight: 900, fontSize: 15, cursor: "pointer", whiteSpace: "nowrap", boxShadow: "0 4px 16px rgba(255,138,0,.35)", transition: "all .2s", fontFamily: "inherit" }}>
+                  <button className="search-btn" onClick={handleSearch} style={{ padding: "12px 28px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", border: "none", borderRadius: 10, color: "#fff", fontWeight: 900, fontSize: 15, cursor: "pointer", whiteSpace: "nowrap", boxShadow: "0 4px 16px rgba(255,138,0,.35)", transition: "all .2s", fontFamily: "inherit" }}>
                     🔍 習い事を探す
                   </button>
                 </div>
               </div>
-
+              {searchError && (
+                <div style={{ marginTop: 10, padding: "8px 14px", background: "#fff3f3", border: "1px solid #ffcdd2", borderRadius: 8, fontSize: 12, color: "#c62828", display: "flex", alignItems: "center", gap: 6 }}>
+                  ⚠️ {searchError}
+                </div>
+              )}
             </div>
 
             {/* Ranking Search Box */}
@@ -398,8 +490,9 @@ export default function TopPage() {
                     type="text"
                     placeholder="例：大阪市、世田谷区、箕面市"
                     value={searchArea2}
-                    onChange={e => setSearchArea2(e.target.value)}
-                    style={{ padding: "12px 14px", border: "1.5px solid #FFD9A0", borderRadius: 10, fontSize: 14, color: "#333", background: "#fff", transition: "all .2s", fontFamily: "inherit" }}
+                    onChange={e => { setSearchArea2(e.target.value); setSearchError2(""); }}
+                    onKeyDown={e => e.key === "Enter" && handleSearch2()}
+                    style={{ padding: "12px 14px", border: `1.5px solid ${searchError2 ? "#e53935" : "#FFD9A0"}`, borderRadius: 10, fontSize: 14, color: "#333", background: "#fff", transition: "all .2s", fontFamily: "inherit" }}
                   />
                 </div>
 
@@ -435,11 +528,16 @@ export default function TopPage() {
 
                 {/* Button 2 */}
                 <div style={{ flex: "0 0 auto" }}>
-                  <button className="search-btn" style={{ padding: "12px 28px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", border: "none", borderRadius: 10, color: "#fff", fontWeight: 900, fontSize: 15, cursor: "pointer", whiteSpace: "nowrap", boxShadow: "0 4px 16px rgba(255,138,0,.35)", transition: "all .2s", fontFamily: "inherit" }}>
+                  <button className="search-btn" onClick={handleSearch2} style={{ padding: "12px 28px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", border: "none", borderRadius: 10, color: "#fff", fontWeight: 900, fontSize: 15, cursor: "pointer", whiteSpace: "nowrap", boxShadow: "0 4px 16px rgba(255,138,0,.35)", transition: "all .2s", fontFamily: "inherit" }}>
                     🏆 ランキングを見る
                   </button>
                 </div>
               </div>
+              {searchError2 && (
+                <div style={{ marginTop: 10, padding: "8px 14px", background: "#fff3f3", border: "1px solid #ffcdd2", borderRadius: 8, fontSize: 12, color: "#c62828", display: "flex", alignItems: "center", gap: 6 }}>
+                  ⚠️ {searchError2}
+                </div>
+              )}
             </div>
 
             {/* Stats */}
