@@ -223,11 +223,63 @@ const GENRE_BLOG_LINKS = {
     { href: "/blog/kanto-kids-dance-school-ranking", text: "関東のキッズダンス教室おすすめ10選" },
     { href: "/blog/lydia-dance-academy-review", text: "リディアダンスアカデミー口コミ・料金" },
     { href: "/blog/kids-dance-benefits-brain", text: "ダンスが子供の脳に与える7つのメリット" },
+    { href: "/blog/dance-cost-breakdown", text: "ダンス教室の月謝・費用相場完全解説" },
+    { href: "/blog/boys-dance-school-guide", text: "男の子のダンス教室選び方ガイド" },
+    { href: "/blog/kids-dance-school-trial-guide", text: "体験レッスンで確認すべき10のポイント" },
   ],
   kpop: [
     { href: "/blog/kids-kpop-dance-school", text: "K-POPダンスを子供に習わせたい！選び方ガイド" },
     { href: "/blog/kids-dance-age-guide", text: "何歳からK-POPダンスを習う？" },
     { href: "/blog/osaka-kids-dance-school-ranking", text: "大阪のダンス教室ランキング" },
+    { href: "/blog/kanto-kids-dance-school-ranking", text: "関東のダンス教室ランキング" },
+  ],
+  swimming: [
+    { href: "/blog/kids-swimming-guide", text: "子供スイミング教室の選び方完全ガイド" },
+    { href: "/blog/kids-multiple-activities-dance", text: "習い事を複数させるときのポイント" },
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+  ],
+  programming: [
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+    { href: "/blog/kids-multiple-activities-dance", text: "習い事を複数させるときのポイント" },
+  ],
+  soccer: [
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+    { href: "/blog/kids-dance-benefits-brain", text: "体を動かす習い事のメリット" },
+    { href: "/blog/osaka-kids-activity-ranking", text: "大阪の子供習い事ランキング" },
+  ],
+  english: [
+    { href: "/blog/kids-english-guide", text: "子供の英語教室の選び方完全ガイド" },
+    { href: "/blog/kids-multiple-activities-dance", text: "習い事を複数させるときのポイント" },
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+  ],
+  piano: [
+    { href: "/blog/kids-piano-guide", text: "子供のピアノ教室の選び方完全ガイド" },
+    { href: "/blog/toddler-dance-rhythmics-guide", text: "リトミックとダンスどちらを選ぶ？" },
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+  ],
+  ballet: [
+    { href: "/blog/dance-vs-ballet-kids", text: "ダンスとバレエどちらを習わせる？" },
+    { href: "/blog/kids-karate-ballet-guide", text: "子供にバレエを習わせたい！選び方と費用" },
+    { href: "/blog/kids-dance-age-guide", text: "何歳から習い事を始める？" },
+  ],
+  karate: [
+    { href: "/blog/kids-karate-ballet-guide", text: "子供に空手を習わせたい！選び方と費用" },
+    { href: "/blog/kids-dance-benefits-brain", text: "習い事が子供に与えるメリット" },
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+  ],
+  rhythmics: [
+    { href: "/blog/toddler-dance-rhythmics-guide", text: "リトミックとダンス、幼児はどちらを選ぶ？" },
+    { href: "/blog/kids-dance-age-guide", text: "何歳から習い事を始める？" },
+    { href: "/blog/kids-piano-guide", text: "子供のピアノ教室の選び方" },
+  ],
+  preschool: [
+    { href: "/blog/toddler-dance-rhythmics-guide", text: "幼児向け習い事の選び方ガイド" },
+    { href: "/blog/kids-dance-age-guide", text: "何歳から習い事を始める？" },
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+  ],
+  juku: [
+    { href: "/blog/kids-activities-how-many", text: "子供の習い事は何個まで？" },
+    { href: "/blog/kids-multiple-activities-dance", text: "習い事を複数させるときのポイント" },
   ],
 };
 
@@ -312,6 +364,8 @@ const GENRE_FAQ = {
   ],
 };
 
+const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const genre = GENRE_META[slug];
@@ -322,7 +376,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `子供の${genre.name}教室おすすめ${genre.count}件｜コドモならいごと`,
       description: `全国の子ども向け${genre.name}教室を口コミ・料金で比較。${genre.desc}。`,
-      url: `https://www.kodomo-navi.com/genre/${slug}`,
+      url: `${BASE_URL}/genre/${slug}`,
     },
   };
 }
@@ -462,6 +516,14 @@ export default function GenrePage({ params }) {
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "トップ", "item": BASE_URL },
+          { "@type": "ListItem", "position": 2, "name": `${genre.name}教室`, "item": `${BASE_URL}/genre/${slug}` },
+        ],
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": (GENRE_FAQ[slug] || GENRE_FAQ.default).map(faq => ({
           "@type": "Question",
@@ -472,16 +534,46 @@ export default function GenrePage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": `${genre.name}教室一覧`,
-        "description": `全国の子ども向け${genre.name}教室`,
+        "name": `子供の${genre.name}教室おすすめ一覧`,
+        "description": `全国の子ども向け${genre.name}教室を口コミ・料金で比較。${genre.desc}。`,
+        "url": `${BASE_URL}/genre/${slug}`,
         "numberOfItems": schools.length,
         "itemListElement": schools.map((s, i) => ({
           "@type": "ListItem",
           "position": i + 1,
           "name": s.name,
           "description": s.desc,
+          "url": s.url || BASE_URL,
         })),
       }) }} />
+      {slug === "dance" && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://re-dia.jp/",
+          "name": "リディアダンスアカデミー",
+          "url": "https://re-dia.jp/",
+          "description": "現役プロダンサー講師100名以上在籍。初心者クラスから本格コースまで充実。ヒップホップ・ジャズ・K-POP・ブレイクダンスなど多ジャンル対応。全国46校展開。",
+          "priceRange": "¥¥",
+          "telephone": "",
+          "areaServed": "JP",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "キッズダンスコース",
+            "itemListElement": [
+              { "@type": "Offer", "name": "リトルクラス（3〜6歳）", "price": "5500", "priceCurrency": "JPY" },
+              { "@type": "Offer", "name": "キッズクラス（小学生）", "price": "5500", "priceCurrency": "JPY" },
+              { "@type": "Offer", "name": "受け放題プラン", "price": "27000", "priceCurrency": "JPY" },
+            ],
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "312",
+            "bestRating": "5",
+          },
+        }) }} />
+      )}
     </div>
   );
 }
