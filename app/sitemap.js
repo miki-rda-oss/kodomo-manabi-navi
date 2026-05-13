@@ -1,4 +1,13 @@
-const BASE_URL = 'https://www.kodomo-navi.com';
+const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+
+const BLOG_SLUGS = [
+  'osaka-kids-dance-school-ranking',
+  'kids-dance-age-guide',
+  'kids-hiphop-dance-guide',
+  'kids-kpop-dance-school',
+  'lydia-dance-academy-review',
+  'kanto-kids-dance-school-ranking',
+];
 
 const GENRE_SLUGS = [
   'dance', 'kpop', 'swimming', 'programming',
@@ -44,5 +53,14 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
-  return [...top, ...genres, ...areas];
+  const blogs = [
+    { url: `${BASE_URL}/blog`, lastModified: now, priority: 0.9 },
+    ...BLOG_SLUGS.map(slug => ({
+      url: `${BASE_URL}/blog/${slug}`,
+      lastModified: now,
+      priority: 0.85,
+    })),
+  ];
+
+  return [...top, ...blogs, ...genres, ...areas];
 }
