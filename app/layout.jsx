@@ -22,7 +22,7 @@ export const metadata = {
     description: 'エリア・ジャンル・年齢から子どもの習い事を検索・比較。全国5,000教室以上を掲載。',
   },
   verification: {
-    google: 'rzhs-3gGOueKsEk889d2LJwIalEpd6NH2KJx_qWpZnI',
+    google: ['rzhs-3gGOueKsEk889d2LJwIalEpd6NH2KJx_qWpZnI', 'CxkhTnbML493Lr45Y4xL3xQ1lmI2WS79D18W8fwdyoU'],
   },
 };
 
