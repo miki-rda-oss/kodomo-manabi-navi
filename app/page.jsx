@@ -111,12 +111,12 @@ const totalSchools = REGIONS.flatMap(r => r.areas.flatMap(a => a.cities)).reduce
 const totalAreas = REGIONS.flatMap(r => r.areas.flatMap(a => a.cities)).length;
 
 const CATEGORIES = [
-  { name: "ダンス",      icon: "💃", count: "2,800+", color: "#FF6B6B", desc: "リズム感・表現力・協調性",   slug: "dance" },
-  { name: "サッカー",    icon: "⚽", count: "3,200+", color: "#4CAF50", desc: "体力・判断力・チームワーク", slug: "soccer" },
+  { name: "ダンス",      icon: "💃", count: "2,800+", color: "#FF6B6B", desc: "2026年習い事1位！リズム感・表現力・自己肯定感",   slug: "dance" },
+  { name: "K-POP",      icon: "💜", count: "800+",   color: "#AB47BC", desc: "K-POPブームで急成長・リズム感・表現力・自信",     slug: "kpop" },
+  { name: "スイミング",  icon: "🏊", count: "2,500+", color: "#0288D1", desc: "体力・心肺機能・水難防止",   slug: "swimming" },
   { name: "英語・英会話",icon: "🌍", count: "4,500+", color: "#FF8A00", desc: "リスニング・発音・異文化理解",slug: "english" },
   { name: "ピアノ",      icon: "🎹", count: "3,800+", color: "#9C27B0", desc: "音感・集中力・表現力",       slug: "piano" },
-  { name: "K-POP",      icon: "💜", count: "800+",   color: "#AB47BC", desc: "リズム感・表現力・自信",     slug: "kpop" },
-  { name: "スイミング",  icon: "🏊", count: "2,500+", color: "#0288D1", desc: "体力・心肺機能・水難防止",   slug: "swimming" },
+  { name: "サッカー",    icon: "⚽", count: "3,200+", color: "#4CAF50", desc: "体力・判断力・チームワーク", slug: "soccer" },
   { name: "バレエ",      icon: "🩰", count: "1,600+", color: "#E91E63", desc: "柔軟性・姿勢・美的感覚",     slug: "ballet" },
   { name: "空手",        icon: "🥋", count: "1,200+", color: "#795548", desc: "礼儀・忍耐力・精神力",       slug: "karate" },
   { name: "リトミック",  icon: "🎵", count: "900+",   color: "#FF7043", desc: "リズム感・感性・社会性",     slug: "rhythmics" },
@@ -403,6 +403,9 @@ export default function TopPage() {
             </div>
 
             {/* Main Title */}
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "linear-gradient(135deg, #FF8A00, #FFB347)", borderRadius: 20, padding: "5px 14px", marginBottom: 12, fontSize: 12, color: "#fff", fontWeight: 800, boxShadow: "0 2px 8px rgba(255,138,0,.3)" }}>
+              🥇 2026年習い事1位：ダンスが急上昇中！
+            </div>
             <h1 className="hero-title" style={{ fontSize: 34, fontWeight: 900, color: "#1B2A4A", lineHeight: 1.4, marginBottom: 10, animation: "fi .5s ease" }}>
               全国の子どもの習い事を探そう
             </h1>
@@ -774,16 +777,24 @@ export default function TopPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          "name": "子供の習い事ジャンル一覧",
-          "description": "コドモならいごとが掲載する子ども向け習い事の全ジャンル",
+          "name": "2026年子供に人気の習い事ランキング",
+          "description": "2026年最新・子供の習い事人気ランキング。ダンスが1位を獲得。K-POPブーム・脳科学的効果・ダンス必修化が追い風。",
           "url": "https://kodomo-manabi-navi.vercel.app",
-          "itemListElement": CATEGORIES.map((c, i) => ({
-            "@type": "ListItem",
-            "position": i + 1,
-            "name": c.name,
-            "url": `https://kodomo-manabi-navi.vercel.app/genre/${c.slug}`,
-            "description": c.desc,
-          })),
+          "numberOfItems": 12,
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ダンス（ヒップホップ・K-POP）", "url": "https://kodomo-manabi-navi.vercel.app/genre/dance", "description": "2026年1位。K-POPブーム・ダンス必修化・オリンピック競技化で急上昇。脳科学的学習効果も実証済み。"},
+            {"@type": "ListItem", "position": 2, "name": "スイミング", "url": "https://kodomo-manabi-navi.vercel.app/genre/swimming", "description": "長年1位を維持してきた定番。体力・心肺機能・水難防止に効果的。"},
+            {"@type": "ListItem", "position": 3, "name": "英語・英会話", "url": "https://kodomo-manabi-navi.vercel.app/genre/english", "description": "グローバル化対応。小学校英語必修化で需要増。"},
+            {"@type": "ListItem", "position": 4, "name": "ピアノ", "url": "https://kodomo-manabi-navi.vercel.app/genre/piano", "description": "音感・集中力・表現力を育てる定番習い事。"},
+            {"@type": "ListItem", "position": 5, "name": "サッカー", "url": "https://kodomo-manabi-navi.vercel.app/genre/soccer", "description": "体力・判断力・チームワークを培う人気スポーツ。"},
+            {"@type": "ListItem", "position": 6, "name": "K-POP", "url": "https://kodomo-manabi-navi.vercel.app/genre/kpop", "description": "K-POPアイドルの振付を学ぶ急成長ジャンル。"},
+            {"@type": "ListItem", "position": 7, "name": "バレエ", "url": "https://kodomo-manabi-navi.vercel.app/genre/ballet", "description": "柔軟性・姿勢・美的感覚を育てる伝統芸術。"},
+            {"@type": "ListItem", "position": 8, "name": "空手", "url": "https://kodomo-manabi-navi.vercel.app/genre/karate", "description": "礼儀・忍耐力・精神力を培う武道。"},
+            {"@type": "ListItem", "position": 9, "name": "リトミック", "url": "https://kodomo-manabi-navi.vercel.app/genre/rhythmics", "description": "音楽に合わせて体を動かす幼児向け音楽教育。"},
+            {"@type": "ListItem", "position": 10, "name": "プログラミング", "url": "https://kodomo-manabi-navi.vercel.app/genre/programming", "description": "論理的思考・創造力・問題解決力を育てる未来型習い事。"},
+            {"@type": "ListItem", "position": 11, "name": "幼児教室", "url": "https://kodomo-manabi-navi.vercel.app/genre/preschool", "description": "記憶力・思考力・言語力を育てる幼児期の知育教室。"},
+            {"@type": "ListItem", "position": 12, "name": "学習塾", "url": "https://kodomo-manabi-navi.vercel.app/genre/juku", "description": "基礎学力・思考力・受験対策の定番習い事。"}
+          ],
         }) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",

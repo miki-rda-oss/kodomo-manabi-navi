@@ -61,6 +61,7 @@ const BLOG_SLUGS = [
   'kids-dance-recital-prep',
   'kanagawa-kids-dance-school-area',
   'kids-sports-dance-comparison',
+  'dance-no1-reasons-2026',
 ];
 
 const GENRE_SLUGS = [

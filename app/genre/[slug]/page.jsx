@@ -370,6 +370,23 @@ export async function generateMetadata({ params }) {
   const { slug } = params;
   const genre = GENRE_META[slug];
   if (!genre) return {};
+  if (slug === 'dance') {
+    return {
+      title: '【2026年1位】子供のダンス習い事おすすめ教室ランキング｜キッズダンス完全ガイド',
+      description: '2026年子供の習い事ランキング1位のダンス。キッズダンス教室の選び方・費用・年齢・おすすめ教室をエリア別に比較。リディア・EXPG・セイハなど全国人気教室を徹底比較します。',
+      alternates: { canonical: `${BASE_URL}/genre/dance` },
+      openGraph: {
+        title: '【2026年1位】子供のダンス習い事おすすめ教室ランキング｜キッズダンス完全ガイド',
+        description: '2026年子供の習い事ランキング1位のダンス。キッズダンス教室の選び方・費用・年齢・おすすめ教室をエリア別に比較。',
+        url: `${BASE_URL}/genre/dance`,
+        siteName: 'コドモならいごと',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: '【2026年1位】子供のダンス習い事おすすめ教室ランキング｜キッズダンス完全ガイド',
+      },
+    };
+  }
   return {
     title: `子供の${genre.name}教室おすすめ${genre.count}件｜口コミ・料金比較【コドモならいごと】`,
     description: `全国の子ども向け${genre.name}教室を口コミ・料金・体験情報で比較。${genre.desc}。無料体験申込みも簡単。`,
@@ -386,6 +403,60 @@ export async function generateMetadata({ params }) {
     },
   };
 }
+
+const danceSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://kodomo-manabi-navi.vercel.app/genre/dance",
+  "name": "【2026年1位】子供のダンス習い事おすすめ教室ランキング",
+  "description": "2026年子供の習い事ランキング1位のダンス。全国のキッズダンス教室を比較できます。",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".dance-summary", ".dance-ranking-intro", "h1", "h2"],
+  },
+};
+
+const danceItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "2026年子供のダンス習い事おすすめ教室ランキング",
+  "description": "2026年最新・子供に人気のダンス教室TOP5。K-POPブームで習い事1位を獲得したダンスの人気教室を徹底比較。",
+  "numberOfItems": 5,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "リディアダンスアカデミー", "url": "https://re-dia.jp/", "description": "全国46校展開・プロ講師100名以上・月5,500円〜・初心者OK" },
+    { "@type": "ListItem", "position": 2, "name": "EXPG（エグザイルプロフェッショナルジム）", "description": "EXILEが設立・業界トップ講師陣・本格志向" },
+    { "@type": "ListItem", "position": 3, "name": "EYS-Kids ダンスアカデミー", "description": "マンツーマンレッスン・子ども専門" },
+    { "@type": "ListItem", "position": 4, "name": "セイハダンスアカデミー", "description": "全国200校以上・パパイヤ鈴木氏監修" },
+    { "@type": "ListItem", "position": 5, "name": "NOAダンスアカデミー", "description": "プロ輩出実績・名門スクール" },
+  ],
+};
+
+const danceFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "子供の習い事でダンスはなぜ1位なのですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "2026年にダンスが習い事1位になった理由は、K-POPブームによる需要急増、中学校ダンス必修化への対応ニーズ、ブレイクダンスのオリンピック競技化、脳科学的な学習効果の証明の4点が主な要因です。表現力・自己肯定感・リズム感・協調性を同時に育てられる総合的な教育効果が高く評価されています。" },
+    },
+    {
+      "@type": "Question",
+      "name": "キッズダンス教室の月謝はいくらですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "キッズダンス教室の月謝相場は月5,000〜10,000円程度です。大手チェーンのリディアダンスアカデミーは月5,500円〜、EXPGは月11,000円〜、セイハダンスアカデミーは月6,600円〜です。発表会費用は年1〜2回で1〜3万円程度かかることが多いです。" },
+    },
+    {
+      "@type": "Question",
+      "name": "何歳からダンスを習い始めるのがよいですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "ダンスは一般的に3歳から始められます。リトミック系は2歳からも対応しています。K-POP・ヒップホップなどの本格ジャンルは5〜6歳頃からが目安です。中学校でダンスが必修のため、小学生のうちに基礎を習得しておくと学校の授業でも役立ちます。" },
+    },
+    {
+      "@type": "Question",
+      "name": "ダンスと他の習い事を掛け持ちできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい、ダンスは週1回から通えるため、他の習い事との掛け持ちがしやすい習い事です。水泳・英語・ピアノとの組み合わせが人気で、「週に2〜3つの習い事」のうちの1つとしてダンスを選ぶ家庭が増えています。" },
+    },
+  ],
+};
 
 export default function GenrePage({ params }) {
   const { slug } = params;
@@ -445,6 +516,32 @@ export default function GenrePage({ params }) {
 
       {/* Content */}
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 24px" }}>
+        {slug === 'dance' && (
+          <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(danceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(danceItemListSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(danceFaqSchema) }} />
+            <div className="dance-summary" style={{ background: "linear-gradient(135deg, #fff7ee 0%, #fff0f5 100%)", borderRadius: 16, padding: "24px", marginBottom: 28, border: "2px solid #FFD9A0" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <span style={{ background: "#FF8A00", color: "#fff", fontWeight: 900, fontSize: 12, padding: "3px 12px", borderRadius: 20 }}>🥇 2026年習い事ランキング1位</span>
+              </div>
+              <h2 className="dance-ranking-intro" style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 10 }}>
+                2026年、子供の習い事ランキング1位はダンス！
+              </h2>
+              <p style={{ fontSize: 14, color: "#444", lineHeight: 1.8, marginBottom: 10 }}>
+                K-POPブーム・中学校ダンス必修化・ブレイクダンスのオリンピック競技化が重なり、2026年に<strong>ダンスが子供の習い事総合1位</strong>を獲得しました。
+                脳科学的にも<strong>海馬・前頭葉・小脳を同時に活性化</strong>する学習効果が証明されており、
+                運動・芸術・コミュニケーション能力を1つの習い事で育てられる点が評価されています。
+              </p>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {[["💃", "K-POP・ヒップホップが特に人気"], ["🧠", "脳科学的効果が証明済み"], ["🏫", "全国5,000教室以上"], ["💰", "月5,000円〜とリーズナブル"]].map(([icon, text], i) => (
+                  <span key={i} style={{ background: "#fff", border: "1px solid #FFD9A0", borderRadius: 8, padding: "5px 12px", fontSize: 12, fontWeight: 600, color: "#1B2A4A" }}>{icon} {text}</span>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+
         {schools.length > 0 ? (
           <>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20, flexWrap: "wrap", gap: 10 }}>
