@@ -17,6 +17,16 @@ const BLOG_SLUGS = [
   'kids-multiple-activities-dance',
   'kashiwa-kids-dance-school',
   'toddler-dance-rhythmics-guide',
+  'yokohama-kids-dance-school',
+  'nagoya-kids-dance-school',
+  'dance-cost-breakdown',
+  'boys-dance-school-guide',
+  'kids-swimming-guide',
+  'kids-piano-guide',
+  'kanagawa-kids-dance-school',
+  'aichi-kids-dance-school',
+  'kids-dance-school-trial-guide',
+  'kids-english-guide',
 ];
 
 const GENRE_SLUGS = [

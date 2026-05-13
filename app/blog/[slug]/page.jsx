@@ -63,11 +63,15 @@ function renderBlock(block, i) {
       return (
         <div key={i} style={{ background: "#E3F2FD", borderRadius: 12, padding: "16px 20px", marginBottom: 20, border: "1px solid #BBDEFB" }}>
           <div style={{ fontSize: 13, fontWeight: 700, color: "#1565C0", marginBottom: 10 }}>ℹ️ {block.title}</div>
-          <ul style={{ paddingLeft: 20 }}>
-            {block.items.map((item, j) => (
-              <li key={j} style={{ fontSize: 14, color: "#333", lineHeight: 1.9 }}>{item}</li>
-            ))}
-          </ul>
+          {block.text ? (
+            <p style={{ fontSize: 14, color: "#333", lineHeight: 1.9, margin: 0 }}>{block.text}</p>
+          ) : (
+            <ul style={{ paddingLeft: 20 }}>
+              {(block.items || []).map((item, j) => (
+                <li key={j} style={{ fontSize: 14, color: "#333", lineHeight: 1.9 }}>{item}</li>
+              ))}
+            </ul>
+          )}
         </div>
       );
     case "checklist":
