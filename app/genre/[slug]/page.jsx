@@ -373,10 +373,16 @@ export async function generateMetadata({ params }) {
   return {
     title: `子供の${genre.name}教室おすすめ${genre.count}件｜口コミ・料金比較【コドモならいごと】`,
     description: `全国の子ども向け${genre.name}教室を口コミ・料金・体験情報で比較。${genre.desc}。無料体験申込みも簡単。`,
+    alternates: { canonical: `${BASE_URL}/genre/${slug}` },
     openGraph: {
       title: `子供の${genre.name}教室おすすめ${genre.count}件｜コドモならいごと`,
       description: `全国の子ども向け${genre.name}教室を口コミ・料金で比較。${genre.desc}。`,
       url: `${BASE_URL}/genre/${slug}`,
+      siteName: 'コドモならいごと',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `子供の${genre.name}教室おすすめ${genre.count}件｜コドモならいごと`,
     },
   };
 }
