@@ -560,6 +560,45 @@ export default function TopPage() {
         </div>
       </section>
 
+      {/* ===== PREFECTURE LINKS ===== */}
+      <section style={{ padding: "40px 24px", background: "#f8fafd", borderTop: "1px solid #eef1f6" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 24 }}>
+            <h2 style={{ fontSize: 20, fontWeight: 900, color: "#1B2A4A", marginBottom: 6 }}>🗾 都道府県から習い事を探す</h2>
+            <p style={{ fontSize: 13, color: "#888" }}>お住まいの都道府県を選んで、地域の習い事情報を確認しよう</p>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
+            {[
+              { label: "大阪府", href: "/osaka", icon: "🏙️" },
+              { label: "東京都", href: "/tokyo", icon: "🗼" },
+              { label: "神奈川県", href: "/kanagawa", icon: "🌊" },
+              { label: "愛知県", href: "/aichi", icon: "🏯" },
+              { label: "兵庫県", href: "/hyogo", icon: "⚓" },
+              { label: "京都府", href: "/kyoto", icon: "⛩️" },
+              { label: "滋賀県", href: "/shiga", icon: "🏔️" },
+              { label: "岐阜県", href: "/gifu", icon: "🌿" },
+              { label: "千葉県", href: "/chiba", icon: "🌻" },
+              { label: "埼玉県", href: "/saitama", icon: "🏘️" },
+              { label: "茨城県", href: "/ibaraki", icon: "🌾" },
+              { label: "石川県", href: "/ishikawa", icon: "🌺" },
+              { label: "長野県", href: "/nagano", icon: "⛰️" },
+              { label: "和歌山県", href: "/wakayama", icon: "🍊" },
+            ].map((pref) => (
+              <Link key={pref.href} href={pref.href} style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
+                padding: "10px 18px", background: "#fff",
+                border: "1.5px solid #e8edf4", borderRadius: 24,
+                textDecoration: "none", color: "#1B2A4A",
+                fontSize: 13, fontWeight: 700,
+                boxShadow: "0 2px 6px rgba(0,0,0,.04)",
+              }}>
+                <span>{pref.icon}</span>{pref.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== 3 STEPS ===== */}
       <section style={{ padding: "52px 24px", background: "#EAF6FF" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
