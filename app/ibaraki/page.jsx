@@ -50,8 +50,8 @@ const faqs = [
 
 const blogs = [
   { href: '/blog/ibaraki-kids-dance-school-ranking', text: '茨城で子供のダンス教室おすすめランキング【2026年版】' },
-  { href: '/blog/dance-school-choosing-guide', text: '子供のダンス教室の選び方｜失敗しない7つのポイント' },
-  { href: '/blog/kids-dance-monthly-fee-guide', text: '子供のダンス教室の月謝相場と費用を徹底解説' },
+  { href: '/blog/kids-dance-school-trial-guide', text: '子供のダンス教室の選び方｜体験レッスンの活用法' },
+  { href: '/blog/dance-cost-breakdown', text: 'ダンス教室の月謝・費用を徹底解説【相場と節約法】' },
 ];
 
 const otherPrefs = [
@@ -61,11 +61,14 @@ const otherPrefs = [
   { href: '/kanagawa', name: '神奈川県' },
 ];
 
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"茨城県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"茨城県の子供ダンス教室は月4,000円〜7,000円程度が相場です。都心に比べてリーズナブルな教室が多い傾向があります。"}},{"@type":"Question","name":"水戸市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"水戸市はリディアダンスアカデミーをはじめ複数の教室が展開しています。常磐線沿いに通いやすい立地の教室が集まっています。"}},{"@type":"Question","name":"つくば市の子供ダンス教室情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。つくば市はTXつくば駅周辺を中心に習い事教室の情報を掲載しています。研究学園都市として子育て環境が整った地域です。"}},{"@type":"Question","name":"茨城県北部（日立・ひたちなか）の習い事情報は？","acceptedAnswer":{"@type":"Answer","text":"はい。日立市・ひたちなか市のダンス教室・習い事情報も掲載しています。各エリアページをご確認ください。"}}]};
+
 export default function IbarakiPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>

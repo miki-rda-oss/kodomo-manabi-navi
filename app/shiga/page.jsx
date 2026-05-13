@@ -47,8 +47,8 @@ const faqs = [
 
 const blogs = [
   { href: '/blog/shiga-kids-dance-school-ranking', text: '滋賀で子供のダンス教室おすすめランキング【2026年版】' },
-  { href: '/blog/dance-school-choosing-guide', text: '子供のダンス教室の選び方｜失敗しない7つのポイント' },
-  { href: '/blog/kids-dance-monthly-fee-guide', text: '子供のダンス教室の月謝相場と費用を徹底解説' },
+  { href: '/blog/kids-dance-school-trial-guide', text: '子供のダンス教室の選び方｜体験レッスンの活用法' },
+  { href: '/blog/dance-cost-breakdown', text: 'ダンス教室の月謝・費用を徹底解説【相場と節約法】' },
 ];
 
 const otherPrefs = [
@@ -58,11 +58,14 @@ const otherPrefs = [
   { href: '/hyogo', name: '兵庫県' },
 ];
 
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"滋賀県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"滋賀県の子供ダンス教室は月4,500円〜7,500円程度が相場です。大阪・京都へのアクセスも良く、滋賀在住でも豊富な教室から選べます。"}},{"@type":"Question","name":"大津市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"大津市はリディアダンスアカデミーが展開しています。JR大津駅・びわ湖浜大津駅周辺に教室が集まっています。"}},{"@type":"Question","name":"草津市の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。草津市はJR草津駅周辺を中心に習い事情報を掲載しています。近年住宅開発が進み子育て世帯が増えているエリアです。"}},{"@type":"Question","name":"滋賀でダンス以外の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スイミング・英語・ピアノ・サッカーなど幅広い習い事情報を滋賀各エリアで掲載しています。"}}]};
+
 export default function ShigaPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>

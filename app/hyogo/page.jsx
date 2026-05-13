@@ -46,8 +46,8 @@ const faqs = [
 
 const blogs = [
   { href: '/blog/hyogo-kids-dance-school-ranking', text: '兵庫・西宮で子供のダンス教室おすすめランキング【2026年版】' },
-  { href: '/blog/dance-school-choosing-guide', text: '子供のダンス教室の選び方｜失敗しない7つのポイント' },
-  { href: '/blog/kids-dance-monthly-fee-guide', text: '子供のダンス教室の月謝相場と費用を徹底解説' },
+  { href: '/blog/kids-dance-school-trial-guide', text: '子供のダンス教室の選び方｜体験レッスンの活用法' },
+  { href: '/blog/dance-cost-breakdown', text: 'ダンス教室の月謝・費用を徹底解説【相場と節約法】' },
 ];
 
 const otherPrefs = [
@@ -57,11 +57,14 @@ const otherPrefs = [
   { href: '/shiga', name: '滋賀県' },
 ];
 
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"兵庫県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"兵庫県の子供ダンス教室は月5,000円〜8,000円程度が相場です。阪神エリアは大阪にも近く、教室の選択肢が豊富です。"}},{"@type":"Question","name":"西宮市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"西宮市はリディアダンスアカデミーが展開しています。阪急・阪神沿線の駅近に教室が多く通いやすいのが特徴です。"}},{"@type":"Question","name":"兵庫県でダンス以外の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スイミング・英語・ピアノ・サッカーなど幅広い習い事情報を兵庫各エリアで掲載しています。"}},{"@type":"Question","name":"神戸市内の習い事情報はいつ掲載予定ですか？","acceptedAnswer":{"@type":"Answer","text":"神戸市エリアの情報は順次追加予定です。現在は西宮市エリアの情報を掲載中です。情報追加をお待ちください。"}}]};
+
 export default function HyogoPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>

@@ -57,8 +57,8 @@ const faqs = [
 
 const blogs = [
   { href: '/blog/kanagawa-kids-dance-school-ranking', text: '神奈川で子供のダンス教室おすすめ10選【2026年版】' },
-  { href: '/blog/dance-school-choosing-guide', text: '子供のダンス教室の選び方｜失敗しない7つのポイント' },
-  { href: '/blog/kids-dance-monthly-fee-guide', text: '子供のダンス教室の月謝相場と費用を徹底解説' },
+  { href: '/blog/kids-dance-school-trial-guide', text: '子供のダンス教室の選び方｜体験レッスンの活用法' },
+  { href: '/blog/dance-cost-breakdown', text: 'ダンス教室の月謝・費用を徹底解説【相場と節約法】' },
 ];
 
 const otherPrefs = [
@@ -68,11 +68,14 @@ const otherPrefs = [
   { href: '/osaka', name: '大阪府' },
 ];
 
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"神奈川県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"神奈川県の子供ダンス教室は月5,500円〜9,000円程度が相場です。横浜市内は教室数が特に多く、料金・スタイルともに選択肢が豊富です。"}},{"@type":"Question","name":"横浜市内でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"横浜市内は青葉区・港北区・緑区・都筑区に多数のダンス教室があります。リディアダンスアカデミーも横浜エリアに複数校展開しています。"}},{"@type":"Question","name":"川崎市内の子供ダンス教室を教えてください","acceptedAnswer":{"@type":"Answer","text":"川崎市は中原区・高津区に人気の教室が集まっています。当サイトでは各区のページから詳細情報をご確認いただけます。"}},{"@type":"Question","name":"神奈川でダンス以外の習い事情報もありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。ダンスのほかスイミング・英語・ピアノ・サッカーなど11ジャンルの習い事情報を神奈川各エリアで掲載しています。"}}]};
+
 export default function KanagawaPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

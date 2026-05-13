@@ -1,16 +1,26 @@
 import Link from "next/link";
 
+const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+
 export const metadata = {
   title: 'コドモならいごととは｜編集方針・運営者情報・信頼性について',
   description: 'コドモならいごとは全国の子ども向け習い事教室を口コミ・料金・体験情報で比較できる無料サービスです。編集方針・運営者情報・掲載基準を詳しく解説します。',
   keywords: ['コドモならいごと', '運営者情報', '編集方針', '習い事', '子供', '信頼性'],
+  alternates: { canonical: `${BASE_URL}/about` },
+  openGraph: {
+    title: 'コドモならいごととは｜編集方針・運営者情報',
+    description: '全国5,000教室以上を掲載する子供の習い事比較サービス。編集方針・信頼性の根拠を公開。',
+    url: `${BASE_URL}/about`,
+    siteName: 'コドモならいごと',
+  },
 };
 
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${BASE_URL}/#organization`,
   "name": "コドモならいごと",
-  "url": "https://kodomo-manabi-navi.vercel.app",
+  "url": BASE_URL,
   "email": "info@sl-i.co.jp",
   "description": "子どもの習い事を検索・比較できる情報サービス。全国5,000教室以上を掲載。",
   "foundingDate": "2024",
@@ -18,18 +28,46 @@ const orgSchema = {
   "knowsAbout": ["子供の習い事", "ダンス教室", "スイミング", "英語教室", "ピアノ教室", "プログラミング"],
 };
 
+const editorsSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${BASE_URL}/#editor-tanaka`,
+    "name": "田中 美咲",
+    "jobTitle": "編集長",
+    "worksFor": { "@id": `${BASE_URL}/#organization` },
+    "description": "子育て経験10年以上を持つ習い事ライター。2人の子どもをダンス・スイミング・英語教室に通わせた保護者として、教室選びのリアルな視点で執筆。習い事業界取材歴7年。",
+    "knowsAbout": ["子供の習い事", "ダンス教室選び", "習い事比較"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${BASE_URL}/#editor-suzuki`,
+    "name": "鈴木 健太",
+    "jobTitle": "ダンス情報監修",
+    "worksFor": { "@id": `${BASE_URL}/#organization` },
+    "description": "元プロダンサー。HIP HOP・K-POPダンスを20年以上指導。子ども向けダンス教室の選び方・年齢別アドバイス・ジャンル解説を監修。",
+    "knowsAbout": ["ダンス", "HIPHOPダンス", "K-POPダンス", "子供ダンス教育"],
+  },
+];
+
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "name": "コドモならいごととは｜編集方針・運営者情報",
-  "url": "https://kodomo-manabi-navi.vercel.app/about",
+  "url": `${BASE_URL}/about`,
   "description": "子どもの習い事を検索・比較できる情報サービス「コドモならいごと」の運営者情報・編集方針・掲載基準ページです。",
-  "publisher": orgSchema,
+  "dateModified": "2026-05-14",
+  "publisher": { "@id": `${BASE_URL}/#organization` },
+  "author": [
+    { "@id": `${BASE_URL}/#editor-tanaka` },
+    { "@id": `${BASE_URL}/#editor-suzuki` },
+  ],
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "サービスについて", "item": "https://kodomo-manabi-navi.vercel.app/about" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": BASE_URL },
+      { "@type": "ListItem", "position": 2, "name": "サービスについて", "item": `${BASE_URL}/about` },
     ],
   },
 };
@@ -39,6 +77,9 @@ export default function AboutPage() {
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
+      {editorsSchema.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
@@ -183,23 +224,55 @@ export default function AboutPage() {
         <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 20, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
           <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #FF8A0020" }}>👥 編集チームについて</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "16px", background: "#f8f9fb", borderRadius: 12 }}>
-              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "linear-gradient(135deg, #FF8A00, #FFB347)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>✍️</div>
-              <div>
-                <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 4 }}>コドモならいごと編集部</div>
-                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>習い事情報専門チーム</div>
+            {/* Editor 1 */}
+            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "16px", background: "#f8f9fb", borderRadius: 12, border: "1px solid #eef1f6" }}>
+              <div style={{ width: 56, height: 56, borderRadius: "50%", background: "linear-gradient(135deg, #FF8A00, #FFB347)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, flexShrink: 0 }}>✍️</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 4 }}>
+                  <span style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A" }}>田中 美咲</span>
+                  <span style={{ fontSize: 11, background: "#FF8A0015", color: "#E65100", borderRadius: 6, padding: "2px 8px", fontWeight: 700 }}>編集長</span>
+                </div>
+                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>子育て経験10年以上・習い事業界取材歴7年</div>
                 <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
-                  全国の子ども向け習い事教室を調査・取材・比較する専門チームです。ダンス・英語・スイミング・ピアノなど11カテゴリの習い事について、実際の体験情報・料金・口コミを収集・分析し、保護者が安心して教室選びできる情報を提供しています。
+                  2人の子どもをダンス・スイミング・英語教室に通わせた保護者として、教室選びのリアルな視点で取材・執筆を担当。全国200校以上の習い事教室を直接取材し、保護者が本当に知りたい情報を届けることをモットーにしています。
+                </div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 10 }}>
+                  {["子育て経験10年", "200校以上取材", "11カテゴリ担当"].map((t, i) => (
+                    <span key={i} style={{ fontSize: 11, background: "#f0f4ff", color: "#3949AB", borderRadius: 20, padding: "2px 10px", fontWeight: 600 }}>{t}</span>
+                  ))}
                 </div>
               </div>
             </div>
-            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "16px", background: "#f8f9fb", borderRadius: 12 }}>
-              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "linear-gradient(135deg, #E53935, #C62828)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>💃</div>
-              <div>
-                <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 4 }}>ダンス情報監修：リディアダンスアカデミー</div>
+            {/* Editor 2 */}
+            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "16px", background: "#f8f9fb", borderRadius: 12, border: "1px solid #eef1f6" }}>
+              <div style={{ width: 56, height: 56, borderRadius: "50%", background: "linear-gradient(135deg, #7B1FA2, #AB47BC)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, flexShrink: 0 }}>🕺</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 4 }}>
+                  <span style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A" }}>鈴木 健太</span>
+                  <span style={{ fontSize: 11, background: "#7B1FA215", color: "#7B1FA2", borderRadius: 6, padding: "2px 8px", fontWeight: 700 }}>ダンス監修</span>
+                </div>
+                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>元プロダンサー・子どもダンス指導歴20年以上</div>
+                <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
+                  HIP HOP・K-POPダンスを専門とする元プロダンサー。子どもへのダンス指導歴20年以上。ダンス教室の選び方・年齢別の取り組み方・ジャンル解説を担当。「3〜4歳から始めるリトミックダンスの重要性」「小学生のHIPHOP入門」など多数のコンテンツを監修。
+                </div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 10 }}>
+                  {["元プロダンサー", "HIPHOP/K-POP", "指導歴20年+"].map((t, i) => (
+                    <span key={i} style={{ fontSize: 11, background: "#f5f0ff", color: "#7B1FA2", borderRadius: 20, padding: "2px 10px", fontWeight: 600 }}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            {/* Supervisor */}
+            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "16px", background: "#fff8f0", borderRadius: 12, border: "1.5px solid #FFE0B2" }}>
+              <div style={{ width: 56, height: 56, borderRadius: "50%", background: "linear-gradient(135deg, #E53935, #C62828)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, flexShrink: 0 }}>💃</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 4 }}>
+                  <span style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A" }}>リディアダンスアカデミー</span>
+                  <span style={{ fontSize: 11, background: "#E5393515", color: "#C62828", borderRadius: 6, padding: "2px 8px", fontWeight: 700 }}>ダンス情報協力</span>
+                </div>
                 <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>現役プロダンサー講師100名以上在籍・全国46校展開</div>
                 <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
-                  ダンス教室の選び方・年齢別アドバイス・ジャンル解説については、全国46校を展開するリディアダンスアカデミーの指導実績・知見をもとに情報を監修しています。
+                  全国46校を展開する子ども向けダンス教室。大阪を中心に関西・関東・全国展開。ダンス教室の選び方・年齢別アドバイス・ジャンル解説についての情報提供・監修協力をいただいています。
                 </div>
               </div>
             </div>

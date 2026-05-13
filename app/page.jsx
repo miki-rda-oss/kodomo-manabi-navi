@@ -8,6 +8,10 @@ const REGIONS = [
       { name: "世田谷区", schools: 7, slug: "/tokyo/setagaya" },
       { name: "北区", schools: 5, slug: "/tokyo/kita" },
       { name: "目黒区", schools: 4, slug: "/tokyo/meguro" },
+      { name: "渋谷区", schools: 3, slug: "/tokyo/shibuya" },
+      { name: "新宿区", schools: 3, slug: "/tokyo/shinjuku" },
+      { name: "練馬区", schools: 2, slug: "/tokyo/nerima" },
+      { name: "杉並区", schools: 2, slug: "/tokyo/suginami" },
       { name: "江戸川区", schools: 2, slug: "/tokyo/edogawa" },
       { name: "調布市", schools: 2, slug: "/tokyo/chofu" },
       { name: "港区", schools: 1, slug: "/tokyo/minato" },
@@ -18,6 +22,8 @@ const REGIONS = [
       { name: "川崎市中原区", schools: 6, slug: "/kanagawa/nakahara" },
       { name: "川崎市高津区", schools: 2, slug: "/kanagawa/takatsu" },
       { name: "横浜市都筑区", schools: 2, slug: "/kanagawa/tsuzuki" },
+      { name: "横須賀市", schools: 2, slug: "/kanagawa/yokosuka" },
+      { name: "藤沢市", schools: 2, slug: "/kanagawa/fujisawa" },
       { name: "横浜市青葉区", schools: 1, slug: "/kanagawa/aoba" },
       { name: "横浜市港北区", schools: 1, slug: "/kanagawa/kohoku" },
       { name: "横浜市緑区", schools: 1, slug: "/kanagawa/midori" },
@@ -28,10 +34,15 @@ const REGIONS = [
       { name: "相模原市南区", schools: 1, slug: "/kanagawa/sagamihara" },
     ]},
     { name: "埼玉県", cities: [
+      { name: "さいたま市浦和区", schools: 2, slug: "/saitama/urawa" },
+      { name: "川口市", schools: 2, slug: "/saitama/kawaguchi" },
+      { name: "越谷市", schools: 1, slug: "/saitama/koshigaya" },
       { name: "さいたま市南区", schools: 1, slug: "/saitama/minami" },
     ]},
     { name: "千葉県", cities: [
       { name: "柏市", schools: 5, slug: "/chiba/kashiwa" },
+      { name: "千葉市", schools: 2, slug: "/chiba/chiba-city" },
+      { name: "松戸市", schools: 2, slug: "/chiba/matsudo" },
     ]},
     { name: "茨城県", cities: [
       { name: "つくば市", schools: 2, slug: "/ibaraki/tsukuba" },
@@ -45,6 +56,9 @@ const REGIONS = [
     { name: "愛知県", cities: [
       { name: "名古屋市天白区", schools: 1, slug: "/aichi/tenpaku" },
       { name: "名古屋市守山区", schools: 1, slug: "/aichi/moriyama" },
+      { name: "名古屋市千種区", schools: 1, slug: "/aichi/chikusa" },
+      { name: "名古屋市緑区", schools: 1, slug: "/aichi/midori" },
+      { name: "名古屋市名東区", schools: 1, slug: "/aichi/meito" },
       { name: "日進市", schools: 1, slug: "/aichi/nisshin" },
       { name: "安城市", schools: 1, slug: "/aichi/anjo" },
       { name: "豊田市", schools: 1, slug: "/aichi/toyota" },
@@ -659,6 +673,20 @@ export default function TopPage() {
             ))}
           </div>
         </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "子供の習い事ジャンル一覧",
+          "description": "コドモならいごとが掲載する子ども向け習い事の全ジャンル",
+          "url": "https://kodomo-manabi-navi.vercel.app",
+          "itemListElement": CATEGORIES.map((c, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": c.name,
+            "url": `https://kodomo-manabi-navi.vercel.app/genre/${c.slug}`,
+            "description": c.desc,
+          })),
+        }) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",

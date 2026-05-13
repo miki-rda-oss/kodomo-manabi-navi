@@ -47,6 +47,20 @@ const BLOG_SLUGS = [
   'lydia-dance-osaka-review',
   'kids-activity-cost-annual',
   'kids-dance-school-change-guide',
+  'tokyo-kids-dance-school-ranking',
+  'osaka-dance-lydia-price-guide',
+  'kids-dance-beginner-guide',
+  'kids-rhythmics-guide',
+  'kids-activity-change-timing',
+  'kids-dance-home-practice',
+  'nagoya-kids-dance-school-ranking',
+  'saitama-chiba-kanto-dance-school',
+  'kids-dance-concentration-benefit',
+  'kids-activity-introverts',
+  'dance-school-size-comparison',
+  'kids-dance-recital-prep',
+  'kanagawa-kids-dance-school-area',
+  'kids-sports-dance-comparison',
 ];
 
 const GENRE_SLUGS = [
@@ -56,23 +70,26 @@ const GENRE_SLUGS = [
 ];
 
 const AREA_PATHS = [
-  '/aichi/anjo', '/aichi/moriyama', '/aichi/nisshin', '/aichi/owariasahi', '/aichi/tenpaku', '/aichi/toyota',
-  '/chiba/kashiwa',
+  '/aichi/anjo', '/aichi/chikusa', '/aichi/meito', '/aichi/midori',
+  '/aichi/moriyama', '/aichi/nisshin', '/aichi/owariasahi', '/aichi/tenpaku', '/aichi/toyota',
+  '/chiba/chiba-city', '/chiba/kashiwa', '/chiba/matsudo',
   '/gifu/gifu-city', '/gifu/kani', '/gifu/minokamo', '/gifu/tajimi',
   '/hyogo/nishinomiya',
   '/ibaraki/hitachi', '/ibaraki/hitachinaka', '/ibaraki/mito', '/ibaraki/tsuchiura', '/ibaraki/tsukuba',
   '/ishikawa/kanazawa', '/ishikawa/nonoichi', '/ishikawa/uchinada',
-  '/kanagawa/aoba', '/kanagawa/atsugi', '/kanagawa/ebina', '/kanagawa/kohoku', '/kanagawa/midori',
+  '/kanagawa/aoba', '/kanagawa/atsugi', '/kanagawa/ebina', '/kanagawa/fujisawa',
+  '/kanagawa/kohoku', '/kanagawa/midori',
   '/kanagawa/nakahara', '/kanagawa/nakahara-shinjou', '/kanagawa/sagamihara', '/kanagawa/takatsu',
-  '/kanagawa/tsuzuki', '/kanagawa/yamato', '/kanagawa/zushi',
+  '/kanagawa/tsuzuki', '/kanagawa/yamato', '/kanagawa/yokosuka', '/kanagawa/zushi',
   '/kyoto/kyoto-city',
   '/nagano/nagano-city',
   '/osaka/ibaraki', '/osaka/minoh', '/osaka/moriguchi', '/osaka/osaka-city',
   '/osaka/sakai', '/osaka/suita', '/osaka/takatsuki', '/osaka/toyonaka',
-  '/saitama/minami',
+  '/saitama/kawaguchi', '/saitama/koshigaya', '/saitama/minami', '/saitama/urawa',
   '/shiga/kusatsu', '/shiga/otsu',
   '/tokyo/chofu', '/tokyo/edogawa', '/tokyo/kita', '/tokyo/machida',
-  '/tokyo/meguro', '/tokyo/minato', '/tokyo/setagaya', '/tokyo/shinagawa',
+  '/tokyo/meguro', '/tokyo/minato', '/tokyo/nerima', '/tokyo/setagaya',
+  '/tokyo/shibuya', '/tokyo/shinagawa', '/tokyo/shinjuku', '/tokyo/suginami',
   '/wakayama/wakayama-city',
 ];
 

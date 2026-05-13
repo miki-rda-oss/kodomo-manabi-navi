@@ -53,8 +53,8 @@ const faqs = [
 
 const blogs = [
   { href: '/blog/tokyo-kids-dance-school-ranking', text: '東京で子供のダンス教室おすすめ10選【2026年版】' },
-  { href: '/blog/dance-school-choosing-guide', text: '子供のダンス教室の選び方｜失敗しない7つのポイント' },
-  { href: '/blog/kids-dance-monthly-fee-guide', text: '子供のダンス教室の月謝相場と費用を徹底解説' },
+  { href: '/blog/kids-dance-school-trial-guide', text: '子供のダンス教室の選び方｜体験レッスンの活用法' },
+  { href: '/blog/dance-cost-breakdown', text: 'ダンス教室の月謝・費用を徹底解説【相場と節約法】' },
 ];
 
 const otherPrefs = [
@@ -64,11 +64,14 @@ const otherPrefs = [
   { href: '/chiba', name: '千葉県' },
 ];
 
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"東京都内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"東京都の子供ダンス教室は月6,000円〜10,000円程度が相場です。都内は全国的に見ても教室数が多く、料金・スタイルも多様です。"}},{"@type":"Question","name":"東京で3歳から通えるダンス教室はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。リディアダンスアカデミーをはじめ多くの教室が3歳から対応しています。都内は駅近教室が多く、通いやすいのも特徴です。"}},{"@type":"Question","name":"東京都内の人気ダンス教室はどこですか？","acceptedAnswer":{"@type":"Answer","text":"リディアダンスアカデミー（東京都内複数校展開）のほか、EYS-KIDSダンスアカデミー、タンスアレ等が人気です。口コミ・体験情報をあわせてご確認ください。"}},{"@type":"Question","name":"東京の区部と市部でおすすめエリアは違いますか？","acceptedAnswer":{"@type":"Answer","text":"区部は世田谷・目黒・品川・江戸川・北区など、多摩地区は調布・町田が人気です。駅アクセスや送迎のしやすさでエリアを絞るのがおすすめです。"}}]};
+
 export default function TokyoPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
