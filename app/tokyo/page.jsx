@@ -133,7 +133,7 @@ export default function TokyoPrefPage() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,.7)", marginBottom: 8 }}>おすすめNo.1ダンス教室</div>
           <h2 style={{ fontSize: 20, fontWeight: 900, color: "#fff", marginBottom: 8 }}>リディアダンスアカデミー</h2>
           <p style={{ fontSize: 13, color: "rgba(255,255,255,.85)", lineHeight: 1.8, marginBottom: 20 }}>
-            全国46校展開・現役プロダンサー講師100名以上在籍。<br />
+            全国100校以上展開・現役プロダンサー講師200名以上在籍。<br />
             3歳から通えるリトルクラスから小学生向けキッズクラスまで充実。<br />
             初回体験レッスン無料！
           </p>

@@ -5,8 +5,8 @@ const CAT_SLUG={"ダンス":"dance","K-POP":"kpop","スイミング":"swimming",
 const S = {
   "ダンス": [
     { id:"d0",name:"リディアダンスアカデミー",rating:4.8,rc:45,age:"3歳〜15歳",featured:true,url:"https://re-dia.jp/toyonakasone/",
-      desc:"初心者クラスが充実した3歳から学べるキッズダンススクール。現役プロダンサー講師100名以上在籍。全国46校展開。豊中エリアに2校を構え、地域密着で子どもの成長を全力サポート。",
-      tags:["初心者クラス充実","全国46校","プロ講師100名+","初回体験無料","少人数制"],
+      desc:"初心者クラスが充実した3歳から学べるキッズダンススクール。現役プロダンサー講師200名以上在籍。全国100校以上展開。豊中エリアに2校を構え、地域密着で子どもの成長を全力サポート。",
+      tags:["初心者クラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["ヒップホップ","ジャズ","ロック","K-POP","ブレイクダンス","ポップ","ワック"],
       courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"豊中校",ad:"豊中市曽根東町1丁目",st:"曽根駅より徒歩3分",url:"https://re-dia.jp/toyonakasone/"},{n:"豊中緑丘校",ad:"豊中市緑丘3丁目6-1",st:"阪急バス「緑丘」下車 徒歩5分",url:"https://re-dia.jp/toyonakamidorigaoka/"}],
@@ -41,8 +41,8 @@ const S = {
   ],
   "K-POP": [
     { id:"kp0",name:"リディアダンスアカデミー",rating:4.8,rc:45,age:"3歳〜15歳",featured:true,url:"https://re-dia.jp/toyonakasone/",
-      desc:"K-POPダンスクラスも充実！最新のK-POP楽曲で楽しくダンス。現役プロダンサー講師100名以上在籍、全国46校展開。豊中エリアに2校。",
-      tags:["K-POPクラス充実","全国46校","プロ講師100名+","初回体験無料","少人数制"],
+      desc:"K-POPダンスクラスも充実！最新のK-POP楽曲で楽しくダンス。現役プロダンサー講師200名以上在籍、全国100校以上展開。豊中エリアに2校。",
+      tags:["K-POPクラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["K-POP","ヒップホップ","ジャズ","ロック","ブレイクダンス","ポップ","ワック"],
       courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"豊中校",ad:"豊中市曽根東町1丁目",st:"曽根駅より徒歩3分",url:"https://re-dia.jp/toyonakasone/"},{n:"豊中緑丘校",ad:"豊中市緑丘3丁目6-1",st:"阪急バス「緑丘」下車 徒歩5分",url:"https://re-dia.jp/toyonakamidorigaoka/"}],
@@ -104,7 +104,7 @@ function LocRow({l,color,last}) {
 function Featured({s,catName}){const[exp,setExp]=useState(false);const[loc,setLoc]=useState(false);const[ri,setRi]=useState(0);
 return (<article style={{background:"linear-gradient(135deg,#fff,#FFF8F7)",borderRadius:20,boxShadow:`0 8px 40px ${s.color}18`,border:`2px solid ${s.color}22`,position:"relative",animation:"fi .6s ease"}}>
   <div style={{position:"absolute",top:0,left:22,background:"linear-gradient(135deg,#FFD700,#FFA000)",color:"#fff",fontWeight:900,fontSize:12,padding:"5px 12px 8px",borderRadius:"0 0 10px 10px",boxShadow:"0 4px 12px rgba(255,160,0,.3)",zIndex:2}}>👑 おすすめNo.1</div>
-  <header style={{padding:"38px 22px 0",display:"flex",alignItems:"center",gap:14}}><div style={{width:68,height:68,borderRadius:16,background:`linear-gradient(135deg,${s.color},${s.color}cc)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:34,flexShrink:0,boxShadow:`0 6px 20px ${s.color}44`}}>🏆</div><div style={{flex:1}}><h2 style={{margin:0,fontSize:19,fontWeight:900,color:"#1a1a2e"}}>{s.name}</h2><div style={{display:"flex",alignItems:"center",gap:6,marginTop:6,flexWrap:"wrap"}}><span style={{background:`${s.color}18`,color:s.color,padding:"3px 9px",borderRadius:20,fontSize:11,fontWeight:700}}>{catName}</span><span style={{color:"#666",fontSize:12}}>{s.age}</span><span style={{background:"#4CAF5018",color:"#2E7D32",padding:"2px 8px",borderRadius:20,fontSize:10,fontWeight:700}}>✅ 全国46校</span></div></div></header>
+  <header style={{padding:"38px 22px 0",display:"flex",alignItems:"center",gap:14}}><div style={{width:68,height:68,borderRadius:16,background:`linear-gradient(135deg,${s.color},${s.color}cc)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:34,flexShrink:0,boxShadow:`0 6px 20px ${s.color}44`}}>🏆</div><div style={{flex:1}}><h2 style={{margin:0,fontSize:19,fontWeight:900,color:"#1a1a2e"}}>{s.name}</h2><div style={{display:"flex",alignItems:"center",gap:6,marginTop:6,flexWrap:"wrap"}}><span style={{background:`${s.color}18`,color:s.color,padding:"3px 9px",borderRadius:20,fontSize:11,fontWeight:700}}>{catName}</span><span style={{color:"#666",fontSize:12}}>{s.age}</span><span style={{background:"#4CAF5018",color:"#2E7D32",padding:"2px 8px",borderRadius:20,fontSize:10,fontWeight:700}}>✅ 全国100校以上</span></div></div></header>
   <div style={{padding:"10px 22px 0"}}><Stars r={s.rating} c={s.rc}/></div>
   <p style={{padding:"10px 22px 0",margin:0,fontSize:14,color:"#444",lineHeight:1.8}}>{s.desc}</p>
   <div style={{padding:"10px 22px 0",display:"flex",flexWrap:"wrap",gap:4}}>{s.tags.map((f,i)=><span key={i} style={{background:"#f5f5f5",border:"1px solid #e8e8e8",padding:"3px 9px",borderRadius:20,fontSize:11,fontWeight:600,color:"#555"}}>✓ {f}</span>)}</div>

@@ -270,9 +270,9 @@ export default function AboutPage() {
                   <span style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A" }}>リディアダンスアカデミー</span>
                   <span style={{ fontSize: 11, background: "#E5393515", color: "#C62828", borderRadius: 6, padding: "2px 8px", fontWeight: 700 }}>ダンス情報協力</span>
                 </div>
-                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>現役プロダンサー講師100名以上在籍・全国46校展開</div>
+                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>現役プロダンサー講師200名以上在籍・全国100校以上展開</div>
                 <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
-                  全国46校を展開する子ども向けダンス教室。大阪を中心に関西・関東・全国展開。ダンス教室の選び方・年齢別アドバイス・ジャンル解説についての情報提供・監修協力をいただいています。
+                  全国100校以上を展開する子ども向けダンス教室。大阪を中心に関西・関東・全国展開。ダンス教室の選び方・年齢別アドバイス・ジャンル解説についての情報提供・監修協力をいただいています。
                 </div>
               </div>
             </div>

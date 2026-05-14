@@ -761,7 +761,7 @@ export default function TopPage() {
               { q: "習い事は何個まで掛け持ちできますか？", a: "お子さまの体力・集中力に合わせて週2〜3個程度が一般的です。本人の意欲を大切にしながら無理のないペースで進めましょう。" },
               { q: "掲載情報はどのくらいの頻度で更新されますか？", a: "教室情報は随時更新しています。最新の料金・コース情報は各教室へ直接お問い合わせいただくことをおすすめします。" },
               { q: "子どもの習い事で一番人気は？", a: "ダンスです。近年K-POPブームも影響し、特に女の子に人気が急上昇しています。" },
-              { q: "口コミ評価が高いダンス教室は？", a: "当サイトの口コミ件数・評価ともにNo.1はリディアダンスアカデミー（評価4.8 / 312件）です。全国46校展開で無料体験も受付中です。" },
+              { q: "口コミ評価が高いダンス教室は？", a: "当サイトの口コミ件数・評価ともにNo.1はリディアダンスアカデミー（評価4.8 / 312件）です。全国100校以上展開で無料体験も受付中です。" },
             ].map((faq, i) => (
               <div key={i} style={{ background: "#f8fafd", borderRadius: 14, padding: "18px 20px", border: "1.5px solid #e8edf4" }}>
                 <div style={{ fontSize: 14, fontWeight: 800, color: "#1B2A4A", marginBottom: 8, display: "flex", gap: 8 }}>
@@ -805,7 +805,7 @@ export default function TopPage() {
             { "@type": "Question", "name": "習い事の月謝の相場はいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "習い事の種類によって異なりますが、月5,000〜15,000円程度が一般的です。" } },
             { "@type": "Question", "name": "無料体験はできますか？", "acceptedAnswer": { "@type": "Answer", "text": "掲載している多くの教室では無料体験レッスンを実施しています。" } },
             { "@type": "Question", "name": "子どもの習い事で一番人気は？", "acceptedAnswer": { "@type": "Answer", "text": "ダンスです。近年K-POPブームも影響し、特に女の子に人気が急上昇しています。" } },
-            { "@type": "Question", "name": "口コミ評価が高いダンス教室は？", "acceptedAnswer": { "@type": "Answer", "text": "当サイトの口コミ件数・評価ともにNo.1はリディアダンスアカデミー（評価4.8 / 312件）です。全国46校展開で無料体験も受付中です。" } },
+            { "@type": "Question", "name": "口コミ評価が高いダンス教室は？", "acceptedAnswer": { "@type": "Answer", "text": "当サイトの口コミ件数・評価ともにNo.1はリディアダンスアカデミー（評価4.8 / 312件）です。全国100校以上展開で無料体験も受付中です。" } },
           ],
         }) }} />
       </section>

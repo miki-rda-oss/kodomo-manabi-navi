@@ -37,7 +37,7 @@ export default function PrefPage() {
         </div>
         <div style={{background:"linear-gradient(135deg,#1B2A4A,#2a4070)",borderRadius:18,padding:"28px 24px",marginBottom:24,textAlign:"center"}}>
           <h2 style={{fontSize:20,fontWeight:900,color:"#fff",marginBottom:8}}>リディアダンスアカデミー</h2>
-          <p style={{fontSize:13,color:"rgba(255,255,255,.85)",lineHeight:1.8,marginBottom:20}}>全国46校展開・3歳から通えるリトルクラス充実。初回体験無料！</p>
+          <p style={{fontSize:13,color:"rgba(255,255,255,.85)",lineHeight:1.8,marginBottom:20}}>全国100校以上展開・3歳から通えるリトルクラス充実。初回体験無料！</p>
           <a href="https://lydia-dance.com/" target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,padding:"12px 24px",background:"linear-gradient(135deg,#FF8A00,#FFB347)",borderRadius:24,color:"#fff",fontWeight:700,fontSize:14,textDecoration:"none"}}>💃 無料体験を予約する</a>
         </div>
         <div style={{background:"#fff",borderRadius:18,padding:"28px 24px",marginBottom:24,border:"1.5px solid #e8edf4"}}>

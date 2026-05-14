@@ -152,6 +152,10 @@ const BLOG_SLUGS = [
   'kids-programming-scratch-guide',
   'kids-activity-multiple-schedule',
   'kids-activity-personality-match',
+  // 比較記事
+  'lydia-vs-avex-dance',
+  'lydia-vs-seiha-dance',
+  'lydia-vs-expg-dance',
 ];
 
 const GENRE_SLUGS = [

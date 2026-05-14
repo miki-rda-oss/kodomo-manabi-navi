@@ -5,8 +5,8 @@ const CAT_SLUG={"ダンス":"dance","K-POP":"kpop","スイミング":"swimming",
 const S = {
   "ダンス": [
     { id:"d0", name:"リディアダンスアカデミー", rating:4.8, rc:312, age:"3歳〜15歳", featured:true, url:"https://re-dia.jp/",
-      desc:"箕面市内に5校展開する人気No.1ダンススクール。現役プロダンサー講師100名以上在籍、全国46校展開。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。",
-      tags:["箕面市内6校","口コミ312件","評価4.8","初回体験無料","少人数制","プロ講師","全国46校","塾代助成カード対応"],
+      desc:"箕面市内に5校展開する人気No.1ダンススクール。現役プロダンサー講師200名以上在籍、全国100校以上展開。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。",
+      tags:["箕面市内6校","口コミ312件","評価4.8","初回体験無料","少人数制","プロ講師","全国100校以上","塾代助成カード対応"],
       genres:["ヒップホップ","ジャズ","K-POP","ブレイクダンス","ポップ","ワック","ソウル"],
       courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"箕面船場阪大前校",ad:"箕面市船場西3丁目1-7 ICCビル5階",st:"箕面船場阪大前駅より徒歩5分",url:"https://re-dia.jp/minohandaimae/"},{n:"箕面森町校",ad:"箕面市森町中1-24-7",st:"千里中央駅からバス「とどろみの森学園前」下車すぐ",url:"https://re-dia.jp/minoshinmachi/"},{n:"桜井校",ad:"箕面市桜6-3-22 ワクイバレエスクール",st:"桜井駅より徒歩5分",url:"https://re-dia.jp/sakurai/"},{n:"坊島校",ad:"箕面市坊島",st:"箕面萱野駅より徒歩圏内",url:"https://re-dia.jp/boushima/"},{n:"彩都西校",ad:"箕面市彩都粟生南2丁目",st:"彩都西駅より徒歩5分",url:"https://re-dia.jp/saitonishi/"},{n:"箕面市立第二中学校",ad:"箕面市萱野1丁目15-12",st:"箕面萱野駅北口より徒歩約15分",url:"https://re-dia.jp/minoshiritsudainichugakko/"}],
@@ -95,8 +95,8 @@ const S = {
   ],
   "K-POP": [
     { id:"kp0",name:"リディアダンスアカデミー",rating:4.8,rc:45,age:"3歳〜15歳",featured:true,url:"https://re-dia.jp/",
-      desc:"K-POPダンスクラスも充実！最新のK-POP楽曲で楽しくダンス。現役プロダンサー講師100名以上在籍、全国46校展開。箕面エリアに5校。",
-      tags:["K-POPクラス充実","全国46校","プロ講師100名+","初回体験無料","少人数制"],
+      desc:"K-POPダンスクラスも充実！最新のK-POP楽曲で楽しくダンス。現役プロダンサー講師200名以上在籍、全国100校以上展開。箕面エリアに5校。",
+      tags:["K-POPクラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["K-POP","ヒップホップ","ジャズ","ロック","ブレイクダンス","ポップ","ワック"],
       courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"箕面船場阪大前校",ad:"箕面市船場西3丁目1-7 ICCビル5階",st:"箕面船場阪大前駅より徒歩5分"},{n:"箕面森町校",ad:"箕面市森町中1-24-7",st:"千里中央駅からバス「とどろみの森学園前」下車すぐ"},{n:"桜井校",ad:"箕面市桜6-3-22 ワクイバレエスクール",st:"桜井駅より徒歩5分"},{n:"彩都西校",ad:"箕面市彩都粟生南2丁目",st:"彩都西駅より徒歩5分"},{n:"箕面市立第二中学校",ad:"箕面市箕面6丁目",st:"箕面駅より徒歩10分"}],
@@ -190,7 +190,7 @@ function LocRow({l,color,last}) {
 function Featured({s,catName}){const[exp,setExp]=useState(false);const[loc,setLoc]=useState(false);const[ri,setRi]=useState(0);
 return (<article style={{background:"linear-gradient(135deg,#fff,#FFF8F7)",borderRadius:20,boxShadow:`0 8px 40px ${s.color}18`,border:`2px solid ${s.color}22`,position:"relative",animation:"fi .6s ease"}}>
   <div style={{position:"absolute",top:0,left:22,background:"linear-gradient(135deg,#FFD700,#FFA000)",color:"#fff",fontWeight:900,fontSize:12,padding:"5px 12px 8px",borderRadius:"0 0 10px 10px",boxShadow:"0 4px 12px rgba(255,160,0,.3)",zIndex:2}}>👑 おすすめNo.1</div>
-  <header style={{padding:"38px 22px 0",display:"flex",alignItems:"center",gap:14}}><div style={{width:68,height:68,borderRadius:16,background:`linear-gradient(135deg,${s.color},${s.color}cc)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:34,flexShrink:0,boxShadow:`0 6px 20px ${s.color}44`}}>🏆</div><div style={{flex:1}}><h2 style={{margin:0,fontSize:19,fontWeight:900,color:"#1a1a2e"}}>{s.name}</h2><div style={{display:"flex",alignItems:"center",gap:6,marginTop:6,flexWrap:"wrap"}}><span style={{background:`${s.color}18`,color:s.color,padding:"3px 9px",borderRadius:20,fontSize:11,fontWeight:700}}>{catName}</span><span style={{color:"#666",fontSize:12}}>{s.age}</span><span style={{background:"#4CAF5018",color:"#2E7D32",padding:"2px 8px",borderRadius:20,fontSize:10,fontWeight:700}}>✅ 全国46校</span></div></div></header>
+  <header style={{padding:"38px 22px 0",display:"flex",alignItems:"center",gap:14}}><div style={{width:68,height:68,borderRadius:16,background:`linear-gradient(135deg,${s.color},${s.color}cc)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:34,flexShrink:0,boxShadow:`0 6px 20px ${s.color}44`}}>🏆</div><div style={{flex:1}}><h2 style={{margin:0,fontSize:19,fontWeight:900,color:"#1a1a2e"}}>{s.name}</h2><div style={{display:"flex",alignItems:"center",gap:6,marginTop:6,flexWrap:"wrap"}}><span style={{background:`${s.color}18`,color:s.color,padding:"3px 9px",borderRadius:20,fontSize:11,fontWeight:700}}>{catName}</span><span style={{color:"#666",fontSize:12}}>{s.age}</span><span style={{background:"#4CAF5018",color:"#2E7D32",padding:"2px 8px",borderRadius:20,fontSize:10,fontWeight:700}}>✅ 全国100校以上</span></div></div></header>
   <div style={{padding:"10px 22px 0"}}><Stars r={s.rating} c={s.rc}/></div>
   <p style={{padding:"10px 22px 0",margin:0,fontSize:14,color:"#444",lineHeight:1.8}}>{s.desc}</p>
   <div style={{padding:"10px 22px 0",display:"flex",flexWrap:"wrap",gap:4}}>{s.tags.map((f,i)=><span key={i} style={{background:"#f5f5f5",border:"1px solid #e8e8e8",padding:"3px 9px",borderRadius:20,fontSize:11,fontWeight:600,color:"#555"}}>✓ {f}</span>)}</div>
