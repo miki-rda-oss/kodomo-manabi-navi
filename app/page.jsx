@@ -418,8 +418,8 @@ export default function TopPage() {
             </p>
 
             {/* Search Box */}
-            <div style={{ background: "#fff", borderRadius: 18, padding: "22px 24px", boxShadow: "0 8px 40px rgba(27,42,74,.11)", border: "1.5px solid #deeaf7", marginBottom: 16, animation: "fi .5s ease .2s both" }}>
-              <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 14 }}>🔍 今すぐ子どもの習い事を検索！</div>
+            <div className="search-card" style={{ background: "#fff", borderRadius: 18, padding: "20px", boxShadow: "0 8px 40px rgba(27,42,74,.11)", border: "1.5px solid #deeaf7", marginBottom: 16, animation: "fi .5s ease .2s both" }}>
+              <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 12 }}>🔍 今すぐ子どもの習い事を検索！</div>
               <div className="search-row" style={{ display: "flex", gap: 10, alignItems: "flex-end", flexWrap: "wrap" }}>
 
                 {/* Area */}
@@ -481,8 +481,8 @@ export default function TopPage() {
             </div>
 
             {/* Ranking Search Box */}
-            <div style={{ background: "linear-gradient(135deg, #FFF4E0 0%, #FFF0F5 100%)", borderRadius: 18, padding: "22px 24px", boxShadow: "0 8px 40px rgba(255,138,0,.12)", border: "1.5px solid #FFD9A0", marginBottom: 32, animation: "fi .5s ease .25s both" }}>
-              <div style={{ fontSize: 15, fontWeight: 800, color: "#FF8A00", marginBottom: 14, letterSpacing: ".3px" }}>🏆 ランキングから習い事を検索！</div>
+            <div className="search-card" style={{ background: "linear-gradient(135deg, #FFF4E0 0%, #FFF0F5 100%)", borderRadius: 18, padding: "20px", boxShadow: "0 8px 40px rgba(255,138,0,.12)", border: "1.5px solid #FFD9A0", marginBottom: 32, animation: "fi .5s ease .25s both" }}>
+              <div style={{ fontSize: 15, fontWeight: 800, color: "#FF8A00", marginBottom: 12, letterSpacing: ".3px" }}>🏆 ランキングから習い事を検索！</div>
               <div className="search-row" style={{ display: "flex", gap: 10, alignItems: "flex-end", flexWrap: "wrap" }}>
 
                 {/* Area 2 */}
