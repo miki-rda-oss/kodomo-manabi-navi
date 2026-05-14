@@ -643,7 +643,8 @@ export default function GenrePage({ params }) {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "トップ", "item": BASE_URL },
-          { "@type": "ListItem", "position": 2, "name": `${genre.name}教室`, "item": `${BASE_URL}/genre/${slug}` },
+          { "@type": "ListItem", "position": 2, "name": "習い事ジャンル", "item": `${BASE_URL}/genre/${slug}` },
+          { "@type": "ListItem", "position": 3, "name": `${genre.name}`, "item": `${BASE_URL}/genre/${slug}` },
         ],
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -1,0 +1,59 @@
+import Link from "next/link";
+export const metadata = {
+  title: '佐賀県の子供向けダンス教室・習い事一覧｜コドモならいごと',
+  description: '佐賀県内のキッズダンス教室・子ども向け習い事を比較。佐賀市 など主要エリアの教室情報を掲載。',
+  keywords: ['佐賀', '子供', 'ダンス教室', '習い事'],
+  alternates: { canonical: 'https://kodomo-manabi-navi.vercel.app/saga' },
+};
+export default function PrefPage() {
+  const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://kodomo-manabi-navi.vercel.app"},{"@type":"ListItem","position":2,"name":"佐賀県の習い事","item":"https://kodomo-manabi-navi.vercel.app/saga"}]};
+  const faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"佐賀県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"佐賀県の子供ダンス教室は月5,000円〜8,000円程度が相場です。"}},{"@type":"Question","name":"佐賀県で3歳から通えるダンス教室はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。佐賀県内のダンス教室の多くが3歳から入会できるリトルクラスを設けています。"}}]};
+  return (
+    <div style={{fontFamily:"'Noto Sans JP',sans-serif",background:"#f4f7fc",minHeight:"100vh"}}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}} />
+      <header style={{background:"#fff",borderBottom:"1px solid #e8edf4",position:"sticky",top:0,zIndex:100}}>
+        <div style={{maxWidth:1100,margin:"0 auto",padding:"0 24px",display:"flex",alignItems:"center",gap:10,height:56}}>
+          <Link href="/" style={{display:"flex",alignItems:"center",gap:8,textDecoration:"none"}}>
+            <div style={{width:32,height:32,borderRadius:9,background:"linear-gradient(135deg,#FF8A00,#FFB347)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16}}>🧒</div>
+            <span style={{fontSize:15,fontWeight:900,color:"#1B2A4A"}}>コドモならいごと</span>
+          </Link>
+          <span style={{color:"#ddd"}}>›</span><span style={{fontSize:13,color:"#888"}}>佐賀県</span>
+        </div>
+      </header>
+      <nav style={{maxWidth:1100,margin:"0 auto",padding:"10px 24px",fontSize:12,color:"#888"}}>
+        <Link href="/" style={{color:"#FF8A00",textDecoration:"none"}}>トップ</Link>{" › "}佐賀県
+      </nav>
+      <section style={{background:"linear-gradient(135deg,#1B2A4A,#2a4070)",padding:"44px 24px 40px"}}>
+        <div style={{maxWidth:800,margin:"0 auto",textAlign:"center"}}>
+          <h1 style={{fontSize:28,fontWeight:900,color:"#fff",marginBottom:12}}>佐賀県の子供向け<br/>ダンス教室・習い事</h1>
+          <p style={{fontSize:14,color:"rgba(255,255,255,.85)",lineHeight:1.9}}>佐賀市を中心に佐賀県全域の習い事情報を掲載。</p>
+        </div>
+      </section>
+      <div style={{maxWidth:900,margin:"0 auto",padding:"32px 24px 60px"}}>
+        <div style={{background:"#fff",borderRadius:18,padding:"28px 24px",marginBottom:24,border:"1.5px solid #e8edf4"}}>
+          <h2 style={{fontSize:18,fontWeight:900,color:"#1B2A4A",marginBottom:16}}>📍 佐賀県のエリアを選ぶ</h2>
+          <p style={{fontSize:14,color:"#666",lineHeight:1.9}}>佐賀県内の市区町村別の習い事情報を準備中です。</p>
+        </div>
+        <div style={{background:"linear-gradient(135deg,#1B2A4A,#2a4070)",borderRadius:18,padding:"28px 24px",marginBottom:24,textAlign:"center"}}>
+          <h2 style={{fontSize:20,fontWeight:900,color:"#fff",marginBottom:8}}>リディアダンスアカデミー</h2>
+          <p style={{fontSize:13,color:"rgba(255,255,255,.85)",lineHeight:1.8,marginBottom:20}}>全国46校展開・3歳から。初回体験無料！</p>
+          <a href="https://lydia-dance.com/" target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,padding:"12px 24px",background:"linear-gradient(135deg,#FF8A00,#FFB347)",borderRadius:24,color:"#fff",fontWeight:700,fontSize:14,textDecoration:"none"}}>💃 無料体験を予約する</a>
+        </div>
+        <div style={{background:"#fff",borderRadius:18,padding:"28px 24px",marginBottom:24,border:"1.5px solid #e8edf4"}}>
+          <Link href="/blog/kids-dance-start-age-guide-2026/" style={{display:"block",padding:"10px 0",borderBottom:"1px solid #f0f0f0",color:"#1B2A4A",textDecoration:"none",fontSize:14}}>子供のダンスを始める年齢ガイド2026</Link>
+          <Link href="/blog/kids-activity-ranking-2026-latest/" style={{display:"block",padding:"10px 0",color:"#1B2A4A",textDecoration:"none",fontSize:14}}>子供習い事人気ランキング2026最新版</Link>
+        </div>
+        <section style={{marginBottom:40}}>
+          <div style={{background:"linear-gradient(135deg,#fff7ee,#fff0f5)",borderRadius:16,padding:"24px 20px",border:"1.5px solid #FFD9A0"}}>
+            <h2 style={{fontSize:18,fontWeight:900,color:"#1B2A4A",marginBottom:12}}>🥇 佐賀県の習い事トレンド2026：ダンスが1位</h2>
+            <p style={{fontSize:14,lineHeight:1.9,color:"#444"}}>K-POPブームと中学校ダンス必修化で佐賀県でも子供のダンス需要が急増。2026年ランキング1位。</p>
+          </div>
+        </section>
+        <div style={{textAlign:"center"}}>
+          <Link href="/" style={{display:"inline-flex",alignItems:"center",gap:6,padding:"12px 28px",background:"linear-gradient(135deg,#FF8A00,#FFB347)",borderRadius:20,color:"#fff",fontWeight:700,fontSize:14,textDecoration:"none"}}>← トップページへ戻る</Link>
+        </div>
+      </div>
+    </div>
+  );
+}

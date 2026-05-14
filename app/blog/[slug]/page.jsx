@@ -134,17 +134,24 @@ function renderBlock(block, i) {
           </table>
         </div>
       );
-    case "faq":
+    case "faq": {
+      // Support both formats: {q,a} (old) and {items:[{q,a}]} (new)
+      const faqEntries = block.items ? block.items : (block.q ? [{ q: block.q, a: block.a }] : []);
       return (
-        <div key={i} style={{ background: "#fff", border: "1px solid #e8f0fe", borderRadius: 12, padding: "18px 20px", marginBottom: 14 }}>
-          <div style={{ fontSize: 14, fontWeight: 800, color: "#1a1a2e", marginBottom: 8, display: "flex", gap: 8 }}>
-            <span style={{ color: "#2a7cc8", fontWeight: 900 }}>Q.</span>{block.q}
-          </div>
-          <div style={{ fontSize: 14, color: "#555", lineHeight: 1.9, display: "flex", gap: 8 }}>
-            <span style={{ color: "#4CAF50", fontWeight: 900, flexShrink: 0 }}>A.</span>{block.a}
-          </div>
+        <div key={i}>
+          {faqEntries.map((entry, fi) => (
+            <div key={fi} style={{ background: "#fff", border: "1px solid #e8f0fe", borderRadius: 12, padding: "18px 20px", marginBottom: 14 }}>
+              <div style={{ fontSize: 14, fontWeight: 800, color: "#1a1a2e", marginBottom: 8, display: "flex", gap: 8 }}>
+                <span style={{ color: "#2a7cc8", fontWeight: 900 }}>Q.</span>{entry.q}
+              </div>
+              <div style={{ fontSize: 14, color: "#555", lineHeight: 1.9, display: "flex", gap: 8 }}>
+                <span style={{ color: "#4CAF50", fontWeight: 900, flexShrink: 0 }}>A.</span>{entry.a}
+              </div>
+            </div>
+          ))}
         </div>
       );
+    }
     case "review":
       return (
         <div key={i} style={{ background: "#FFF8F7", border: "1px solid #FFCCBC", borderRadius: 12, padding: "16px 20px", marginBottom: 14 }}>
@@ -176,7 +183,7 @@ function renderBlock(block, i) {
           <div style={{ fontSize: 15, color: "#fff", marginBottom: 12, fontWeight: 700 }}>
             🎉 初回無料体験レッスン受付中！
           </div>
-          <a href={block.url} target="_blank" rel="noopener noreferrer"
+          <a href={block.url || "https://re-dia.jp/trial/"} target="_blank" rel="noopener noreferrer"
             style={{ display: "inline-block", background: "#fff", color: "#E53935", fontWeight: 900, fontSize: 15, padding: "14px 32px", borderRadius: 12, textDecoration: "none", boxShadow: "0 4px 20px rgba(0,0,0,.2)" }}>
             {block.text}
           </a>
@@ -192,15 +199,21 @@ export default function ArticlePage({ params }) {
   const article = getArticle(params.slug);
   if (!article) notFound();
 
-  const faqSchemaData = {
+  // faqSchema: use top-level property OR extract from content blocks
+  const faqItems = article.faqSchema ||
+    article.content
+      .filter(b => b && b.type === 'faq')
+      .flatMap(b => b.items ? b.items : (b.q ? [{ q: b.q, a: b.a }] : []));
+
+  const faqSchemaData = faqItems.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": article.faqSchema.map(faq => ({
+    "mainEntity": faqItems.map(faq => ({
       "@type": "Question",
       "name": faq.q,
       "acceptedAnswer": { "@type": "Answer", "text": faq.a },
     })),
-  };
+  } : null;
 
   const articleSchemaData = {
     "@context": "https://schema.org",
@@ -380,7 +393,7 @@ export default function ArticlePage({ params }) {
 
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchemaData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />
+      {faqSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     </div>
   );
