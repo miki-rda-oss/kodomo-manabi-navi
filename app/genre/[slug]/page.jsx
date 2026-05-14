@@ -201,18 +201,18 @@ const SCHOOLS = {
 };
 
 const GENRE_META = {
-  dance:       { name: "ダンス",        icon: "💃", color: "#FF6B6B", bg: "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)", desc: "リズム感・表現力・協調性を育む", count: "2,800+" },
-  kpop:        { name: "K-POP",         icon: "💜", color: "#AB47BC", bg: "linear-gradient(135deg, #AB47BC 0%, #7B1FA2 100%)", desc: "リズム感・表現力・自信を育む",   count: "800+" },
-  swimming:    { name: "スイミング",     icon: "🏊", color: "#0288D1", bg: "linear-gradient(135deg, #0288D1 0%, #00BCD4 100%)", desc: "体力・心肺機能・水難防止を育む", count: "2,500+" },
-  programming: { name: "プログラミング", icon: "💻", color: "#00897B", bg: "linear-gradient(135deg, #00897B 0%, #00BCD4 100%)", desc: "論理的思考・創造力・問題解決力を育む", count: "1,800+" },
-  soccer:      { name: "サッカー",       icon: "⚽", color: "#4CAF50", bg: "linear-gradient(135deg, #43A047 0%, #1B5E20 100%)", desc: "体力・判断力・チームワークを育む", count: "3,200+" },
-  english:     { name: "英語・英会話",   icon: "🌍", color: "#FF8A00", bg: "linear-gradient(135deg, #FF8A00 0%, #FFB347 100%)", desc: "リスニング・発音・異文化理解を育む", count: "4,500+" },
-  piano:       { name: "ピアノ",         icon: "🎹", color: "#9C27B0", bg: "linear-gradient(135deg, #7B1FA2 0%, #AB47BC 100%)", desc: "音感・集中力・表現力を育む",     count: "3,800+" },
-  ballet:      { name: "バレエ",         icon: "🩰", color: "#E91E63", bg: "linear-gradient(135deg, #E91E63 0%, #C2185B 100%)", desc: "柔軟性・姿勢・美的感覚を育む",   count: "1,600+" },
-  karate:      { name: "空手",           icon: "🥋", color: "#795548", bg: "linear-gradient(135deg, #795548 0%, #4E342E 100%)", desc: "礼儀・忍耐力・精神力を育む",     count: "1,200+" },
-  rhythmics:   { name: "リトミック",     icon: "🎵", color: "#FF7043", bg: "linear-gradient(135deg, #FF7043 0%, #E64A19 100%)", desc: "リズム感・感性・社会性を育む",   count: "900+" },
-  preschool:   { name: "幼児教室",       icon: "🧒", color: "#FF8A65", bg: "linear-gradient(135deg, #FF8A65 0%, #FF7043 100%)", desc: "記憶力・思考力・言語力を育む",   count: "1,100+" },
-  juku:        { name: "学習塾",         icon: "📝", color: "#1B2A4A", bg: "linear-gradient(135deg, #1B2A4A 0%, #243a60 100%)", desc: "基礎学力・思考力・受験対策",     count: "5,200+" },
+  dance:       { name: "ダンス",        icon: "💃", color: "#FF6B6B", bg: "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)", desc: "リズム感・表現力・協調性を育む", count: "2,800+", longDesc: "K-POPブーム・中学校ダンス必修化・ブレイクダンスのオリンピック競技化を背景に、2026年にダンスが子供の習い事総合1位を獲得しました。脳科学研究でも海馬・前頭葉・小脳を同時に活性化する最も効果的な活動として注目されています。表現力・リズム感・自己肯定感を同時に育てられ、3歳から始められる間口の広さも人気の理由です。" },
+  kpop:        { name: "K-POP",         icon: "💜", color: "#AB47BC", bg: "linear-gradient(135deg, #AB47BC 0%, #7B1FA2 100%)", desc: "リズム感・表現力・自信を育む",   count: "800+",   longDesc: "K-POPダンスは全身を使った表現力とリズム感を育みます。アイドルの振り付けを通じて目標を持ちながら練習する姿勢が自己肯定感アップにつながります。韓国文化への興味から語学学習へ発展するケースも多く、グローバルな感性を育てる習い事として人気が急増しています。" },
+  swimming:    { name: "スイミング",     icon: "🏊", color: "#0288D1", bg: "linear-gradient(135deg, #0288D1 0%, #00BCD4 100%)", desc: "体力・心肺機能・水難防止を育む", count: "2,500+", longDesc: "スイミングは全身を使う有酸素運動のため、心肺機能の向上・体力増進に優れています。水難防止の観点からも「泳げること」は子どもの安全に直結します。喘息改善・姿勢矯正・集中力向上など、健康面での多彩なメリットが保護者から支持され、習い事の定番として長年高い人気を誇ります。" },
+  programming: { name: "プログラミング", icon: "💻", color: "#00897B", bg: "linear-gradient(135deg, #00897B 0%, #00BCD4 100%)", desc: "論理的思考・創造力・問題解決力を育む", count: "1,800+", longDesc: "2020年の小学校必修化以降、プログラミング教育への関心が一気に高まりました。ScratchやPythonを通じてゲーム・アプリを自分で作る体験が、子どもの論理的思考力・問題解決力・創造力を鍛えます。AI時代に必須のデジタルリテラシーを幼少期から身につけられる点が、親世代から高く評価されています。" },
+  soccer:      { name: "サッカー",       icon: "⚽", color: "#4CAF50", bg: "linear-gradient(135deg, #43A047 0%, #1B5E20 100%)", desc: "体力・判断力・チームワークを育む", count: "3,200+", longDesc: "サッカーは世界で最も人気のあるスポーツで、日本でも子供の習い事として根強い人気があります。瞬時の判断力・体力・チームワーク・コミュニケーション能力を同時に育てられます。Jリーグクラブが運営するスクールも全国に展開しており、夢を持ちながら本格的に学べる環境が整っています。" },
+  english:     { name: "英語・英会話",   icon: "🌍", color: "#FF8A00", bg: "linear-gradient(135deg, #FF8A00 0%, #FFB347 100%)", desc: "リスニング・発音・異文化理解を育む", count: "4,500+", longDesc: "英語は幼少期に学ぶほど発音・リスニング力が自然に身につくといわれています。グローバル化が加速する現代では、英語力は将来の選択肢を大きく広げる重要スキルです。オンラインレッスンの普及で費用・通いやすさの面でも選びやすくなり、習い事の中でも特に需要が高まっています。" },
+  piano:       { name: "ピアノ",         icon: "🎹", color: "#9C27B0", bg: "linear-gradient(135deg, #7B1FA2 0%, #AB47BC 100%)", desc: "音感・集中力・表現力を育む",     count: "3,800+", longDesc: "ピアノは両手を独立して動かす動作が脳の左右両半球を同時に刺激し、集中力・記憶力・表現力の向上に効果的とする研究が多くあります。幼少期からの音楽教育は感性を豊かにし、学習全般にもよい影響をもたらします。発表会に向けて努力する経験が達成感と自信につながる習い事です。" },
+  ballet:      { name: "バレエ",         icon: "🩰", color: "#E91E63", bg: "linear-gradient(135deg, #E91E63 0%, #C2185B 100%)", desc: "柔軟性・姿勢・美的感覚を育む",   count: "1,600+", longDesc: "バレエは美しい姿勢・柔軟性・バランス感覚を育てるだけでなく、礼儀作法や集中力、音楽に合わせた表現力も磨かれます。幼少期からの訓練が身体の使い方を根本から変え、他のスポーツや日常生活にもプラスの影響をもたらします。衣装や発表会を通じた非日常体験が子どもの情操教育にも役立ちます。" },
+  karate:      { name: "空手",           icon: "🥋", color: "#795548", bg: "linear-gradient(135deg, #795548 0%, #4E342E 100%)", desc: "礼儀・忍耐力・精神力を育む",     count: "1,200+", longDesc: "空手は「礼に始まり礼に終わる」武道の精神を通じて、礼儀・集中力・忍耐力・精神力を育てます。護身術としての側面もあり、子どもの安全意識を高める効果もあります。帯の色が上がるごとに成長を実感できる段階的な進級制度が、子どもの達成感とモチベーション維持につながります。" },
+  rhythmics:   { name: "リトミック",     icon: "🎵", color: "#FF7043", bg: "linear-gradient(135deg, #FF7043 0%, #E64A19 100%)", desc: "リズム感・感性・社会性を育む",   count: "900+",   longDesc: "リトミックはスイスの音楽教育家ダルクローズが創案した音楽教育メソッドで、音楽に合わせて体を動かすことで音感・リズム感・感性・社会性を自然に育てます。0〜3歳の脳が最も柔軟な時期に音楽体験を積むことで、その後のピアノ・ダンス・スポーツ学習の土台となる豊かな感受性が培われます。" },
+  preschool:   { name: "幼児教室",       icon: "🧒", color: "#FF8A65", bg: "linear-gradient(135deg, #FF8A65 0%, #FF7043 100%)", desc: "記憶力・思考力・言語力を育む",   count: "1,100+", longDesc: "幼児期（0〜6歳）は脳の神経回路が最も発達する黄金期です。この時期の適切な知的刺激が記憶力・思考力・言語力・集中力の発達に大きく寄与するとされています。七田式・モンテッソーリ・公文式など各種メソッドに基づいたカリキュラムで、小学校入学後の学習習慣の基礎を楽しみながら作れます。" },
+  juku:        { name: "学習塾",         icon: "📝", color: "#1B2A4A", bg: "linear-gradient(135deg, #1B2A4A 0%, #243a60 100%)", desc: "基礎学力・思考力・受験対策",     count: "5,200+", longDesc: "学習塾は小学校の授業の補完から中学受験対策まで、目的に応じた幅広い選択肢があります。公文式・学研教室のような自学自習型から、難関校対策の進学塾まで多様です。早期から学習習慣をつけることで、基礎学力の定着・思考力の向上・受験対策における余裕が生まれます。" },
 };
 
 const GENRE_BLOG_LINKS = {
@@ -372,34 +372,41 @@ export async function generateMetadata({ params }) {
   if (!genre) return {};
   if (slug === 'dance') {
     return {
-      title: '【2026年1位】子供のダンス習い事おすすめ教室ランキング｜キッズダンス完全ガイド',
+      title: '【2026年習い事1位】子供のダンス教室おすすめ比較｜コドモならいごと',
       description: '2026年子供の習い事ランキング1位のダンス。キッズダンス教室の選び方・費用・年齢・おすすめ教室をエリア別に比較。リディア・EXPG・セイハなど全国人気教室を徹底比較します。',
       alternates: { canonical: `${BASE_URL}/genre/dance` },
       openGraph: {
-        title: '【2026年1位】子供のダンス習い事おすすめ教室ランキング｜キッズダンス完全ガイド',
+        title: '【2026年習い事1位】子供のダンス教室おすすめ比較｜コドモならいごと',
         description: '2026年子供の習い事ランキング1位のダンス。キッズダンス教室の選び方・費用・年齢・おすすめ教室をエリア別に比較。',
         url: `${BASE_URL}/genre/dance`,
         siteName: 'コドモならいごと',
+        type: 'website',
+        locale: 'ja_JP',
       },
       twitter: {
         card: 'summary_large_image',
-        title: '【2026年1位】子供のダンス習い事おすすめ教室ランキング｜キッズダンス完全ガイド',
+        title: '【2026年習い事1位】子供のダンス教室おすすめ比較｜コドモならいごと',
+        description: '2026年子供の習い事ランキング1位のダンス。全国のキッズダンス教室を徹底比較。',
       },
     };
   }
   return {
     title: `子供の${genre.name}教室おすすめ${genre.count}件｜口コミ・料金比較【コドモならいごと】`,
     description: `全国の子ども向け${genre.name}教室を口コミ・料金・体験情報で比較。${genre.desc}。無料体験申込みも簡単。`,
+    keywords: [`子供`, `${genre.name}`, `習い事`, `教室`, `おすすめ`, `比較`, `料金`, `口コミ`, `無料体験`],
     alternates: { canonical: `${BASE_URL}/genre/${slug}` },
     openGraph: {
       title: `子供の${genre.name}教室おすすめ${genre.count}件｜コドモならいごと`,
       description: `全国の子ども向け${genre.name}教室を口コミ・料金で比較。${genre.desc}。`,
       url: `${BASE_URL}/genre/${slug}`,
       siteName: 'コドモならいごと',
+      type: 'website',
+      locale: 'ja_JP',
     },
     twitter: {
       card: 'summary_large_image',
       title: `子供の${genre.name}教室おすすめ${genre.count}件｜コドモならいごと`,
+      description: `全国の子ども向け${genre.name}教室を口コミ・料金で比較。${genre.desc}。`,
     },
   };
 }
@@ -566,6 +573,20 @@ export default function GenrePage({ params }) {
             </p>
           </div>
         )}
+
+        {/* ジャンル解説セクション */}
+        <section style={{ maxWidth: 900, margin: "40px auto 0", padding: "0 0px" }}>
+          <div style={{ background: "#fff", borderRadius: 16, padding: "28px 24px", border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.04)" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 900, color: "#1B2A4A", marginBottom: 16 }}>
+              {slug === "dance" ? "🥇 2026年、ダンスが子供の習い事1位に！" : `${GENRE_META[slug]?.name || slug}を子供に習わせるメリット`}
+            </h2>
+            <p style={{ fontSize: 14, lineHeight: 2, color: "#444", marginBottom: 0 }}>
+              {slug === "dance"
+                ? "K-POPブーム・中学校ダンス必修化・ブレイクダンスのオリンピック競技化を背景に、2026年にダンスが子供の習い事総合1位を獲得しました。脳科学研究でも海馬・前頭葉・小脳を同時に活性化する最も効果的な活動として注目されています。表現力・リズム感・自己肯定感を同時に育てられ、3歳から始められる間口の広さも人気の理由です。"
+                : GENRE_META[slug]?.longDesc || "子供の習い事として人気のジャンルです。"}
+            </p>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <div style={{ marginTop: 52 }}>

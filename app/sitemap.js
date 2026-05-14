@@ -135,7 +135,11 @@ const PREF_PATHS = [
 export default function sitemap() {
   const now = new Date().toISOString();
 
-  const top = [{ url: BASE_URL, lastModified: now, priority: 1.0 }];
+  const top = [
+    { url: BASE_URL, lastModified: now, priority: 1.0 },
+    { url: `${BASE_URL}/editors`, lastModified: now, priority: 0.7 },
+    { url: `${BASE_URL}/about`, lastModified: now, priority: 0.6 },
+  ];
 
   const genres = GENRE_SLUGS.map(slug => ({
     url: `${BASE_URL}/genre/${slug}`,

@@ -197,6 +197,31 @@ export default function OsakaPrefPage() {
           </div>
         </div>
 
+        {/* ===== 地域ダンストレンド ===== */}
+        <section style={{ maxWidth: 900, margin: "0 auto 40px", padding: "0 0px" }}>
+          <div style={{ background: "linear-gradient(135deg, #fff7ee, #fff0f5)", borderRadius: 16, padding: "24px 20px", border: "1.5px solid #FFD9A0" }}>
+            <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 12 }}>
+              🥇 大阪の習い事トレンド2026：ダンスが1位
+            </h2>
+            <p style={{ fontSize: 14, lineHeight: 1.9, color: "#444", marginBottom: 16 }}>
+              大阪・関西でダンスが急成長中。K-POPブームと中学校ダンス必修化の影響で、大阪でも子供のダンス習い事への需要が急増しています。
+              2026年の習い事人気ランキングでダンスが1位を獲得し、スイミングや英語を上回る勢いです。
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {[
+                { slug: "osaka-kids-dance-2026-complete", title: "大阪キッズダンス2026年完全ガイド" },
+                { slug: "osaka-kids-dance-school-ranking", title: "大阪おすすめダンス教室ランキング" },
+                { slug: "osaka-kids-activity-ranking", title: "大阪の子供習い事人気ランキング" },
+              ].map(({ slug, title }) => (
+                <a key={slug} href={`/blog/${slug}`}
+                  style={{ fontSize: 12, color: "#4527A0", background: "#f3f0ff", padding: "4px 10px", borderRadius: 12, textDecoration: "none", fontWeight: 600 }}>
+                  📝 {title}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <div style={{ textAlign: "center" }}>
           <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 28px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 16px rgba(255,138,0,.3)" }}>
             ← トップページへ戻る

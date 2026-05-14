@@ -16,15 +16,18 @@ export const metadata = {
 
 const blogListSchema = {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "コドモならいごと コラム",
+  "@type": "ItemList",
+  "name": "子供の習い事コラム・選び方ガイド一覧",
+  "description": "ダンス・スイミング・英語・ピアノなど子供の習い事に関するコラム記事一覧",
   "url": `${BASE_URL}/blog`,
-  "description": "子供の習い事選び方・費用・おすすめスクール情報",
-  "publisher": {
-    "@type": "Organization",
-    "name": "コドモならいごと",
-    "url": BASE_URL,
-  },
+  "numberOfItems": ARTICLES.length,
+  "itemListElement": ARTICLES.slice(0, 20).map((a, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": a.title,
+    "url": `${BASE_URL}/blog/${a.slug}`,
+    "description": a.description,
+  })),
 };
 
 const CATEGORY_COLORS = {
@@ -45,6 +48,7 @@ export default function BlogIndex() {
 
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f5f6fa", minHeight: "100vh" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }} />
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap');*{box-sizing:border-box;margin:0;padding:0}`}</style>
 
       {/* Header */}

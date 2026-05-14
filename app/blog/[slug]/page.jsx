@@ -32,6 +32,14 @@ export async function generateMetadata({ params }) {
   };
 }
 
+function getRelatedArticles(current, all) {
+  return all
+    .filter(a => a.slug !== current.slug)
+    .filter(a => a.category === current.category || a.area === current.area ||
+      (current.keywords && a.keywords && current.keywords.some(k => a.keywords.includes(k))))
+    .slice(0, 4);
+}
+
 function renderBlock(block, i) {
   switch (block.type) {
     case "lead":
@@ -306,6 +314,42 @@ export default function ArticlePage({ params }) {
             </div>
           </div>
         )}
+
+        {/* 関連記事セクション */}
+        {(() => {
+          const related = getRelatedArticles(article, ARTICLES);
+          if (related.length === 0) return null;
+          return (
+            <section style={{ marginTop: 48, paddingTop: 32, borderTop: "2px solid #e8edf4", marginBottom: 32 }}>
+              <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 20 }}>
+                📚 関連記事
+              </h2>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 14 }}>
+                {related.map(rel => (
+                  <Link key={rel.slug} href={`/blog/${rel.slug}`} style={{
+                    display: "block", padding: "14px 16px",
+                    background: "#fff", borderRadius: 12,
+                    border: "1.5px solid #e8edf4",
+                    textDecoration: "none",
+                    boxShadow: "0 2px 8px rgba(0,0,0,.04)",
+                    transition: "all .2s",
+                  }}>
+                    <div style={{ fontSize: 22, marginBottom: 6 }}>{rel.heroEmoji}</div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#1B2A4A", lineHeight: 1.5, marginBottom: 6 }}>
+                      {rel.title}
+                    </div>
+                    <div style={{ fontSize: 11, color: "#888", lineHeight: 1.5 }}>
+                      {rel.description?.slice(0, 60)}...
+                    </div>
+                    <div style={{ fontSize: 11, color: "#FF8A00", fontWeight: 700, marginTop: 8 }}>
+                      続きを読む →
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Back to Blog */}
         <div style={{ textAlign: "center" }}>

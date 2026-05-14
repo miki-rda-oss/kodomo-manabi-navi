@@ -15,11 +15,20 @@ export const metadata = {
     siteName: 'コドモならいごと',
     locale: 'ja_JP',
     type: 'website',
+    images: [
+      {
+        url: `${BASE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'コドモならいごと｜子供の習い事を口コミで検索・比較',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'コドモならいごと｜子供の習い事を口コミで検索・比較',
     description: 'エリア・ジャンル・年齢から子どもの習い事を検索・比較。全国5,000教室以上を掲載。',
+    images: [`${BASE_URL}/og-image.png`],
   },
   verification: {
     google: ['rzhs-3gGOueKsEk889d2LJwIalEpd6NH2KJx_qWpZnI', 'CxkhTnbML493Lr45Y4xL3xQ1lmI2WS79D18W8fwdyoU'],

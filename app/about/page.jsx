@@ -327,6 +327,7 @@ export default function AboutPage() {
           <h2 style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 14 }}>🔗 関連ページ</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {[
+              { href: "/editors", text: "👥 編集部・監修者紹介" },
               { href: "/blog", text: "📝 習い事コラム・選び方ガイド" },
               { href: "/genre/dance", text: "💃 ダンス教室一覧" },
               { href: "/terms", text: "利用規約" },

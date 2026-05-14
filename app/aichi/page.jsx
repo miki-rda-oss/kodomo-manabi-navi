@@ -194,6 +194,30 @@ export default function AichiPrefPage() {
           </div>
         </div>
 
+        {/* ===== 地域ダンストレンド ===== */}
+        <section style={{ maxWidth: 900, margin: "0 auto 40px", padding: "0 0px" }}>
+          <div style={{ background: "linear-gradient(135deg, #fff7ee, #fff0f5)", borderRadius: 16, padding: "24px 20px", border: "1.5px solid #FFD9A0" }}>
+            <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 12 }}>
+              🥇 愛知の習い事トレンド2026：ダンスが1位
+            </h2>
+            <p style={{ fontSize: 14, lineHeight: 1.9, color: "#444", marginBottom: 16 }}>
+              愛知・名古屋でキッズダンス教室が増加中。K-POPブームと中学校ダンス必修化の影響で、愛知でも子供のダンス習い事への需要が急増しています。
+              2026年の習い事人気ランキングでダンスが1位を獲得し、スイミングや英語を上回る勢いです。
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {[
+                { slug: "aichi-nagoya-kids-dance-2026", title: "愛知・名古屋キッズダンス2026年ガイド" },
+                { slug: "aichi-kids-dance-school", title: "愛知おすすめキッズダンス教室" },
+              ].map(({ slug, title }) => (
+                <a key={slug} href={`/blog/${slug}`}
+                  style={{ fontSize: 12, color: "#4527A0", background: "#f3f0ff", padding: "4px 10px", borderRadius: 12, textDecoration: "none", fontWeight: 600 }}>
+                  📝 {title}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <div style={{ textAlign: "center" }}>
           <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 28px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 16px rgba(255,138,0,.3)" }}>
             ← トップページへ戻る
