@@ -407,10 +407,10 @@ export default function TopPage() {
               🥇 2026年習い事1位：ダンスが急上昇中！
             </div>
             <h1 className="hero-title" style={{ fontSize: 34, fontWeight: 900, color: "#1B2A4A", lineHeight: 1.4, marginBottom: 10, animation: "fi .5s ease" }}>
-              全国の子どもの習い事を探そう
+              全国の子どもの<br className="hero-br" style={{ display: "none" }} />習い事を探そう
             </h1>
             <p className="hero-sub" style={{ fontSize: 17, fontWeight: 700, color: "#FF8A00", marginBottom: 12, animation: "fi .5s ease .1s both" }}>
-              エリア・ジャンル・年齢から、お子さまに合った習い事が見つかる
+              エリア・ジャンル・年齢から、<br className="hero-br" style={{ display: "none" }} />お子さまに合った習い事が見つかる
             </p>
             <p style={{ fontSize: 13, color: "#666", lineHeight: 1.9, marginBottom: 32, animation: "fi .5s ease .15s both" }}>
               ダンス・サッカー・英語・ピアノ・スイミングなど、<br />

@@ -86,8 +86,9 @@
 }
 
 @media (max-width: 768px) {
-  .hero-title  { font-size: 26px !important; }
-  .hero-sub    { font-size: 15px !important; }
+  .hero-title  { font-size: 22px !important; line-height: 1.45 !important; }
+  .hero-sub    { font-size: 14px !important; }
+  .hero-br     { display: inline !important; }
   .search-row  {
     flex-direction: column !important;
     align-items: stretch !important;
