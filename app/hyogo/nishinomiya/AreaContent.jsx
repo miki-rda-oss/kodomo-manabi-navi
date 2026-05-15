@@ -8,7 +8,7 @@ const S = {
       desc:"初心者クラスが充実した3歳から学べるキッズダンススクール。現役プロダンサー講師200名以上在籍。全国100校以上展開。西宮市に1校。",
       tags:["初心者クラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["ヒップホップ","ジャズ","ロック","K-POP","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"西宮北口校",ad:"西宮市高松町",st:"西宮北口駅より徒歩3分",url:"https://re-dia.jp/nishinomiyakitaguchi/"}],
       revs:[{g:"女の子",a:"5歳〜",l:"西宮北口校",t:"先生たちはみんな優しくて毎週楽しみに通っています。ダンスだけでなく人としても成長しました。"},{g:"女の子",a:"8歳〜",l:"西宮北口校",t:"DANCEを始めてから人前で堂々と自分の思いを伝えられるようになりました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -41,7 +41,7 @@ const S = {
       desc:"K-POPダンスクラスも充実！最新の楽曲で楽しくダンス。プロ講師200名以上在籍、全国100校以上。西宮市に1校。",
       tags:["K-POPクラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["K-POP","ヒップホップ","ジャズ","ロック","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"西宮北口校",ad:"西宮市高松町",st:"西宮北口駅より徒歩3分",url:"https://re-dia.jp/nishinomiyakitaguchi/"}],
       revs:[{g:"女の子",a:"8歳〜",l:"西宮北口校",t:"K-POPの曲で踊れるのがとても楽しい！毎週通うのが楽しみです。"},{g:"女の子",a:"10歳〜",l:"西宮北口校",t:"推しの振付を本格的に学べて最高！基礎もしっかり身につきました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -198,7 +198,7 @@ export default function App(){
         <a href="/blog/osaka-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 大阪・関西のキッズダンス教室ランキングを見る</a>
       </div>
       <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 西宮市のダンス教室 よくある質問</h3>
-      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 西宮市でおすすめのキッズダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが西宮エリアに展開。3歳から通えるリトルクラスがあります。西宮北口・夙川エリアには複数のダンス教室があり、比較検討しやすいエリアです。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 西宮市のダンス教室の月謝相場は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝6,000〜13,000円が相場です。阪急沿線は教育への関心が高いエリアで、質の高いスクールが揃っています。リディアダンスアカデミーは月5,500円〜でコスパも優秀です。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 西宮市でK-POPダンスを子供に習わせるには？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーはK-POPクラスが充実しています。西宮市内にはK-POP専門のダンスサークルや教室もあります。体験レッスンで楽しいクラスを見つけましょう。</div></div>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 西宮市でおすすめのキッズダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが西宮エリアに展開。3歳から通えるリトルクラスがあります。西宮北口・夙川エリアには複数のダンス教室があり、比較検討しやすいエリアです。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 西宮市のダンス教室の月謝相場は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝6,000〜13,000円が相場です。阪急沿線は教育への関心が高いエリアで、質の高いスクールが揃っています。リディアダンスアカデミーは月6,600円〜でコスパも優秀です。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 西宮市でK-POPダンスを子供に習わせるには？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーはK-POPクラスが充実しています。西宮市内にはK-POP専門のダンスサークルや教室もあります。体験レッスンで楽しいクラスを見つけましょう。</div></div>
     </div></section>
 <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 西宮市でダンス教室を選ぶポイント</h2>

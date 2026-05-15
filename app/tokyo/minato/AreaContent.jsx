@@ -8,7 +8,7 @@ const S = {
       desc:"初心者クラスが充実した3歳から学べるキッズダンススクール。現役プロダンサー講師200名以上在籍。全国100校以上展開。港区に1校。",
       tags:["初心者クラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["ヒップホップ","ジャズ","ロック","K-POP","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"白金高輪校",ad:"港区白金1丁目",st:"白金高輪駅より徒歩3分",url:"https://re-dia.jp/shirokanetakanawa/"}],
       revs:[{g:"女の子",a:"5歳〜",l:"白金高輪校",t:"先生たちはみんな優しくて毎週楽しみに通っています。ダンスだけでなく人としても成長しました。"},{g:"女の子",a:"8歳〜",l:"白金高輪校",t:"DANCEを始めてから人前で堂々と自分の思いを伝えられるようになりました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -43,7 +43,7 @@ const S = {
       desc:"K-POPダンスクラスも充実！プロ講師200名以上在籍、全国100校以上。港区に1校。",
       tags:["K-POPクラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["K-POP","ヒップホップ","ジャズ","ロック","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"白金高輪校",ad:"港区白金1丁目",st:"白金高輪駅より徒歩3分",url:"https://re-dia.jp/shirokanetakanawa/"}],
       revs:[{g:"女の子",a:"8歳〜",l:"白金高輪校",t:"K-POPの曲で踊れるのがとても楽しい！毎週通うのが楽しみです。"},{g:"女の子",a:"10歳〜",l:"白金高輪校",t:"推しの振付を本格的に学べて最高！基礎もしっかり身につきました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -102,7 +102,7 @@ export default function App(){
         <a href="/blog/kanto-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 関東のキッズダンス教室おすすめランキングを見る</a>
       </div>
       <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 港区のダンス教室 よくある質問</h3>
-      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 港区でおすすめの子供ダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが港区内に展開。プロダンサー100名以上在籍の本格スクールです。3歳から通えるクラスがあります。港区には質の高いスタジオが多数あります。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 港区のダンス教室の月謝は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 東京都心の港区エリアは月謝10,000〜20,000円と高めの傾向があります。リディアダンスアカデミーは全国均一価格（月5,500円〜）で都心でもリーズナブルに利用できます。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 港区で英語対応のダンス教室はありますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 港区には外国人講師が教えるインターナショナルなダンス教室もあります。バイリンガル対応のスクールは体験予約時に確認してみましょう。</div></div>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 港区でおすすめの子供ダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが港区内に展開。プロダンサー100名以上在籍の本格スクールです。3歳から通えるクラスがあります。港区には質の高いスタジオが多数あります。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 港区のダンス教室の月謝は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 東京都心の港区エリアは月謝10,000〜20,000円と高めの傾向があります。リディアダンスアカデミーは全国均一価格（月6,600円〜）で都心でもリーズナブルに利用できます。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 港区で英語対応のダンス教室はありますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 港区には外国人講師が教えるインターナショナルなダンス教室もあります。バイリンガル対応のスクールは体験予約時に確認してみましょう。</div></div>
     </div></section>
 <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 港区でダンス教室を選ぶポイント</h2>

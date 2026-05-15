@@ -8,7 +8,7 @@ const S = {
       desc:"初心者クラスが充実した3歳から学べるキッズダンススクール。現役プロダンサー講師200名以上在籍。全国100校以上展開。品川区に1校。",
       tags:["初心者クラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["ヒップホップ","ジャズ","ロック","K-POP","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"戸越銀座校",ad:"品川区戸越2丁目",st:"戸越銀座駅より徒歩3分",url:"https://re-dia.jp/togoshiginza/"}],
       revs:[{g:"女の子",a:"5歳〜",l:"戸越銀座校",t:"先生たちはみんな優しくて毎週楽しみに通っています。ダンスだけでなく人としても成長しました。"},{g:"女の子",a:"8歳〜",l:"戸越銀座校",t:"DANCEを始めてから人前で堂々と自分の思いを伝えられるようになりました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -41,7 +41,7 @@ const S = {
       desc:"K-POPダンスクラスも充実！プロ講師200名以上在籍、全国100校以上。品川区に1校。",
       tags:["K-POPクラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["K-POP","ヒップホップ","ジャズ","ロック","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"戸越銀座校",ad:"品川区戸越2丁目",st:"戸越銀座駅より徒歩3分",url:"https://re-dia.jp/togoshiginza/"}],
       revs:[{g:"女の子",a:"8歳〜",l:"戸越銀座校",t:"K-POPの曲で踊れるのがとても楽しい！毎週通うのが楽しみです。"},{g:"女の子",a:"10歳〜",l:"戸越銀座校",t:"推しの振付を本格的に学べて最高！基礎もしっかり身につきました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -100,7 +100,7 @@ export default function App(){
         <a href="/blog/kanto-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 関東のキッズダンス教室おすすめランキングを見る</a>
       </div>
       <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 品川区のダンス教室 よくある質問</h3>
-      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 品川区でおすすめのダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが品川区内に展開。3歳から通えるクラスがあり、初回体験無料です。五反田・武蔵小山エリアにも複数の選択肢があります。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 品川区のダンス教室の月謝相場は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝6,000〜14,000円程度が相場です。スタジオの立地や設備によって差があります。リディアダンスアカデミーは月5,500円〜とコストパフォーマンスに優れています。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 品川区で土日・平日夜に通えるダンス教室はありますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. はい、多くのスクールが週末クラスや平日夕方クラスを設けています。共働き家庭でも通いやすいスケジュールのスクールを体験時に確認しましょう。</div></div>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 品川区でおすすめのダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが品川区内に展開。3歳から通えるクラスがあり、初回体験無料です。五反田・武蔵小山エリアにも複数の選択肢があります。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 品川区のダンス教室の月謝相場は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝6,000〜14,000円程度が相場です。スタジオの立地や設備によって差があります。リディアダンスアカデミーは月6,600円〜とコストパフォーマンスに優れています。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 品川区で土日・平日夜に通えるダンス教室はありますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. はい、多くのスクールが週末クラスや平日夕方クラスを設けています。共働き家庭でも通いやすいスケジュールのスクールを体験時に確認しましょう。</div></div>
     </div></section>
 <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 品川区でダンス教室を選ぶポイント</h2>

@@ -8,7 +8,7 @@ const S = {
       desc:"初心者クラスが充実した3歳から学べるキッズダンススクール。現役プロダンサー講師200名以上在籍。全国100校以上展開。京都市に2校。",
       tags:["初心者クラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["ヒップホップ","ジャズ","ロック","K-POP","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"京都校",ad:"京都市下京区四条通",st:"四条駅より徒歩5分",url:"https://re-dia.jp/kyoto/"},{n:"桂校",ad:"京都市西京区桂野里町",st:"桂駅より徒歩3分",url:"https://re-dia.jp/katsura/"}],
       revs:[{g:"女の子",a:"5歳〜",l:"京都校",t:"先生たちはみんな優しくて毎週楽しみに通っています。ダンスだけでなく人としても成長しました。"},{g:"女の子",a:"8歳〜",l:"桂校",t:"DANCEを始めてから人前で堂々と自分の思いを伝えられるようになりました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -42,7 +42,7 @@ const S = {
       desc:"K-POPダンスクラスも充実！プロ講師200名以上在籍、全国100校以上。京都市に2校。",
       tags:["K-POPクラス充実","全国100校以上","プロ講師200名以上","初回体験無料","少人数制"],
       genres:["K-POP","ヒップホップ","ジャズ","ロック","ブレイクダンス","ポップ","ワック"],
-      courses:[{n:"リトルクラス",p:null,a:"3歳〜6歳"},{n:"キッズクラス",p:null,a:"小学生"},{n:"月会員プラン",p:5500,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
+      courses:[{n:"リトルクラス",p:6600,a:"3歳〜6歳"},{n:"キッズクラス",p:7700,a:"小学生"},{n:"月会員プラン",p:7700,a:"全年齢"},{n:"受け放題プラン",p:27000,a:"全年齢"}],
       locs:[{n:"京都校",ad:"京都市下京区四条通",st:"四条駅より徒歩5分",url:"https://re-dia.jp/kyoto/"},{n:"桂校",ad:"京都市西京区桂野里町",st:"桂駅より徒歩3分",url:"https://re-dia.jp/katsura/"}],
       revs:[{g:"女の子",a:"8歳〜",l:"京都校",t:"K-POPの曲で踊れるのがとても楽しい！毎週通うのが楽しみです。"},{g:"女の子",a:"10歳〜",l:"桂校",t:"推しの振付を本格的に学べて最高！基礎もしっかり身につきました。"}],
       color:"#E53935",emoji:"🏆"},
@@ -101,7 +101,7 @@ export default function App(){
         <a href="/blog/osaka-kids-dance-school-ranking" style={{fontSize:14,fontWeight:700,color:"#1565C0",textDecoration:"none"}}>→ 大阪・関西のキッズダンス教室ランキングを見る</a>
       </div>
       <h3 style={{fontSize:17,fontWeight:900,color:"#1a1a2e",marginBottom:14}}>❓ 京都市のダンス教室 よくある質問</h3>
-      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 京都市でおすすめのキッズダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが京都市内に展開。3歳から通えるリトルクラスがあります。四条・烏丸・北山・伏見エリアのスクールがアクセス便利です。初回体験無料。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 京都市のダンス教室の月謝は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝6,000〜12,000円程度が相場です。京都市内は大阪市内とほぼ同等の価格帯です。リディアダンスアカデミーは月5,500円〜でコスパも優秀です。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 京都市で何歳からダンスを習わせられますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 3歳から通えるスクールがあります。京都市は伝統文化の素養がある子が多く、ダンスも表現力豊かに学ぶ傾向があります。まずは体験レッスンでお子さまの反応を見てみましょう。</div></div>
+      <div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 京都市でおすすめのキッズダンス教室は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. リディアダンスアカデミーが京都市内に展開。3歳から通えるリトルクラスがあります。四条・烏丸・北山・伏見エリアのスクールがアクセス便利です。初回体験無料。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 京都市のダンス教室の月謝は？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 月謝6,000〜12,000円程度が相場です。京都市内は大阪市内とほぼ同等の価格帯です。リディアダンスアカデミーは月6,600円〜でコスパも優秀です。</div></div><div style={{background:"#fff",border:"1px solid #e0e0e0",borderRadius:12,marginBottom:8}}><div style={{padding:"14px 18px",fontSize:14,fontWeight:600,color:"#333"}}>Q. 京都市で何歳からダンスを習わせられますか？</div><div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>A. 3歳から通えるスクールがあります。京都市は伝統文化の素養がある子が多く、ダンスも表現力豊かに学ぶ傾向があります。まずは体験レッスンでお子さまの反応を見てみましょう。</div></div>
     </div></section>
 <section style={{background:"#fff",padding:"36px 20px",borderTop:"1px solid #eee"}}><div style={{maxWidth:1100,margin:"0 auto"}}>
       <h2 style={{fontSize:20,fontWeight:900,color:"#1a1a2e",marginBottom:18}}>💡 京都市でダンス教室を選ぶポイント</h2>
