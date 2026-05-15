@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+const BASE_URL = 'https://www.kodomo-navi.com';
 
 export const metadata = {
   title: 'コドモならいごととは｜編集方針・運営者情報・信頼性について',
@@ -141,7 +141,7 @@ export default function AboutPage() {
             <tbody>
               {[
                 ["サービス名", "コドモならいごと"],
-                ["URL", "https://kodomo-manabi-navi.vercel.app"],
+                ["URL", "https://www.kodomo-navi.com"],
                 ["サービス内容", "子ども向け習い事教室の検索・比較・口コミ情報の提供"],
                 ["掲載教室数", "全国5,000教室以上（2026年5月時点）"],
                 ["掲載ジャンル", "ダンス・スイミング・英語・ピアノ・プログラミング・サッカー・バレエ・空手・リトミック・幼児教室・学習塾"],

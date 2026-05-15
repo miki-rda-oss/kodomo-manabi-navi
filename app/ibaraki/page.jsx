@@ -5,7 +5,7 @@ export const metadata = {
   description: '茨城県内のキッズダンス教室・子ども向け習い事を市別に比較。水戸市・つくば市・日立市など主要エリアの教室情報を掲載。',
   keywords: ['茨城', '子供', 'ダンス教室', '習い事', 'キッズ', '茨城県', '水戸', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/ibaraki',
+    canonical: 'https://www.kodomo-navi.com/ibaraki',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "茨城県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/ibaraki" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "茨城県の習い事", "item": "https://www.kodomo-navi.com/ibaraki" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "茨城県の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/ibaraki",
+  "url": "https://www.kodomo-navi.com/ibaraki",
   "description": "茨城県内のキッズダンス教室・子ども向け習い事を市別に比較。水戸市・つくば市・日立市など主要エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "茨城県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/ibaraki" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "茨城県の習い事", "item": "https://www.kodomo-navi.com/ibaraki" },
     ],
   },
 };

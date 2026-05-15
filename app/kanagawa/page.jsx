@@ -5,7 +5,7 @@ export const metadata = {
   description: '神奈川県内のキッズダンス教室・子ども向け習い事を市区別に比較。横浜・川崎・相模原など主要エリアの教室情報を掲載。',
   keywords: ['神奈川', '子供', 'ダンス教室', '習い事', 'キッズ', '神奈川県', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/kanagawa',
+    canonical: 'https://www.kodomo-navi.com/kanagawa',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "神奈川県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/kanagawa" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "神奈川県の習い事", "item": "https://www.kodomo-navi.com/kanagawa" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "神奈川県の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/kanagawa",
+  "url": "https://www.kodomo-navi.com/kanagawa",
   "description": "神奈川県内のキッズダンス教室・子ども向け習い事を市区別に比較。横浜・川崎・相模原など主要エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "神奈川県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/kanagawa" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "神奈川県の習い事", "item": "https://www.kodomo-navi.com/kanagawa" },
     ],
   },
 };

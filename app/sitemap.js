@@ -1,4 +1,4 @@
-const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+const BASE_URL = 'https://www.kodomo-navi.com';
 
 const BLOG_SLUGS = [
   'osaka-kids-dance-school-ranking',

@@ -5,7 +5,7 @@ export const metadata = {
   description: '石川県内のキッズダンス教室・子ども向け習い事を市別に比較。金沢市・野々市市・内灘町など主要エリアの教室情報を掲載。',
   keywords: ['石川', '子供', 'ダンス教室', '習い事', 'キッズ', '金沢', '石川県', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/ishikawa',
+    canonical: 'https://www.kodomo-navi.com/ishikawa',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "石川県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/ishikawa" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "石川県の習い事", "item": "https://www.kodomo-navi.com/ishikawa" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "石川県の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/ishikawa",
+  "url": "https://www.kodomo-navi.com/ishikawa",
   "description": "石川県内のキッズダンス教室・子ども向け習い事を市別に比較。金沢市・野々市市・内灘町など主要エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "石川県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/ishikawa" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "石川県の習い事", "item": "https://www.kodomo-navi.com/ishikawa" },
     ],
   },
 };

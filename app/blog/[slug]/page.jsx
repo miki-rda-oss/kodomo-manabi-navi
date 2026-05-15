@@ -6,7 +6,7 @@ export async function generateStaticParams() {
   return ARTICLES.map(a => ({ slug: a.slug }));
 }
 
-const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+const BASE_URL = 'https://www.kodomo-navi.com';
 
 export async function generateMetadata({ params }) {
   const article = getArticle(params.slug);
@@ -243,9 +243,9 @@ export default function ArticlePage({ params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://kodomo-manabi-navi.vercel.app/blog" },
-      { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://kodomo-manabi-navi.vercel.app/blog/${article.slug}` },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://www.kodomo-navi.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://www.kodomo-navi.com/blog/${article.slug}` },
     ],
   };
 

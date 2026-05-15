@@ -1,7 +1,7 @@
 import { ARTICLES } from "./articles";
 import Link from "next/link";
 
-const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+const BASE_URL = 'https://www.kodomo-navi.com';
 
 export const metadata = {
   title: "子供の習い事コラム・選び方ガイド｜コドモならいごと",
@@ -160,13 +160,13 @@ export default function BlogIndex() {
         "@type": "Blog",
         "name": "コドモならいごと コラム",
         "description": "子供の習い事に関する情報・ガイドを発信するブログ",
-        "url": "https://kodomo-manabi-navi.vercel.app/blog",
+        "url": "https://www.kodomo-navi.com/blog",
         "blogPost": sorted.map(a => ({
           "@type": "BlogPosting",
           "headline": a.title,
           "description": a.description,
           "datePublished": a.date,
-          "url": `https://kodomo-manabi-navi.vercel.app/blog/${a.slug}`,
+          "url": `https://www.kodomo-navi.com/blog/${a.slug}`,
           "author": { "@type": "Organization", "name": "コドモならいごと編集部" },
         })),
       }) }} />

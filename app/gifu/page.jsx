@@ -5,7 +5,7 @@ export const metadata = {
   description: '岐阜県内のキッズダンス教室・子ども向け習い事を市別に比較。岐阜市・多治見・可児・美濃加茂など主要エリアの教室情報を掲載。',
   keywords: ['岐阜', '子供', 'ダンス教室', '習い事', 'キッズ', '岐阜県', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/gifu',
+    canonical: 'https://www.kodomo-navi.com/gifu',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "岐阜県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/gifu" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "岐阜県の習い事", "item": "https://www.kodomo-navi.com/gifu" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "岐阜県の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/gifu",
+  "url": "https://www.kodomo-navi.com/gifu",
   "description": "岐阜県内のキッズダンス教室・子ども向け習い事を市別に比較。岐阜市・多治見・可児・美濃加茂など主要エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "岐阜県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/gifu" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "岐阜県の習い事", "item": "https://www.kodomo-navi.com/gifu" },
     ],
   },
 };

@@ -5,7 +5,7 @@ export const metadata = {
   description: '埼玉県内のキッズダンス教室・子ども向け習い事を市区別に比較。さいたま市など主要エリアの教室情報を掲載。',
   keywords: ['埼玉', '子供', 'ダンス教室', '習い事', 'キッズ', '埼玉県', 'さいたま', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/saitama',
+    canonical: 'https://www.kodomo-navi.com/saitama',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "埼玉県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/saitama" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "埼玉県の習い事", "item": "https://www.kodomo-navi.com/saitama" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "埼玉県の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/saitama",
+  "url": "https://www.kodomo-navi.com/saitama",
   "description": "埼玉県内のキッズダンス教室・子ども向け習い事を市区別に比較。さいたま市など主要エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "埼玉県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/saitama" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "埼玉県の習い事", "item": "https://www.kodomo-navi.com/saitama" },
     ],
   },
 };

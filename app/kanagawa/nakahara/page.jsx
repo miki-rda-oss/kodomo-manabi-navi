@@ -1,13 +1,13 @@
 import AreaContent from "./AreaContent";
 
 export const metadata = {
-  alternates: { canonical: 'https://kodomo-manabi-navi.vercel.app/kanagawa/nakahara' },
+  alternates: { canonical: 'https://www.kodomo-navi.com/kanagawa/nakahara' },
   title: '川崎市中原区の子供の習い事おすすめ｜口コミ・料金比較【コドモならいごと】',
   description: '神奈川県川崎市中原区の子ども向け習い事教室を口コミ・料金で比較。ダンス・スイミング・英語・ピアノ・プログラミングなど人気教室の無料体験情報を掲載。',
   openGraph: {
     title: '川崎市中原区の子供の習い事おすすめ｜コドモならいごと',
     description: '神奈川県川崎市中原区の子ども向け習い事教室を口コミ・料金で比較。',
-    url: 'https://kodomo-manabi-navi.vercel.app/kanagawa/nakahara',
+    url: 'https://www.kodomo-navi.com/kanagawa/nakahara',
   },
 };
 
@@ -15,8 +15,8 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://re-dia.jp/musashinakahara/","name":"リディアダンスアカデミー武蔵中原校","url":"https://re-dia.jp/musashinakahara/","description":"子どもの習い事ダンス教室。現役プロダンサー講師200名以上在籍。3歳から通える初心者クラスあり。初回体験無料。","priceRange":"¥¥","address":{"@type":"PostalAddress","streetAddress":"神奈川県川崎市中原区","addressLocality":"川崎市中原区","addressRegion":"神奈川県","addressCountry":"JP"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"45","bestRating":"5"},"parentOrganization":{"@type":"Organization","name":"リディアダンスアカデミー","url":"https://re-dia.jp/"}}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://kodomo-manabi-navi.vercel.app"},{"@type":"ListItem","position":2,"name":"神奈川県の習い事","item":"https://kodomo-manabi-navi.vercel.app/kanagawa"},{"@type":"ListItem","position":3,"name":"中原区の習い事","item":"https://kodomo-manabi-navi.vercel.app/kanagawa/nakahara"}]}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"中原区の子供の習い事おすすめ","url":"https://kodomo-manabi-navi.vercel.app/kanagawa/nakahara","description":"中原区の子ども向け習い事教室を口コミ・料金で比較。ダンス・スイミング・英語・ピアノなど人気教室の無料体験情報を掲載。","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://kodomo-manabi-navi.vercel.app"},{"@type":"ListItem","position":2,"name":"中原区の習い事","item":"https://kodomo-manabi-navi.vercel.app/kanagawa/nakahara"}]},"publisher":{"@type":"Organization","name":"コドモならいごと","url":"https://kodomo-manabi-navi.vercel.app"}}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://www.kodomo-navi.com"},{"@type":"ListItem","position":2,"name":"神奈川県の習い事","item":"https://www.kodomo-navi.com/kanagawa"},{"@type":"ListItem","position":3,"name":"中原区の習い事","item":"https://www.kodomo-navi.com/kanagawa/nakahara"}]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"中原区の子供の習い事おすすめ","url":"https://www.kodomo-navi.com/kanagawa/nakahara","description":"中原区の子ども向け習い事教室を口コミ・料金で比較。ダンス・スイミング・英語・ピアノなど人気教室の無料体験情報を掲載。","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://www.kodomo-navi.com"},{"@type":"ListItem","position":2,"name":"中原区の習い事","item":"https://www.kodomo-navi.com/kanagawa/nakahara"}]},"publisher":{"@type":"Organization","name":"コドモならいごと","url":"https://www.kodomo-navi.com"}}` }} />
       <AreaContent />
     </>
   );

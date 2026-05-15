@@ -3,10 +3,10 @@ export const metadata = {
   title: '奈良県の子供向けダンス教室・習い事一覧｜コドモならいごと',
   description: '奈良県内のキッズダンス教室・子ども向け習い事を比較。奈良市 など主要エリアの教室情報を掲載。',
   keywords: ['奈良', '子供', 'ダンス教室', '習い事'],
-  alternates: { canonical: 'https://kodomo-manabi-navi.vercel.app/nara' },
+  alternates: { canonical: 'https://www.kodomo-navi.com/nara' },
 };
 export default function PrefPage() {
-  const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://kodomo-manabi-navi.vercel.app"},{"@type":"ListItem","position":2,"name":"奈良県の習い事","item":"https://kodomo-manabi-navi.vercel.app/nara"}]};
+  const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://www.kodomo-navi.com"},{"@type":"ListItem","position":2,"name":"奈良県の習い事","item":"https://www.kodomo-navi.com/nara"}]};
   const faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"奈良県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"奈良県の子供ダンス教室は月5,000円〜8,000円程度が相場です。"}},{"@type":"Question","name":"奈良県で3歳から通えるダンス教室はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。奈良県内のダンス教室の多くが3歳から入会できるリトルクラスを設けています。"}},{"@type":"Question","name":"奈良県の人気ダンス教室はどこですか？","acceptedAnswer":{"@type":"Answer","text":"リディアダンスアカデミーをはじめ、奈良県には体験レッスン無料の人気教室が多数あります。"}}]};
   return (
     <div style={{fontFamily:"'Noto Sans JP',sans-serif",background:"#f4f7fc",minHeight:"100vh"}}>

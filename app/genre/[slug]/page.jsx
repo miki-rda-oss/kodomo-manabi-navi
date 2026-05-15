@@ -364,7 +364,7 @@ const GENRE_FAQ = {
   ],
 };
 
-const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+const BASE_URL = 'https://www.kodomo-navi.com';
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -414,7 +414,7 @@ export async function generateMetadata({ params }) {
 const danceSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://kodomo-manabi-navi.vercel.app/genre/dance",
+  "@id": "https://www.kodomo-navi.com/genre/dance",
   "name": "【2026年1位】子供のダンス習い事おすすめ教室ランキング",
   "description": "2026年子供の習い事ランキング1位のダンス。全国のキッズダンス教室を比較できます。",
   "speakable": {

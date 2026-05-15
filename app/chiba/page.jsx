@@ -5,7 +5,7 @@ export const metadata = {
   description: '千葉県内のキッズダンス教室・子ども向け習い事を市別に比較。柏市など主要エリアの教室情報を掲載。',
   keywords: ['千葉', '子供', 'ダンス教室', '習い事', 'キッズ', '千葉県', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/chiba',
+    canonical: 'https://www.kodomo-navi.com/chiba',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "千葉県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/chiba" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "千葉県の習い事", "item": "https://www.kodomo-navi.com/chiba" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "千葉県の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/chiba",
+  "url": "https://www.kodomo-navi.com/chiba",
   "description": "千葉県内のキッズダンス教室・子ども向け習い事を市別に比較。柏市など主要エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "千葉県の習い事", "item": "https://kodomo-manabi-navi.vercel.app/chiba" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "千葉県の習い事", "item": "https://www.kodomo-navi.com/chiba" },
     ],
   },
 };

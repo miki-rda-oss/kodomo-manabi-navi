@@ -5,7 +5,7 @@ export const metadata = {
   description: '東京都内のキッズダンス教室・子ども向け習い事を区市別に比較。世田谷・目黒・江戸川など各エリアの教室情報を掲載。',
   keywords: ['東京', '子供', 'ダンス教室', '習い事', 'キッズ', '東京都', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/tokyo',
+    canonical: 'https://www.kodomo-navi.com/tokyo',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "東京都の習い事", "item": "https://kodomo-manabi-navi.vercel.app/tokyo" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "東京都の習い事", "item": "https://www.kodomo-navi.com/tokyo" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "東京都の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/tokyo",
+  "url": "https://www.kodomo-navi.com/tokyo",
   "description": "東京都内のキッズダンス教室・子ども向け習い事を区市別に比較。世田谷・目黒・江戸川など各エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "東京都の習い事", "item": "https://kodomo-manabi-navi.vercel.app/tokyo" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "東京都の習い事", "item": "https://www.kodomo-navi.com/tokyo" },
     ],
   },
 };

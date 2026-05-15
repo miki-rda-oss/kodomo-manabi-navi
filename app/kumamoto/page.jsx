@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+const BASE_URL = 'https://www.kodomo-navi.com';
 const PREF_SLUG = 'kumamoto';
 const PREF_NAME = '熊本県';
 const PREF_NAME_SHORT = '熊本';
@@ -13,7 +13,7 @@ export const metadata = {
   alternates: { canonical: `${BASE_URL}/${PREF_SLUG}` },
 };
 
-const breadcrumbSchema = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://kodomo-manabi-navi.vercel.app"},{"@type":"ListItem","position":2,"name":"熊本県の習い事","item":"https://kodomo-manabi-navi.vercel.app/kumamoto"}]};
+const breadcrumbSchema = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://www.kodomo-navi.com"},{"@type":"ListItem","position":2,"name":"熊本県の習い事","item":"https://www.kodomo-navi.com/kumamoto"}]};
 const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"熊本県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"熊本県の子供ダンス教室は月5,000円〜8,000円程度が相場です。"}},{"@type":"Question","name":"熊本県で3歳から通えるダンス教室はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。熊本県内のダンス教室の多くが3歳から入会できるリトルクラスを設けています。"}},{"@type":"Question","name":"熊本県の有名なダンス教室はどこですか？","acceptedAnswer":{"@type":"Answer","text":"リディアダンスアカデミーをはじめ、熊本県には人気のダンス教室が多数あります。口コミ評価も高く、体験レッスンも随時受付中です。"}}]};
 
 const blogs = [

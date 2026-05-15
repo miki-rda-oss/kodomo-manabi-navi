@@ -5,7 +5,7 @@ export const metadata = {
   description: '京都府内のキッズダンス教室・子ども向け習い事を市別に比較。京都市の各エリアの教室情報を掲載。',
   keywords: ['京都', '子供', 'ダンス教室', '習い事', 'キッズ', '京都府', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/kyoto',
+    canonical: 'https://www.kodomo-navi.com/kyoto',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "京都府の習い事", "item": "https://kodomo-manabi-navi.vercel.app/kyoto" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "京都府の習い事", "item": "https://www.kodomo-navi.com/kyoto" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "京都府の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/kyoto",
+  "url": "https://www.kodomo-navi.com/kyoto",
   "description": "京都府内のキッズダンス教室・子ども向け習い事を市別に比較。京都市の各エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "京都府の習い事", "item": "https://kodomo-manabi-navi.vercel.app/kyoto" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "京都府の習い事", "item": "https://www.kodomo-navi.com/kyoto" },
     ],
   },
 };

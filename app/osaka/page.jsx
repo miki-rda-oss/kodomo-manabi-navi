@@ -5,7 +5,7 @@ export const metadata = {
   description: '大阪府内のキッズダンス教室・子ども向け習い事を市区町村別に比較。吹田・豊中・高槻など主要エリアの教室情報を掲載。',
   keywords: ['大阪', '子供', 'ダンス教室', '習い事', 'キッズ', '大阪府', '比較'],
   alternates: {
-    canonical: 'https://kodomo-manabi-navi.vercel.app/osaka',
+    canonical: 'https://www.kodomo-navi.com/osaka',
   },
 };
 
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-    { "@type": "ListItem", "position": 2, "name": "大阪府の習い事", "item": "https://kodomo-manabi-navi.vercel.app/osaka" },
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+    { "@type": "ListItem", "position": 2, "name": "大阪府の習い事", "item": "https://www.kodomo-navi.com/osaka" },
   ],
 };
 
@@ -22,13 +22,13 @@ const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "大阪府の子供向け習い事・ダンス教室一覧",
-  "url": "https://kodomo-manabi-navi.vercel.app/osaka",
+  "url": "https://www.kodomo-navi.com/osaka",
   "description": "大阪府内のキッズダンス教室・子ども向け習い事を市区町村別に比較。吹田・豊中・高槻など主要エリアの教室情報を掲載。",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kodomo-manabi-navi.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "大阪府の習い事", "item": "https://kodomo-manabi-navi.vercel.app/osaka" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.kodomo-navi.com" },
+      { "@type": "ListItem", "position": 2, "name": "大阪府の習い事", "item": "https://www.kodomo-navi.com/osaka" },
     ],
   },
 };

@@ -8,10 +8,10 @@ export const metadata = {
   title: `${PREF_NAME}の子供向けダンス教室・習い事一覧｜コドモならいごと`,
   description: `${PREF_NAME}内のキッズダンス教室・子ども向け習い事を比較。${PREF_CITY}など主要エリアの教室情報を掲載。`,
   keywords: [PREF_NAME, '子供', 'ダンス教室', '習い事', 'キッズ'],
-  alternates: { canonical: `https://kodomo-manabi-navi.vercel.app/${PREF_SLUG}` },
+  alternates: { canonical: `https://www.kodomo-navi.com/${PREF_SLUG}` },
 };
 
-const breadcrumbSchema = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://kodomo-manabi-navi.vercel.app"},{"@type":"ListItem","position":2,"name":"秋田県の習い事","item":"https://kodomo-manabi-navi.vercel.app/akita"}]};
+const breadcrumbSchema = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://www.kodomo-navi.com"},{"@type":"ListItem","position":2,"name":"秋田県の習い事","item":"https://www.kodomo-navi.com/akita"}]};
 const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"秋田県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"秋田県の子供ダンス教室は月5,000円〜8,000円程度が相場です。"}},{"@type":"Question","name":"秋田県で3歳から通えるダンス教室はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。秋田県内のダンス教室の多くが3歳から入会できるリトルクラスを設けています。"}},{"@type":"Question","name":"秋田県の人気ダンス教室はどこですか？","acceptedAnswer":{"@type":"Answer","text":"リディアダンスアカデミーをはじめ、秋田県には体験レッスン無料の人気ダンス教室が多数あります。"}}]};
 
 const blogs = [

@@ -1,6 +1,6 @@
 import "./globals.css";
 
-const BASE_URL = 'https://kodomo-manabi-navi.vercel.app';
+const BASE_URL = 'https://www.kodomo-navi.com';
 
 export const metadata = {
   title: 'コドモならいごと｜子供の習い事を口コミで検索・比較',
