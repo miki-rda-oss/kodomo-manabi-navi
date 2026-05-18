@@ -178,8 +178,11 @@ export default function EnglishTopPage() {
           </div>
         </div>
 
-        <div style={{ textAlign: "center" }}>
-          <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 28px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 16px rgba(255,138,0,.3)" }}>
+        <div style={{ textAlign: "center", display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/genre/english" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 24px", background: "#fff", border: "1.5px solid #FFD9A0", borderRadius: 20, color: "#FF8A00", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+            🌍 英語スクール一覧
+          </Link>
+          <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 24px", background: "linear-gradient(135deg, #FF8A00, #FFB347)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 16px rgba(255,138,0,.3)" }}>
             ← トップページへ戻る
           </Link>
         </div>

@@ -177,8 +177,11 @@ export default function SoccerTopPage() {
           </div>
         </div>
 
-        <div style={{ textAlign: "center" }}>
-          <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 28px", background: "linear-gradient(135deg, #4CAF50, #2E7D32)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 16px rgba(76,175,80,.3)" }}>
+        <div style={{ textAlign: "center", display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/genre/soccer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 24px", background: "#fff", border: "1.5px solid #C8E6C9", borderRadius: 20, color: "#2E7D32", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+            ⚽ サッカーのスクール一覧
+          </Link>
+          <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 24px", background: "linear-gradient(135deg, #4CAF50, #2E7D32)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 16px rgba(76,175,80,.3)" }}>
             ← トップページへ戻る
           </Link>
         </div>
