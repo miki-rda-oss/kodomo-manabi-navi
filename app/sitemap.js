@@ -164,6 +164,81 @@ const GENRE_SLUGS = [
   'karate', 'rhythmics', 'preschool', 'juku',
 ];
 
+// サッカー・英語専用ページ
+const SOCCER_PREF_PATHS = [
+  '/soccer/osaka', '/soccer/tokyo', '/soccer/kanagawa', '/soccer/aichi', '/soccer/gifu',
+  '/soccer/hyogo', '/soccer/ibaraki', '/soccer/ishikawa', '/soccer/kyoto', '/soccer/nagano',
+  '/soccer/shiga', '/soccer/wakayama', '/soccer/saitama', '/soccer/chiba',
+  '/soccer/fukuoka', '/soccer/hokkaido', '/soccer/miyagi', '/soccer/hiroshima', '/soccer/shizuoka',
+  '/soccer/okayama', '/soccer/niigata', '/soccer/tochigi', '/soccer/gunma', '/soccer/mie',
+  '/soccer/nara', '/soccer/fukui', '/soccer/toyama', '/soccer/yamanashi', '/soccer/tottori',
+  '/soccer/shimane', '/soccer/kochi', '/soccer/tokushima', '/soccer/kagawa', '/soccer/saga',
+  '/soccer/oita', '/soccer/miyazaki', '/soccer/okinawa', '/soccer/kumamoto', '/soccer/kagoshima',
+  '/soccer/nagasaki', '/soccer/ehime', '/soccer/yamaguchi', '/soccer/fukushima', '/soccer/akita',
+  '/soccer/yamagata', '/soccer/iwate', '/soccer/aomori',
+];
+
+const SOCCER_AREA_PATHS = [
+  '/soccer/aichi/anjo', '/soccer/aichi/chikusa', '/soccer/aichi/meito', '/soccer/aichi/midori',
+  '/soccer/aichi/moriyama', '/soccer/aichi/nisshin', '/soccer/aichi/owariasahi', '/soccer/aichi/tenpaku', '/soccer/aichi/toyota',
+  '/soccer/chiba/chiba-city', '/soccer/chiba/kashiwa', '/soccer/chiba/matsudo',
+  '/soccer/gifu/gifu-city', '/soccer/gifu/kani', '/soccer/gifu/minokamo', '/soccer/gifu/tajimi',
+  '/soccer/hyogo/nishinomiya',
+  '/soccer/ibaraki/hitachi', '/soccer/ibaraki/hitachinaka', '/soccer/ibaraki/mito', '/soccer/ibaraki/tsuchiura', '/soccer/ibaraki/tsukuba',
+  '/soccer/ishikawa/kanazawa', '/soccer/ishikawa/nonoichi', '/soccer/ishikawa/uchinada',
+  '/soccer/kanagawa/aoba', '/soccer/kanagawa/atsugi', '/soccer/kanagawa/ebina', '/soccer/kanagawa/fujisawa',
+  '/soccer/kanagawa/kohoku', '/soccer/kanagawa/midori',
+  '/soccer/kanagawa/nakahara', '/soccer/kanagawa/nakahara-shinjou', '/soccer/kanagawa/sagamihara', '/soccer/kanagawa/takatsu',
+  '/soccer/kanagawa/tsuzuki', '/soccer/kanagawa/yamato', '/soccer/kanagawa/yokosuka', '/soccer/kanagawa/zushi',
+  '/soccer/kyoto/kyoto-city',
+  '/soccer/nagano/nagano-city',
+  '/soccer/osaka/ibaraki', '/soccer/osaka/minoh', '/soccer/osaka/moriguchi', '/soccer/osaka/osaka-city',
+  '/soccer/osaka/sakai', '/soccer/osaka/suita', '/soccer/osaka/takatsuki', '/soccer/osaka/toyonaka',
+  '/soccer/saitama/kawaguchi', '/soccer/saitama/koshigaya', '/soccer/saitama/minami', '/soccer/saitama/urawa',
+  '/soccer/shiga/kusatsu', '/soccer/shiga/otsu',
+  '/soccer/tokyo/chofu', '/soccer/tokyo/edogawa', '/soccer/tokyo/kita', '/soccer/tokyo/machida',
+  '/soccer/tokyo/meguro', '/soccer/tokyo/minato', '/soccer/tokyo/nerima', '/soccer/tokyo/setagaya',
+  '/soccer/tokyo/shibuya', '/soccer/tokyo/shinagawa', '/soccer/tokyo/shinjuku', '/soccer/tokyo/suginami',
+  '/soccer/wakayama/wakayama-city',
+];
+
+const ENGLISH_PREF_PATHS = [
+  '/english/osaka', '/english/tokyo', '/english/kanagawa', '/english/aichi', '/english/gifu',
+  '/english/hyogo', '/english/ibaraki', '/english/ishikawa', '/english/kyoto', '/english/nagano',
+  '/english/shiga', '/english/wakayama', '/english/saitama', '/english/chiba',
+  '/english/fukuoka', '/english/hokkaido', '/english/miyagi', '/english/hiroshima', '/english/shizuoka',
+  '/english/okayama', '/english/niigata', '/english/tochigi', '/english/gunma', '/english/mie',
+  '/english/nara', '/english/fukui', '/english/toyama', '/english/yamanashi', '/english/tottori',
+  '/english/shimane', '/english/kochi', '/english/tokushima', '/english/kagawa', '/english/saga',
+  '/english/oita', '/english/miyazaki', '/english/okinawa', '/english/kumamoto', '/english/kagoshima',
+  '/english/nagasaki', '/english/ehime', '/english/yamaguchi', '/english/fukushima', '/english/akita',
+  '/english/yamagata', '/english/iwate', '/english/aomori',
+];
+
+const ENGLISH_AREA_PATHS = [
+  '/english/aichi/anjo', '/english/aichi/chikusa', '/english/aichi/meito', '/english/aichi/midori',
+  '/english/aichi/moriyama', '/english/aichi/nisshin', '/english/aichi/owariasahi', '/english/aichi/tenpaku', '/english/aichi/toyota',
+  '/english/chiba/chiba-city', '/english/chiba/kashiwa', '/english/chiba/matsudo',
+  '/english/gifu/gifu-city', '/english/gifu/kani', '/english/gifu/minokamo', '/english/gifu/tajimi',
+  '/english/hyogo/nishinomiya',
+  '/english/ibaraki/hitachi', '/english/ibaraki/hitachinaka', '/english/ibaraki/mito', '/english/ibaraki/tsuchiura', '/english/ibaraki/tsukuba',
+  '/english/ishikawa/kanazawa', '/english/ishikawa/nonoichi', '/english/ishikawa/uchinada',
+  '/english/kanagawa/aoba', '/english/kanagawa/atsugi', '/english/kanagawa/ebina', '/english/kanagawa/fujisawa',
+  '/english/kanagawa/kohoku', '/english/kanagawa/midori',
+  '/english/kanagawa/nakahara', '/english/kanagawa/nakahara-shinjou', '/english/kanagawa/sagamihara', '/english/kanagawa/takatsu',
+  '/english/kanagawa/tsuzuki', '/english/kanagawa/yamato', '/english/kanagawa/yokosuka', '/english/kanagawa/zushi',
+  '/english/kyoto/kyoto-city',
+  '/english/nagano/nagano-city',
+  '/english/osaka/ibaraki', '/english/osaka/minoh', '/english/osaka/moriguchi', '/english/osaka/osaka-city',
+  '/english/osaka/sakai', '/english/osaka/suita', '/english/osaka/takatsuki', '/english/osaka/toyonaka',
+  '/english/saitama/kawaguchi', '/english/saitama/koshigaya', '/english/saitama/minami', '/english/saitama/urawa',
+  '/english/shiga/kusatsu', '/english/shiga/otsu',
+  '/english/tokyo/chofu', '/english/tokyo/edogawa', '/english/tokyo/kita', '/english/tokyo/machida',
+  '/english/tokyo/meguro', '/english/tokyo/minato', '/english/tokyo/nerima', '/english/tokyo/setagaya',
+  '/english/tokyo/shibuya', '/english/tokyo/shinagawa', '/english/tokyo/shinjuku', '/english/tokyo/suginami',
+  '/english/wakayama/wakayama-city',
+];
+
 const AREA_PATHS = [
   '/aichi/anjo', '/aichi/chikusa', '/aichi/meito', '/aichi/midori',
   '/aichi/moriyama', '/aichi/nisshin', '/aichi/owariasahi', '/aichi/tenpaku', '/aichi/toyota',
@@ -239,5 +314,15 @@ export default function sitemap() {
     })),
   ];
 
-  return [...top, ...blogs, ...genres, ...prefs, ...areas];
+  const soccerTop = [{ url: `${BASE_URL}/soccer`, lastModified: now, priority: 0.85 }];
+  const soccerPrefs = SOCCER_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
+  const soccerAreas = SOCCER_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.65 }));
+
+  const englishTop = [{ url: `${BASE_URL}/english`, lastModified: now, priority: 0.85 }];
+  const englishPrefs = ENGLISH_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
+  const englishAreas = ENGLISH_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.65 }));
+
+  return [...top, ...blogs, ...genres, ...prefs, ...areas,
+          ...soccerTop, ...soccerPrefs, ...soccerAreas,
+          ...englishTop, ...englishPrefs, ...englishAreas];
 }
