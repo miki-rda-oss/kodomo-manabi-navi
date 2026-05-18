@@ -314,15 +314,28 @@ export default function sitemap() {
     })),
   ];
 
+  // 既存: soccer / english
   const soccerTop = [{ url: `${BASE_URL}/soccer`, lastModified: now, priority: 0.85 }];
   const soccerPrefs = SOCCER_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
   const soccerAreas = SOCCER_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.65 }));
-
   const englishTop = [{ url: `${BASE_URL}/english`, lastModified: now, priority: 0.85 }];
   const englishPrefs = ENGLISH_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
   const englishAreas = ENGLISH_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.65 }));
 
+  // 新規ジャンル（各ジャンルのトップ・都道府県・エリアページ）
+  const ACTIVITY_SLUGS = [
+    'piano', 'swimming', 'ballet', 'gymnastics', 'basketball',
+    'preschool', 'soroban', 'programming', 'rhythmics', 'music',
+    'karate',
+  ];
+  const activityPages = ACTIVITY_SLUGS.flatMap(slug => [
+    { url: `${BASE_URL}/${slug}`, lastModified: now, priority: 0.85 },
+    ...PREF_PATHS.map(p => ({ url: `${BASE_URL}/${slug}${p}`, lastModified: now, priority: 0.75 })),
+    ...AREA_PATHS.map(p => ({ url: `${BASE_URL}/${slug}${p}`, lastModified: now, priority: 0.65 })),
+  ]);
+
   return [...top, ...blogs, ...genres, ...prefs, ...areas,
           ...soccerTop, ...soccerPrefs, ...soccerAreas,
-          ...englishTop, ...englishPrefs, ...englishAreas];
+          ...englishTop, ...englishPrefs, ...englishAreas,
+          ...activityPages];
 }
