@@ -50,6 +50,32 @@ export default function PrefPage() {
             <p style={{fontSize:14,lineHeight:1.9,color:"#444"}}>K-POPブームと中学校ダンス必修化で佐賀県でも子供のダンス需要が急増。2026年ランキング1位。</p>
           </div>
         </section>
+        {/* ジャンル別に探す */}
+        <section style={{background:'#fff',borderRadius:16,padding:'24px 20px',border:'1.5px solid #e8edf4',marginTop:32,marginBottom:24}}>
+          <div style={{fontSize:11,fontWeight:700,color:'#FF8A00',marginBottom:8,letterSpacing:'.5px'}}>GENRE</div>
+          <h2 style={{fontSize:16,fontWeight:900,color:'#1B2A4A',marginBottom:14}}>ジャンル別に探す</h2>
+          <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
+            {[
+              ['/soccer/saga','⚽','サッカー'],
+              ['/piano/saga','🎹','ピアノ'],
+              ['/swimming/saga','🏊','スイミング'],
+              ['/english/saga','🌍','英語'],
+              ['/ballet/saga','🩰','バレエ'],
+              ['/gymnastics/saga','🤸','体操'],
+              ['/basketball/saga','🏀','バスケット'],
+              ['/preschool/saga','🧒','幼児教室'],
+              ['/soroban/saga','🧮','そろばん'],
+              ['/programming/saga','💻','プログラミング'],
+              ['/rhythmics/saga','🎵','リトミック'],
+              ['/music/saga','🎸','音楽'],
+              ['/karate/saga','🥋','空手'],
+            ].map(([href,emoji,label])=>(
+              <Link key={href} href={href} style={{display:'inline-flex',alignItems:'center',gap:4,padding:'7px 14px',background:'#f8f9fb',border:'1.5px solid #e8edf4',borderRadius:20,textDecoration:'none',color:'#1B2A4A',fontSize:12,fontWeight:600}}>
+                {emoji} {label}
+              </Link>
+            ))}
+          </div>
+        </section>
         <div style={{textAlign:"center"}}>
           <Link href="/" style={{display:"inline-flex",alignItems:"center",gap:6,padding:"12px 28px",background:"linear-gradient(135deg,#FF8A00,#FFB347)",borderRadius:20,color:"#fff",fontWeight:700,fontSize:14,textDecoration:"none"}}>← トップページへ戻る</Link>
         </div>

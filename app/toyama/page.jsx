@@ -56,6 +56,32 @@ export default function PrefPage() {
             {[{href:"/osaka",name:"大阪府"},{href:"/tokyo",name:"東京都"},{href:"/aichi",name:"愛知県"},{href:"/kanagawa",name:"神奈川県"}].map((p,i)=><Link key={i} href={p.href} style={{display:"inline-flex",padding:"8px 16px",background:"#fff",border:"1.5px solid #e8edf4",borderRadius:20,textDecoration:"none",color:"#1B2A4A",fontSize:13,fontWeight:600}}>{p.name}</Link>)}
           </div>
         </div>
+        {/* ジャンル別に探す */}
+        <section style={{background:'#fff',borderRadius:16,padding:'24px 20px',border:'1.5px solid #e8edf4',marginTop:32,marginBottom:24}}>
+          <div style={{fontSize:11,fontWeight:700,color:'#FF8A00',marginBottom:8,letterSpacing:'.5px'}}>GENRE</div>
+          <h2 style={{fontSize:16,fontWeight:900,color:'#1B2A4A',marginBottom:14}}>ジャンル別に探す</h2>
+          <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
+            {[
+              ['/soccer/toyama','⚽','サッカー'],
+              ['/piano/toyama','🎹','ピアノ'],
+              ['/swimming/toyama','🏊','スイミング'],
+              ['/english/toyama','🌍','英語'],
+              ['/ballet/toyama','🩰','バレエ'],
+              ['/gymnastics/toyama','🤸','体操'],
+              ['/basketball/toyama','🏀','バスケット'],
+              ['/preschool/toyama','🧒','幼児教室'],
+              ['/soroban/toyama','🧮','そろばん'],
+              ['/programming/toyama','💻','プログラミング'],
+              ['/rhythmics/toyama','🎵','リトミック'],
+              ['/music/toyama','🎸','音楽'],
+              ['/karate/toyama','🥋','空手'],
+            ].map(([href,emoji,label])=>(
+              <Link key={href} href={href} style={{display:'inline-flex',alignItems:'center',gap:4,padding:'7px 14px',background:'#f8f9fb',border:'1.5px solid #e8edf4',borderRadius:20,textDecoration:'none',color:'#1B2A4A',fontSize:12,fontWeight:600}}>
+                {emoji} {label}
+              </Link>
+            ))}
+          </div>
+        </section>
         <div style={{textAlign:"center"}}>
           <Link href="/" style={{display:"inline-flex",alignItems:"center",gap:6,padding:"12px 28px",background:"linear-gradient(135deg,#FF8A00,#FFB347)",borderRadius:20,color:"#fff",fontWeight:700,fontSize:14,textDecoration:"none"}}>← トップページへ戻る</Link>
         </div>

@@ -574,36 +574,44 @@ export default function GenrePage({ params }) {
           </div>
         )}
 
-        {/* 都道府県別ページへのリンク（soccer・english） */}
-        {(slug === 'soccer' || slug === 'english') && (
-          <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginTop: 28, border: `1.5px solid ${slug === 'soccer' ? '#C8E6C9' : '#FFD9A0'}`, boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
-            <div style={{ display: "inline-block", background: slug === 'soccer' ? "#E8F5E9" : "#fff7ee", borderRadius: 6, padding: "3px 12px", fontSize: 11, fontWeight: 700, color: slug === 'soccer' ? '#2E7D32' : '#FF8A00', marginBottom: 10, letterSpacing: ".5px" }}>
-              AREA SEARCH
-            </div>
-            <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 6 }}>
-              📍 都道府県・エリア別に探す
-            </h2>
-            <p style={{ fontSize: 13, color: "#888", marginBottom: 16 }}>
-              お住まいの地域から{slug === 'soccer' ? 'サッカースクール' : '英語・英会話教室'}を探せます
-            </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20 }}>
-              {[
-                { s: 'osaka', n: '大阪府' }, { s: 'tokyo', n: '東京都' }, { s: 'kanagawa', n: '神奈川県' },
-                { s: 'aichi', n: '愛知県' }, { s: 'saitama', n: '埼玉県' }, { s: 'chiba', n: '千葉県' },
-                { s: 'fukuoka', n: '福岡県' }, { s: 'hokkaido', n: '北海道' }, { s: 'hyogo', n: '兵庫県' },
-                { s: 'miyagi', n: '宮城県' }, { s: 'hiroshima', n: '広島県' }, { s: 'shizuoka', n: '静岡県' },
-              ].map(pref => (
-                <Link key={pref.s} href={`/${slug}/${pref.s}`}
-                  style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "8px 14px", background: "#f8f9fb", border: "1.5px solid #e8edf4", borderRadius: 20, textDecoration: "none", color: "#1B2A4A", fontSize: 13, fontWeight: 600 }}>
-                  📍 {pref.n}
+        {/* 都道府県別ページへのリンク */}
+        {['soccer','english','piano','swimming','ballet','gymnastics','basketball','preschool','soroban','programming','rhythmics','music','karate'].includes(slug) && (
+          (() => {
+            const activityColor = {soccer:'#4CAF50',english:'#FF8A00',piano:'#9C27B0',swimming:'#0288D1',ballet:'#E91E63',gymnastics:'#FF6F00',basketball:'#E65100',preschool:'#FFC107',soroban:'#795548',programming:'#1565C0',rhythmics:'#FF7043',music:'#673AB7',karate:'#795548'}[slug] || '#FF8A00';
+            const activityLabel = {soccer:'サッカースクール',english:'英語・英会話教室',piano:'ピアノ教室',swimming:'スイミングスクール',ballet:'バレエ教室',gymnastics:'体操教室',basketball:'バスケットボールスクール',preschool:'幼児教室・知育教室',soroban:'そろばん教室',programming:'プログラミング教室',rhythmics:'リトミック教室',music:'音楽教室・楽器教室',karate:'空手教室・道場'}[slug] || slug;
+            const borderColor = activityColor + '40';
+            const bgColor = activityColor + '15';
+            return (
+              <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginTop: 28, border: `1.5px solid ${borderColor}`, boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+                <div style={{ display: "inline-block", background: bgColor, borderRadius: 6, padding: "3px 12px", fontSize: 11, fontWeight: 700, color: activityColor, marginBottom: 10, letterSpacing: ".5px" }}>
+                  AREA SEARCH
+                </div>
+                <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 6 }}>
+                  📍 都道府県・エリア別に探す
+                </h2>
+                <p style={{ fontSize: 13, color: "#888", marginBottom: 16 }}>
+                  お住まいの地域から{activityLabel}を探せます
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20 }}>
+                  {[
+                    { s: 'osaka', n: '大阪府' }, { s: 'tokyo', n: '東京都' }, { s: 'kanagawa', n: '神奈川県' },
+                    { s: 'aichi', n: '愛知県' }, { s: 'saitama', n: '埼玉県' }, { s: 'chiba', n: '千葉県' },
+                    { s: 'fukuoka', n: '福岡県' }, { s: 'hokkaido', n: '北海道' }, { s: 'hyogo', n: '兵庫県' },
+                    { s: 'miyagi', n: '宮城県' }, { s: 'hiroshima', n: '広島県' }, { s: 'shizuoka', n: '静岡県' },
+                  ].map(pref => (
+                    <Link key={pref.s} href={`/${slug}/${pref.s}`}
+                      style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "8px 14px", background: "#f8f9fb", border: "1.5px solid #e8edf4", borderRadius: 20, textDecoration: "none", color: "#1B2A4A", fontSize: 13, fontWeight: 600 }}>
+                      📍 {pref.n}
+                    </Link>
+                  ))}
+                </div>
+                <Link href={`/${slug}`}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 24px", background: `linear-gradient(135deg, ${activityColor}, ${activityColor}cc)`, borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+                  🗾 全国の{activityLabel}を都道府県から探す →
                 </Link>
-              ))}
-            </div>
-            <Link href={`/${slug}`}
-              style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 24px", background: slug === 'soccer' ? "linear-gradient(135deg, #4CAF50, #2E7D32)" : "linear-gradient(135deg, #FF8A00, #FFB347)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: slug === 'soccer' ? "0 4px 16px rgba(76,175,80,.4)" : "0 4px 16px rgba(255,138,0,.4)" }}>
-              🗾 全国の{slug === 'soccer' ? 'サッカースクール' : '英語教室'}を都道府県から探す →
-            </Link>
-          </div>
+              </div>
+            );
+          })()
         )}
 
         {/* ジャンル解説セクション */}
