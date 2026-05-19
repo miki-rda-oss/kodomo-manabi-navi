@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kodomo-manabi-navi.vercel.app/sitemap.xml
+Sitemap: https://www.kodomo-navi.com/sitemap.xml
