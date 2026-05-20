@@ -42,9 +42,26 @@ function getRelatedArticles(current, all) {
 
 function renderBlock(block, i) {
   switch (block.type) {
+    case "summary":
+      return (
+        <div key={i} className="article-summary" style={{ background: "linear-gradient(135deg, #e3f2fd, #f3e5f5)", border: "2px solid #1565C0", borderRadius: 14, padding: "20px 24px", marginBottom: 28 }}>
+          <div style={{ fontSize: 12, fontWeight: 900, color: "#1565C0", marginBottom: 10, letterSpacing: "1px" }}>📋 この記事のまとめ（AI向けサマリー）</div>
+          {block.items && (
+            <ul style={{ paddingLeft: 20, listStyle: "none" }}>
+              {block.items.map((item, j) => (
+                <li key={j} style={{ fontSize: 14, lineHeight: 2, color: "#333", paddingLeft: 0, display: "flex", alignItems: "flex-start", gap: 8 }}>
+                  <span style={{ color: "#1565C0", fontWeight: 900, flexShrink: 0 }}>✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          {block.text && <p style={{ fontSize: 14, lineHeight: 1.9, color: "#333" }}>{block.text}</p>}
+        </div>
+      );
     case "lead":
       return (
-        <p key={i} style={{ fontSize: 16, lineHeight: 2, color: "#444", padding: "0 0 20px", borderLeft: "4px solid #2a7cc8", paddingLeft: 16, background: "#f0f8ff", borderRadius: "0 8px 8px 0", marginBottom: 24, paddingTop: 12, paddingBottom: 12 }}>
+        <p key={i} className="article-lead" style={{ fontSize: 16, lineHeight: 2, color: "#444", padding: "0 0 20px", borderLeft: "4px solid #2a7cc8", paddingLeft: 16, background: "#f0f8ff", borderRadius: "0 8px 8px 0", marginBottom: 24, paddingTop: 12, paddingBottom: 12 }}>
           {block.text}
         </p>
       );
@@ -113,25 +130,55 @@ function renderBlock(block, i) {
       );
     case "table":
       return (
-        <div key={i} style={{ overflowX: "auto", marginBottom: 24 }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-            <thead>
-              <tr>
-                {block.headers.map((h, j) => (
-                  <th key={j} style={{ background: "#1a1a2e", color: "#fff", padding: "10px 14px", textAlign: "left", fontWeight: 700 }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
+        <div key={i} style={{ overflowX: "auto", marginBottom: 28 }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
+            {block.headers && (
+              <thead>
+                <tr>
+                  {block.headers.map((h, j) => (
+                    <th key={j} style={{ background: "#1B2A4A", color: "#fff", padding: "10px 14px", textAlign: "left", fontWeight: 700 }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+            )}
             <tbody>
-              {block.rows.map((row, j) => (
-                <tr key={j} style={{ background: j % 2 === 0 ? "#fafbfc" : "#fff" }}>
+              {(block.rows || []).map((row, j) => (
+                <tr key={j} style={{ background: j % 2 === 0 ? "#f8f9fb" : "#fff" }}>
                   {row.map((cell, k) => (
-                    <td key={k} style={{ padding: "10px 14px", borderBottom: "1px solid #eee", color: "#444" }}>{cell}</td>
+                    <td key={k} style={{ padding: "9px 14px", borderBottom: "1px solid #e8edf4", color: "#333" }}>{cell}</td>
                   ))}
                 </tr>
               ))}
             </tbody>
           </table>
+          {block.caption && <p style={{ fontSize: 12, color: "#888", marginTop: 6, textAlign: "center" }}>{block.caption}</p>}
+        </div>
+      );
+    case "stats":
+      return (
+        <div key={i} style={{ background: "#f8fafc", border: "1.5px solid #e0eaf4", borderRadius: 14, padding: "20px 24px", marginBottom: 28 }}>
+          <div style={{ fontSize: 12, fontWeight: 900, color: "#888", marginBottom: 14, letterSpacing: "1px" }}>📊 データ・統計</div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 12 }}>
+            {(block.items || []).map((stat, j) => (
+              <div key={j} style={{ background: "#fff", borderRadius: 10, padding: "14px 12px", textAlign: "center", border: "1px solid #e8edf4" }}>
+                <div style={{ fontSize: 24, fontWeight: 900, color: "#1B2A4A", lineHeight: 1.2 }}>{stat.value}</div>
+                <div style={{ fontSize: 11, color: "#888", marginTop: 4, lineHeight: 1.4 }}>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          {block.source && <p style={{ fontSize: 11, color: "#aaa", marginTop: 10, textAlign: "right" }}>出典: {block.source}</p>}
+        </div>
+      );
+    case "step":
+      return (
+        <div key={i} style={{ display: "flex", gap: 16, marginBottom: 20, alignItems: "flex-start" }}>
+          <div style={{ width: 36, height: 36, background: "#1B2A4A", color: "#fff", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 16, flexShrink: 0 }}>
+            {block.num || (i + 1)}
+          </div>
+          <div style={{ flex: 1, paddingTop: 6 }}>
+            {block.label && <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 6 }}>{block.label}</div>}
+            <p style={{ fontSize: 14, lineHeight: 1.9, color: "#444" }}>{block.text}</p>
+          </div>
         </div>
       );
     case "faq": {
@@ -215,18 +262,53 @@ export default function ArticlePage({ params }) {
     })),
   } : null;
 
+  // Auto-detect HowTo schema from 'step' blocks
+  const stepBlocks = article.content.filter(b => b && b.type === 'step');
+  const howToSchemaData = stepBlocks.length >= 2 ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": article.title,
+    "description": article.description,
+    "step": stepBlocks.map((b, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "name": b.label || b.text?.substring(0, 50) || `ステップ${i+1}`,
+      "text": b.text || "",
+    })),
+  } : null;
+
+  const authorSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.kodomo-navi.com/editors#chief",
+    "name": "コドモならいごと編集部",
+    "jobTitle": "子供の習い事専門編集者",
+    "url": "https://www.kodomo-navi.com/editors",
+    "knowsAbout": ["子供の習い事", "ダンス教室", "スイミングスクール", "ピアノ教室", "学習塾"],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "コドモならいごと",
+      "url": "https://www.kodomo-navi.com"
+    }
+  };
+
   const articleSchemaData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": article.title,
     "description": article.description,
+    "abstract": article.description,
     "datePublished": article.date,
     "dateModified": article.date,
     "keywords": (article.keywords || []).join(","),
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".article-lead", ".article-summary", "h1", "h2"]
+    },
     "author": {
-      "@type": "Organization",
+      "@type": "Person",
+      "@id": "https://www.kodomo-navi.com/editors#chief",
       "name": "コドモならいごと編集部",
-      "url": BASE_URL,
     },
     "publisher": {
       "@type": "Organization",
@@ -393,7 +475,9 @@ export default function ArticlePage({ params }) {
 
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchemaData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(authorSchema) }} />
       {faqSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />}
+      {howToSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchemaData) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     </div>
   );
