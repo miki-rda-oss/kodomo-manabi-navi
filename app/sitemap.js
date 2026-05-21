@@ -357,7 +357,7 @@ export default function sitemap() {
   const ACTIVITY_SLUGS = [
     'piano', 'swimming', 'ballet', 'gymnastics', 'basketball',
     'preschool', 'soroban', 'programming', 'rhythmics', 'music',
-    'karate',
+    'karate', 'juku',
   ];
   const activityPages = ACTIVITY_SLUGS.flatMap(slug => [
     { url: `${BASE_URL}/${slug}`, lastModified: now, priority: 0.85 },

@@ -133,6 +133,24 @@ const HERO_ACTIVITIES = [
   { name: "スイミング",emoji: "🏊", bg: "linear-gradient(160deg, #0288D1 0%, #00BCD4 100%)", slug: "swimming" },
 ];
 
+const ALL_ACTIVITY_LINKS = [
+  { name:"ダンス",         emoji:"💃", href:"/genre/dance",   desc:"表現力・リズム感・自己肯定感" },
+  { name:"サッカー",       emoji:"⚽", href:"/soccer",        desc:"体力・判断力・チームワーク" },
+  { name:"英語・英会話",   emoji:"🌍", href:"/english",       desc:"グローバルコミュニケーション力" },
+  { name:"ピアノ",         emoji:"🎹", href:"/piano",         desc:"音感・集中力・表現力" },
+  { name:"スイミング",     emoji:"🏊", href:"/swimming",      desc:"体力・心肺機能・水難防止" },
+  { name:"バレエ",         emoji:"🩰", href:"/ballet",        desc:"柔軟性・姿勢・美的感覚" },
+  { name:"体操",           emoji:"🤸", href:"/gymnastics",    desc:"体幹・柔軟性・バランス感覚" },
+  { name:"バスケット",     emoji:"🏀", href:"/basketball",    desc:"瞬発力・判断力・チームワーク" },
+  { name:"幼児教室",       emoji:"🧒", href:"/preschool",     desc:"知育・認知力・社会性" },
+  { name:"そろばん",       emoji:"🧮", href:"/soroban",       desc:"計算力・集中力・暗算力" },
+  { name:"プログラミング", emoji:"💻", href:"/programming",   desc:"論理的思考・問題解決力" },
+  { name:"リトミック",     emoji:"🎵", href:"/rhythmics",     desc:"リズム感・感性・社会性" },
+  { name:"音楽教室",       emoji:"🎸", href:"/music",         desc:"音感・表現力・豊かな感性" },
+  { name:"空手",           emoji:"🥋", href:"/karate",        desc:"礼儀・忍耐力・精神力" },
+  { name:"学習塾",         emoji:"📚", href:"/juku",          desc:"学習習慣・基礎学力・受験対策" },
+];
+
 function JapanMap({ onRegionClick, activeRegion }) {
   const regions = [
     { id: "hokkaido", name: "北海道", d: "M280,20 L320,15 L340,35 L330,60 L310,70 L285,55 L275,35Z", cx: 308, cy: 42 },
@@ -635,6 +653,24 @@ export default function TopPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* ===== 全ジャンルナビ ===== */}
+      <section style={{ maxWidth:1100, margin:"0 auto 48px", padding:"0 16px" }}>
+        <div style={{ textAlign:"center", marginBottom:20 }}>
+          <div style={{ display:"inline-block", background:"#fff7ee", borderRadius:8, padding:"4px 16px", fontSize:11, fontWeight:700, color:"#FF8A00", marginBottom:8, letterSpacing:"1px" }}>ALL GENRES</div>
+          <h2 style={{ fontSize:22, fontWeight:900, color:"#1B2A4A" }}>ジャンルから習い事を探す</h2>
+          <p style={{ fontSize:13, color:"#888", marginTop:4 }}>全15ジャンルを都道府県・エリア別に比較できます</p>
+        </div>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(110px, 1fr))", gap:10 }}>
+          {ALL_ACTIVITY_LINKS.map((act, i) => (
+            <Link key={i} href={act.href} style={{ display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:5, padding:"16px 8px", background:"#fff", borderRadius:14, textDecoration:"none", border:"1.5px solid #e8edf4", boxShadow:"0 2px 8px rgba(0,0,0,.04)" }}>
+              <span style={{ fontSize:28 }}>{act.emoji}</span>
+              <span style={{ fontSize:12, fontWeight:800, color:"#1B2A4A", textAlign:"center", lineHeight:1.3 }}>{act.name}</span>
+              <span style={{ fontSize:10, color:"#888", textAlign:"center", lineHeight:1.3 }}>{act.desc}</span>
+            </Link>
+          ))}
         </div>
       </section>
 

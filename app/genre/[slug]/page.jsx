@@ -575,10 +575,10 @@ export default function GenrePage({ params }) {
         )}
 
         {/* 都道府県別ページへのリンク */}
-        {['soccer','english','piano','swimming','ballet','gymnastics','basketball','preschool','soroban','programming','rhythmics','music','karate'].includes(slug) && (
+        {['soccer','english','piano','swimming','ballet','gymnastics','basketball','preschool','soroban','programming','rhythmics','music','karate','juku'].includes(slug) && (
           (() => {
-            const activityColor = {soccer:'#4CAF50',english:'#FF8A00',piano:'#9C27B0',swimming:'#0288D1',ballet:'#E91E63',gymnastics:'#FF6F00',basketball:'#E65100',preschool:'#FFC107',soroban:'#795548',programming:'#1565C0',rhythmics:'#FF7043',music:'#673AB7',karate:'#795548'}[slug] || '#FF8A00';
-            const activityLabel = {soccer:'サッカースクール',english:'英語・英会話教室',piano:'ピアノ教室',swimming:'スイミングスクール',ballet:'バレエ教室',gymnastics:'体操教室',basketball:'バスケットボールスクール',preschool:'幼児教室・知育教室',soroban:'そろばん教室',programming:'プログラミング教室',rhythmics:'リトミック教室',music:'音楽教室・楽器教室',karate:'空手教室・道場'}[slug] || slug;
+            const activityColor = {soccer:'#4CAF50',english:'#FF8A00',piano:'#9C27B0',swimming:'#0288D1',ballet:'#E91E63',gymnastics:'#FF6F00',basketball:'#E65100',preschool:'#FFC107',soroban:'#795548',programming:'#1565C0',rhythmics:'#FF7043',music:'#673AB7',karate:'#795548',juku:'#1565C0'}[slug] || '#FF8A00';
+            const activityLabel = {soccer:'サッカースクール',english:'英語・英会話教室',piano:'ピアノ教室',swimming:'スイミングスクール',ballet:'バレエ教室',gymnastics:'体操教室',basketball:'バスケットボールスクール',preschool:'幼児教室・知育教室',soroban:'そろばん教室',programming:'プログラミング教室',rhythmics:'リトミック教室',music:'音楽教室・楽器教室',karate:'空手教室・道場',juku:'学習塾・学習教室'}[slug] || slug;
             const borderColor = activityColor + '40';
             const bgColor = activityColor + '15';
             return (
