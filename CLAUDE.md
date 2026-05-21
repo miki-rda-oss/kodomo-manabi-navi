@@ -9,14 +9,16 @@
 
 ## 必須ルール
 
-1. **作業完了後は必ず git push すること**
+1. **作業前に必ず git pull すること**
+2. **作業完了後は必ず git push すること**
    ```
+   git pull origin main
    git add <変更ファイル>
    git commit -m "feat: ○○"
    git push origin main
    ```
-2. pushするとVercelが自動デプロイする（数分で本番反映）
-3. バックアップファイル（*.bak など）はコミットしない
+3. pushするとVercelが自動デプロイする（数分で本番反映）
+4. バックアップファイル（*.bak など）はコミットしない
 
 ## 技術スタック
 
