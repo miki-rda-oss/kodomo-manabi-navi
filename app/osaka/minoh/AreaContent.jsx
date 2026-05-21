@@ -209,7 +209,21 @@ return (<article style={{background:"#fff",borderRadius:16,boxShadow:"0 2px 14px
   {s.revs?.[0]&&<div style={{margin:"12px 20px 0",background:"#f8f9fb",borderRadius:10,padding:12,borderLeft:`3px solid ${s.color}`}}><div style={{display:"flex",alignItems:"center",gap:6,marginBottom:4}}><div style={{width:24,height:24,borderRadius:"50%",background:`${s.color}44`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10}}>👤</div><span style={{fontSize:11,color:"#888"}}>{s.revs[0].g}／{s.revs[0].a}　{s.revs[0].l}</span></div><p style={{margin:0,fontSize:12,color:"#555",lineHeight:1.6,fontStyle:"italic"}}>「{s.revs[0].t}」</p></div>}
   <Acc title={`📋 コース・料金（${s.courses.length}件）`} color={s.color} open={exp} toggle={()=>setExp(!exp)}>{s.courses.map((c,i)=><CRow key={i} c={c} color={s.color} i={i}/>)}</Acc>
   <Acc title={`📍 教室（${s.locs.length}件）`} open={loc} toggle={()=>setLoc(!loc)}>{s.locs.map((l,i)=><LocRow key={i} l={l} color={s.color} last={i===s.locs.length-1}/>)}</Acc>
-  <div style={{padding:"18px 20px"}}><button style={{width:"100%",padding:"13px",borderRadius:12,border:"none",background:`linear-gradient(135deg,${s.color},${s.color}cc)`,color:"#fff",fontWeight:700,fontSize:14,cursor:"pointer",boxShadow:`0 4px 16px ${s.color}44`}}>📝 無料体験レッスンに申し込む</button></div>
+  <div style={{padding:"18px 20px"}}>
+    {s.featured && (
+      <a href={s.trialUrl || s.url} target="_blank" rel="noopener noreferrer"
+         style={{display:'block', background:'#E53935', color:'#fff', textAlign:'center',
+                 padding:'12px 20px', borderRadius:'8px', fontWeight:'900', fontSize:'14px',
+                 textDecoration:'none', marginTop:'12px', letterSpacing:'.5px'}}>
+        🎵 無料体験を申し込む →
+      </a>
+    )}
+    {!s.featured && (s.trialUrl || s.url) ? (
+      <a href={s.trialUrl || s.url} target="_blank" rel="noopener noreferrer" style={{display:"block",width:"100%",padding:"13px",borderRadius:12,background:`linear-gradient(135deg,${s.color},${s.color}cc)`,color:"#fff",fontWeight:700,fontSize:14,textDecoration:"none",textAlign:"center",boxShadow:`0 4px 16px ${s.color}44`}}>📝 無料体験レッスンに申し込む</a>
+    ) : !s.featured ? (
+      <button style={{width:"100%",padding:"13px",borderRadius:12,border:"none",background:`linear-gradient(135deg,${s.color},${s.color}cc)`,color:"#fff",fontWeight:700,fontSize:14,cursor:"pointer",boxShadow:`0 4px 16px ${s.color}44`}}>📝 無料体験レッスンに申し込む</button>
+    ) : null}
+  </div>
 </article>);}
 
 function FAQ({q,a}){const[o,setO]=useState(false);return (<div style={{background:"#fff",borderRadius:12,marginBottom:8,border:"1px solid #eee"}}><button onClick={()=>setO(!o)} style={{width:"100%",padding:"14px 18px",border:"none",background:"none",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"space-between",fontSize:14,fontWeight:600,color:"#333",textAlign:"left",gap:10}}><span>{q}</span><span style={{transform:o?"rotate(180deg)":"",transition:".2s",flexShrink:0}}>▼</span></button>{o&&<div style={{padding:"0 18px 14px",fontSize:14,color:"#666",lineHeight:1.8}}>{a}</div>}</div>);}

@@ -393,6 +393,12 @@ export default function sitemap() {
   const dancePrefs = DANCE_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.8 }));
   const danceAreas = DANCE_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
 
+  // リディア専用ページ・年齢別ページ
+  const danceSpecial = [
+    { url: `${BASE_URL}/dance/redia`, lastModified: now, priority: 0.95 },
+    ...([3,4,5,6,7,8,9,10].map(age => ({ url: `${BASE_URL}/dance/age/${age}`, lastModified: now, priority: 0.85 }))),
+  ];
+
   // 新規ジャンル（各ジャンルのトップ・都道府県・エリアページ）
   const ACTIVITY_SLUGS = [
     'piano', 'swimming', 'ballet', 'gymnastics', 'basketball',
@@ -408,6 +414,6 @@ export default function sitemap() {
   return [...top, ...blogs, ...genres, ...prefs, ...areas,
           ...soccerTop, ...soccerPrefs, ...soccerAreas,
           ...englishTop, ...englishPrefs, ...englishAreas,
-          ...danceTop, ...dancePrefs, ...danceAreas,
+          ...danceTop, ...dancePrefs, ...danceAreas, ...danceSpecial,
           ...activityPages];
 }
