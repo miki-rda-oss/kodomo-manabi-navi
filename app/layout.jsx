@@ -62,6 +62,32 @@ const websiteSchema = {
   },
 };
 
+const siteNavSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.kodomo-navi.com/#website",
+  "url": "https://www.kodomo-navi.com",
+  "name": "コドモならいごと",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.kodomo-navi.com/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "hasPart": [
+    { "@type": "SiteNavigationElement", "name": "ダンス教室を探す", "url": "https://www.kodomo-navi.com/genre/dance" },
+    { "@type": "SiteNavigationElement", "name": "サッカースクールを探す", "url": "https://www.kodomo-navi.com/soccer" },
+    { "@type": "SiteNavigationElement", "name": "英語教室を探す", "url": "https://www.kodomo-navi.com/english" },
+    { "@type": "SiteNavigationElement", "name": "ピアノ教室を探す", "url": "https://www.kodomo-navi.com/piano" },
+    { "@type": "SiteNavigationElement", "name": "スイミングスクールを探す", "url": "https://www.kodomo-navi.com/swimming" },
+    { "@type": "SiteNavigationElement", "name": "学習塾を探す", "url": "https://www.kodomo-navi.com/juku" },
+    { "@type": "SiteNavigationElement", "name": "都道府県から探す", "url": "https://www.kodomo-navi.com/osaka" },
+    { "@type": "SiteNavigationElement", "name": "習い事コラム", "url": "https://www.kodomo-navi.com/blog" }
+  ]
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
@@ -77,6 +103,7 @@ export default function RootLayout({ children }) {
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavSchema) }} />
         {children}
       </body>
     </html>
