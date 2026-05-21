@@ -4,7 +4,7 @@ const CAT_SLUG={"ダンス":"dance","K-POP":"kpop","スイミング":"swimming",
 
 const S = {
   "ダンス": [
-    { id:"d0", name:"リディアダンスアカデミー", rating:4.8, rc:312, age:"3歳〜15歳", featured:true, url:"https://re-dia.jp/",
+    { id:"d0", name:"リディアダンスアカデミー", rating:4.8, rc:312, age:"3歳〜15歳", featured:true, trialUrl:"https://re-dia.jp/contact/", url:"https://re-dia.jp/",
       desc:"箕面市内に5校展開する人気No.1ダンススクール。現役プロダンサー講師200名以上在籍、全国100校以上展開。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。",
       tags:["箕面市内6校","口コミ312件","評価4.8","初回体験無料","少人数制","プロ講師","全国100校以上","塾代助成カード対応"],
       genres:["ヒップホップ","ジャズ","K-POP","ブレイクダンス","ポップ","ワック","ソウル"],
@@ -198,7 +198,7 @@ return (<article style={{background:"linear-gradient(135deg,#fff,#FFF8F7)",borde
   {s.revs.length>0&&(<div style={{margin:"14px 22px 0",background:"#FFF8F7",borderRadius:12,padding:14,borderLeft:`4px solid ${s.color}`}}><div style={{display:"flex",alignItems:"center",gap:6,marginBottom:6}}><div style={{width:28,height:28,borderRadius:"50%",background:`${s.color}44`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12}}>👤</div><span style={{fontSize:11,color:"#888"}}>{s.revs[ri].g}／{s.revs[ri].a}　{s.revs[ri].l}</span></div><p style={{margin:0,fontSize:13,color:"#444",lineHeight:1.7}}>「{s.revs[ri].t}」</p>{s.revs.length>1&&<div style={{display:"flex",gap:5,marginTop:8,justifyContent:"center"}}>{s.revs.map((_,i)=><button key={i} onClick={()=>setRi(i)} style={{width:7,height:7,borderRadius:"50%",border:"none",background:i===ri?s.color:"#ddd",cursor:"pointer"}}/>)}</div>}</div>)}
   <Acc title={`📋 コース・料金（${s.courses.length}件）`} color={s.color} open={exp} toggle={()=>setExp(!exp)}>{s.courses.map((c,i)=><CRow key={i} c={c} color={s.color} i={i}/>)}</Acc>
   <Acc title={`📍 箕面市内の教室（${s.locs.length}校）`} color={s.color} open={loc} toggle={()=>setLoc(!loc)}>{s.locs.map((l,i)=><LocRow key={i} l={l} color={s.color} last={i===s.locs.length-1}/>)}</Acc>
-  <div style={{padding:"18px 22px"}}><a href={s.url} target="_blank" rel="noopener noreferrer" style={{display:"flex",alignItems:"center",justifyContent:"center",gap:8,padding:"14px",borderRadius:14,background:`linear-gradient(135deg,${s.color},${s.color}cc)`,color:"#fff",fontWeight:800,fontSize:14,textDecoration:"none",boxShadow:`0 6px 20px ${s.color}44`}}>📝 無料体験レッスンに申し込む</a></div>
+  <div style={{padding:"18px 22px"}}><a href={s.trialUrl||s.url} target="_blank" rel="noopener noreferrer" style={{display:"flex",alignItems:"center",justifyContent:"center",gap:8,padding:"14px",borderRadius:14,background:`linear-gradient(135deg,${s.color},${s.color}cc)`,color:"#fff",fontWeight:800,fontSize:14,textDecoration:"none",boxShadow:`0 6px 20px ${s.color}44`}}>🎵 無料体験を申し込む →</a></div>
 </article>);}
 
 function Card({s,idx,catName}){const[exp,setExp]=useState(false);const[loc,setLoc]=useState(false);

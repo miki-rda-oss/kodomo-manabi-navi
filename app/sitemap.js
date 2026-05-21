@@ -353,6 +353,46 @@ export default function sitemap() {
   const englishPrefs = ENGLISH_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
   const englishAreas = ENGLISH_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.65 }));
 
+  // ダンス専用ページ（dance/）
+  const DANCE_PREF_PATHS = [
+    '/dance/osaka', '/dance/tokyo', '/dance/kanagawa', '/dance/aichi', '/dance/gifu',
+    '/dance/hyogo', '/dance/ibaraki', '/dance/ishikawa', '/dance/kyoto', '/dance/nagano',
+    '/dance/shiga', '/dance/wakayama', '/dance/saitama', '/dance/chiba',
+    '/dance/fukuoka', '/dance/hokkaido', '/dance/miyagi', '/dance/hiroshima', '/dance/shizuoka',
+    '/dance/okayama', '/dance/niigata', '/dance/tochigi', '/dance/gunma', '/dance/mie',
+    '/dance/nara', '/dance/fukui', '/dance/toyama', '/dance/yamanashi', '/dance/tottori',
+    '/dance/shimane', '/dance/kochi', '/dance/tokushima', '/dance/kagawa', '/dance/saga',
+    '/dance/oita', '/dance/miyazaki', '/dance/okinawa', '/dance/kumamoto', '/dance/kagoshima',
+    '/dance/nagasaki', '/dance/ehime', '/dance/yamaguchi', '/dance/fukushima', '/dance/akita',
+    '/dance/yamagata', '/dance/iwate', '/dance/aomori',
+  ];
+  const DANCE_AREA_PATHS = [
+    '/dance/aichi/anjo', '/dance/aichi/chikusa', '/dance/aichi/meito', '/dance/aichi/midori',
+    '/dance/aichi/moriyama', '/dance/aichi/nisshin', '/dance/aichi/owariasahi', '/dance/aichi/tenpaku', '/dance/aichi/toyota',
+    '/dance/chiba/chiba-city', '/dance/chiba/kashiwa', '/dance/chiba/matsudo',
+    '/dance/gifu/gifu-city', '/dance/gifu/kani', '/dance/gifu/minokamo', '/dance/gifu/tajimi',
+    '/dance/hyogo/nishinomiya',
+    '/dance/ibaraki/hitachi', '/dance/ibaraki/hitachinaka', '/dance/ibaraki/mito', '/dance/ibaraki/tsuchiura', '/dance/ibaraki/tsukuba',
+    '/dance/ishikawa/kanazawa', '/dance/ishikawa/nonoichi', '/dance/ishikawa/uchinada',
+    '/dance/kanagawa/aoba', '/dance/kanagawa/atsugi', '/dance/kanagawa/ebina', '/dance/kanagawa/fujisawa',
+    '/dance/kanagawa/kohoku', '/dance/kanagawa/midori',
+    '/dance/kanagawa/nakahara', '/dance/kanagawa/nakahara-shinjou', '/dance/kanagawa/sagamihara', '/dance/kanagawa/takatsu',
+    '/dance/kanagawa/tsuzuki', '/dance/kanagawa/yamato', '/dance/kanagawa/yokosuka', '/dance/kanagawa/zushi',
+    '/dance/kyoto/kyoto-city',
+    '/dance/nagano/nagano-city',
+    '/dance/osaka/ibaraki', '/dance/osaka/minoh', '/dance/osaka/moriguchi', '/dance/osaka/osaka-city',
+    '/dance/osaka/sakai', '/dance/osaka/suita', '/dance/osaka/takatsuki', '/dance/osaka/toyonaka',
+    '/dance/saitama/kawaguchi', '/dance/saitama/koshigaya', '/dance/saitama/minami', '/dance/saitama/urawa',
+    '/dance/shiga/kusatsu', '/dance/shiga/otsu',
+    '/dance/tokyo/chofu', '/dance/tokyo/edogawa', '/dance/tokyo/kita', '/dance/tokyo/machida',
+    '/dance/tokyo/meguro', '/dance/tokyo/minato', '/dance/tokyo/nerima', '/dance/tokyo/setagaya',
+    '/dance/tokyo/shibuya', '/dance/tokyo/shinagawa', '/dance/tokyo/shinjuku', '/dance/tokyo/suginami',
+    '/dance/wakayama/wakayama-city',
+  ];
+  const danceTop = [{ url: `${BASE_URL}/dance`, lastModified: now, priority: 0.9 }];
+  const dancePrefs = DANCE_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.8 }));
+  const danceAreas = DANCE_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
+
   // 新規ジャンル（各ジャンルのトップ・都道府県・エリアページ）
   const ACTIVITY_SLUGS = [
     'piano', 'swimming', 'ballet', 'gymnastics', 'basketball',
@@ -368,5 +408,6 @@ export default function sitemap() {
   return [...top, ...blogs, ...genres, ...prefs, ...areas,
           ...soccerTop, ...soccerPrefs, ...soccerAreas,
           ...englishTop, ...englishPrefs, ...englishAreas,
+          ...danceTop, ...dancePrefs, ...danceAreas,
           ...activityPages];
 }
