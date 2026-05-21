@@ -129,7 +129,7 @@ export default function DanceAreaPage({ params }) {
 
       <div style={{ maxWidth: 900, margin: "0 auto", padding: "32px 24px 60px" }}>
 
-        {/* リディア特集CTAブロック */}
+        {/* リディアダンスアカデミー特集CTAブロック */}
         {featuredSchool && featuredSchool.featured && (
           <div style={{ background: "linear-gradient(135deg, #FFF5F5, #FFEBEE)", borderRadius: 20, padding: "24px 24px", marginBottom: 28, border: "2px solid #E5393522", boxShadow: "0 4px 24px rgba(229,57,53,.1)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>

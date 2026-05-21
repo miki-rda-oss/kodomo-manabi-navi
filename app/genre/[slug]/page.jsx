@@ -514,7 +514,7 @@ export async function generateMetadata({ params }) {
   if (slug === 'dance') {
     return {
       title: '【2026年習い事1位】子供のダンス教室おすすめ比較｜コドモならいごと',
-      description: '2026年子供の習い事ランキング1位のダンス。キッズダンス教室の選び方・費用・年齢・おすすめ教室をエリア別に比較。リディア・EXPG・セイハなど全国人気教室を徹底比較します。',
+      description: '2026年子供の習い事ランキング1位のダンス。キッズダンス教室の選び方・費用・年齢・おすすめ教室をエリア別に比較。リディアダンスアカデミー・EXPG・セイハなど全国人気教室を徹底比較します。',
       alternates: { canonical: `${BASE_URL}/genre/dance` },
       openGraph: {
         title: '【2026年習い事1位】子供のダンス教室おすすめ比較｜コドモならいごと',

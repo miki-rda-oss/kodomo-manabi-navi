@@ -896,7 +896,7 @@ export default function TopPage() {
               <Link href="/blog" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>習い事コラム一覧</Link>
               <Link href="/blog/osaka-kids-dance-school-ranking" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>大阪ダンス教室ランキング</Link>
               <Link href="/blog/kids-dance-age-guide" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>何歳からダンスを習う？</Link>
-              <Link href="/blog/lydia-dance-academy-review" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>リディア口コミ・料金</Link>
+              <Link href="/blog/lydia-dance-academy-review" style={{ display: "block", fontSize: 12, color: "#6a7d9a", marginBottom: 7, textDecoration: "none" }}>リディアダンスアカデミー口コミ・料金</Link>
             </div>
             <div style={{ minWidth: 130 }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "#fff", marginBottom: 12 }}>ℹ️ サイト情報</div>
