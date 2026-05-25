@@ -121,7 +121,7 @@ const popularSchools = [
     rating: 4.8,
     fee: "7,700円〜（月会員）",
     featured: true,
-    trialUrl: "https://re-dia.jp/contact/",
+    trialUrl: "https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd",
     points: ["現役プロダンサー講師200名以上", "全国100校以上展開", "多ジャンル対応", "発表会充実"],
   },
   {
@@ -208,7 +208,7 @@ export default function AgeDancePage({ params }) {
           <p style={{ fontSize: 14, color: "rgba(255,255,255,.92)", lineHeight: 2, marginBottom: 24 }}>
             {data.ageDesc}
           </p>
-          <a href="https://re-dia.jp/contact/" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd" target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-block', background: '#fff', color: '#E53935',
             textAlign: 'center', padding: '16px 32px', borderRadius: '12px',
             fontWeight: '900', fontSize: '1.1rem', textDecoration: 'none',
@@ -289,7 +289,7 @@ export default function AgeDancePage({ params }) {
             <div style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 8 }}>{data.courseInfo}</div>
             <p style={{ fontSize: 14, color: "#666", lineHeight: 1.7, margin: 0 }}>{data.courseDesc}</p>
           </div>
-          <a href="https://re-dia.jp/contact/" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd" target="_blank" rel="noopener noreferrer" style={{
             display: 'block', background: '#E53935', color: '#fff',
             textAlign: 'center', padding: '16px 24px', borderRadius: '10px',
             fontWeight: '900', fontSize: '15px', textDecoration: 'none',

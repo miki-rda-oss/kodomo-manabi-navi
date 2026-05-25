@@ -31,7 +31,7 @@ const faqSchema = {
 };
 
 const popularSchools = [
-  { name: "リディアダンスアカデミー", rating: 4.8, fee: 7700, age: "3歳〜15歳", desc: "全国100校以上展開のキッズダンススクール。現役プロダンサー講師200名以上在籍。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。", emoji: "🏆", trialUrl: "https://re-dia.jp/contact/", featured: true },
+  { name: "リディアダンスアカデミー", rating: 4.8, fee: 7700, age: "3歳〜15歳", desc: "全国100校以上展開のキッズダンススクール。現役プロダンサー講師200名以上在籍。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。", emoji: "🏆", trialUrl: "https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd", featured: true },
   { name: "EXPG DANCE & VOCAL STUDIO", rating: 4.5, fee: 12100, age: "3歳〜", desc: "LDH系列のダンス・ボーカルスクール。プロを目指す本格派向け。", emoji: "⭐" },
   { name: "エイベックス・ダンスマスター", rating: 4.4, fee: 11000, age: "年中〜高校生", desc: "エイベックス直営のキッズダンススクール。初心者が楽しめる環境を重視。ショッピングモール内が多く通いやすい。", emoji: "💫" },
   { name: "ブレスダンスカンパニー", rating: 4.3, fee: 8800, age: "3歳〜", desc: "全国展開のダンススクール。ヒップホップ・K-POP・バレエなど幅広いジャンルに対応。初心者歓迎。", emoji: "💜" },
@@ -119,7 +119,7 @@ export default function DanceTopPage() {
             ))}
           </div>
           <a
-            href="https://re-dia.jp/contact/"
+            href="https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd"
             target="_blank"
             rel="noopener noreferrer"
             style={{ display: "block", background: "#E53935", color: "#fff", textAlign: "center", padding: "16px 24px", borderRadius: 12, fontWeight: 900, fontSize: 16, textDecoration: "none", boxShadow: "0 6px 20px rgba(229,57,53,.4)" }}
