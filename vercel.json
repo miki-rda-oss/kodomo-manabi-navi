@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "kodomo-manabi-navi.vercel.app"
+        }
+      ],
+      "destination": "https://www.kodomo-navi.com/$1",
+      "permanent": true
+    }
+  ]
+}
