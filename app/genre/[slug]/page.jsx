@@ -712,6 +712,50 @@ export default function GenrePage({ params }) {
           })()
         )}
 
+        {/* 比較テーブル（AIO/GEO・SEO向け） */}
+        {schools.length > 0 && (
+          <section style={{ marginTop: 48 }}>
+            <div style={{ textAlign: "center", marginBottom: 18 }}>
+              <div style={{ display: "inline-block", background: "#fff7ee", borderRadius: 6, padding: "3px 12px", fontSize: 11, fontWeight: 700, color: "#FF8A00", marginBottom: 8, letterSpacing: ".5px" }}>COMPARE</div>
+              <h2 style={{ fontSize: 20, fontWeight: 900, color: "#1B2A4A" }}>{genre.name}教室 料金・特徴を一覧比較</h2>
+              <p style={{ fontSize: 13, color: "#888", marginTop: 6 }}>月謝・対象年齢・体験・評価を比較してお選びください</p>
+            </div>
+            <div style={{ overflowX: "auto", background: "#fff", borderRadius: 16, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.04)" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, minWidth: 600 }}>
+                <thead>
+                  <tr style={{ background: "#1B2A4A" }}>
+                    {["スクール名", "月謝", "対象年齢", "無料体験", "特徴", "口コミ評価"].map((h, i) => (
+                      <th key={i} style={{ padding: "12px 14px", textAlign: "left", color: "#fff", fontWeight: 700, whiteSpace: "nowrap" }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {schools.map((s, i) => (
+                    <tr key={s.id} style={{ background: s.featured ? "#fff7ee" : (i % 2 === 0 ? "#f8f9fb" : "#fff"), borderBottom: "1px solid #e8edf4" }}>
+                      <td style={{ padding: "12px 14px", fontWeight: s.featured ? 800 : 600, color: "#1B2A4A" }}>
+                        {s.featured && <span style={{ background: "#FF8A00", color: "#fff", fontSize: 10, fontWeight: 900, padding: "1px 6px", borderRadius: 4, marginRight: 6 }}>No.1</span>}
+                        {s.url ? <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ color: "#1B2A4A", textDecoration: "none" }}>{s.name}</a> : s.name}
+                      </td>
+                      <td style={{ padding: "12px 14px", color: "#333", whiteSpace: "nowrap" }}>{s.fee}</td>
+                      <td style={{ padding: "12px 14px", color: "#333", whiteSpace: "nowrap" }}>{s.age}</td>
+                      <td style={{ padding: "12px 14px", color: "#4CAF50", fontWeight: 700, whiteSpace: "nowrap" }}>
+                        {s.tags?.includes("無料体験あり") ? "✓ 無料" : "要確認"}
+                      </td>
+                      <td style={{ padding: "12px 14px", color: "#555" }}>
+                        {s.tags?.slice(0, 3).join(" / ")}
+                      </td>
+                      <td style={{ padding: "12px 14px", color: "#FF8A00", fontWeight: 700, whiteSpace: "nowrap" }}>
+                        ★ {s.rating} <span style={{ color: "#aaa", fontWeight: 400 }}>({s.reviews}件)</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize: 12, color: "#aaa", marginTop: 8, textAlign: "right" }}>※ 掲載情報は2026年5月時点。料金・体験内容は各スクールにお確かめください。</p>
+          </section>
+        )}
+
         {/* ジャンル解説セクション */}
         <section style={{ maxWidth: 900, margin: "40px auto 0", padding: "0 0px" }}>
           <div style={{ background: "#fff", borderRadius: 16, padding: "28px 24px", border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.04)" }}>
@@ -799,6 +843,21 @@ export default function GenrePage({ params }) {
           "description": s.desc,
           "url": s.url || BASE_URL,
         })),
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${BASE_URL}/genre/${slug}`,
+        "name": `${genre.name}教室おすすめ一覧｜子供の習い事比較`,
+        "description": `全国の子ども向け${genre.name}教室を口コミ・料金・体験情報で比較。${genre.desc}。`,
+        "url": `${BASE_URL}/genre/${slug}`,
+        "inLanguage": "ja",
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".dance-ranking-intro", ".dance-summary", "h1", "h2"],
+        },
+        "breadcrumb": { "@id": `${BASE_URL}/genre/${slug}#breadcrumb` },
       }) }} />
       {slug === "dance" && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

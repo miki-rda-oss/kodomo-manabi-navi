@@ -46,6 +46,32 @@ export default function SwimmingTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.kodomo-navi.com/swimming",
+        "name": "子供のスイミングスクールおすすめ｜全国都道府県別比較",
+        "description": "全国の子ども向けスイミングスクールを都道府県・エリア別に比較。月謝・コース・無料体験情報を掲載。",
+        "url": "https://www.kodomo-navi.com/swimming",
+        "inLanguage": "ja",
+        "isPartOf": { "@id": "https://www.kodomo-navi.com/#website" },
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2"] },
+      }) } } />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "子供のスイミングスクールおすすめ人気スクール一覧",
+        "description": "全国の子ども向けスイミングスクールを比較。月謝・口コミ・無料体験情報を掲載。",
+        "url": "https://www.kodomo-navi.com/swimming",
+        "numberOfItems": popularSchools.length,
+        "itemListElement": popularSchools.map((s, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": s.name,
+          "description": s.desc,
+          "url": s.trialUrl || s.url || "https://www.kodomo-navi.com/swimming",
+        })),
+      }) } } />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

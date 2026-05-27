@@ -53,39 +53,30 @@ const websiteSchema = {
   "@id": `${BASE_URL}/#website`,
   "name": "コドモならいごと",
   "url": BASE_URL,
-  "description": "子どもの習い事をエリア・ジャンルで検索・比較できる情報サイト",
+  "description": "子どもの習い事をエリア・ジャンルで検索・比較できる情報サイト。全国5,000教室以上・11カテゴリを掲載。",
+  "inLanguage": "ja",
   "publisher": { "@id": `${BASE_URL}/#organization` },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": `${BASE_URL}/?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
-};
-
-const siteNavSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.kodomo-navi.com/#website",
-  "url": "https://www.kodomo-navi.com",
-  "name": "コドモならいごと",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://www.kodomo-navi.com/?q={search_term_string}"
+      "urlTemplate": `${BASE_URL}/?q={search_term_string}`,
     },
-    "query-input": "required name=search_term_string"
+    "query-input": "required name=search_term_string",
   },
   "hasPart": [
-    { "@type": "SiteNavigationElement", "name": "ダンス教室を探す", "url": "https://www.kodomo-navi.com/genre/dance" },
-    { "@type": "SiteNavigationElement", "name": "サッカースクールを探す", "url": "https://www.kodomo-navi.com/soccer" },
-    { "@type": "SiteNavigationElement", "name": "英語教室を探す", "url": "https://www.kodomo-navi.com/english" },
-    { "@type": "SiteNavigationElement", "name": "ピアノ教室を探す", "url": "https://www.kodomo-navi.com/piano" },
-    { "@type": "SiteNavigationElement", "name": "スイミングスクールを探す", "url": "https://www.kodomo-navi.com/swimming" },
-    { "@type": "SiteNavigationElement", "name": "学習塾を探す", "url": "https://www.kodomo-navi.com/juku" },
-    { "@type": "SiteNavigationElement", "name": "都道府県から探す", "url": "https://www.kodomo-navi.com/osaka" },
-    { "@type": "SiteNavigationElement", "name": "習い事コラム", "url": "https://www.kodomo-navi.com/blog" }
-  ]
+    { "@type": "SiteNavigationElement", "name": "ダンス教室を探す", "url": `${BASE_URL}/genre/dance` },
+    { "@type": "SiteNavigationElement", "name": "スイミングスクールを探す", "url": `${BASE_URL}/swimming` },
+    { "@type": "SiteNavigationElement", "name": "英語教室を探す", "url": `${BASE_URL}/english` },
+    { "@type": "SiteNavigationElement", "name": "ピアノ教室を探す", "url": `${BASE_URL}/piano` },
+    { "@type": "SiteNavigationElement", "name": "プログラミング教室を探す", "url": `${BASE_URL}/programming` },
+    { "@type": "SiteNavigationElement", "name": "サッカースクールを探す", "url": `${BASE_URL}/soccer` },
+    { "@type": "SiteNavigationElement", "name": "バレエ教室を探す", "url": `${BASE_URL}/ballet` },
+    { "@type": "SiteNavigationElement", "name": "学習塾を探す", "url": `${BASE_URL}/juku` },
+    { "@type": "SiteNavigationElement", "name": "都道府県から探す", "url": `${BASE_URL}/osaka` },
+    { "@type": "SiteNavigationElement", "name": "習い事コラム", "url": `${BASE_URL}/blog` },
+    { "@type": "SiteNavigationElement", "name": "サービスについて", "url": `${BASE_URL}/about` },
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -103,7 +94,6 @@ export default function RootLayout({ children }) {
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavSchema) }} />
         {children}
       </body>
     </html>

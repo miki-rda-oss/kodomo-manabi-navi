@@ -10,7 +10,6 @@ export default function PrefPage() {
     return (
     <div style={{fontFamily:"'Noto Sans JP',sans-serif",background:"#f4f7fc",minHeight:"100vh"}}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb)}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}} />
       <header style={{background:"#fff",borderBottom:"1px solid #e8edf4",position:"sticky",top:0,zIndex:100}}>
         <div style={{maxWidth:1100,margin:"0 auto",padding:"0 24px",display:"flex",alignItems:"center",gap:10,height:56}}>
           <Link href="/" style={{display:"flex",alignItems:"center",gap:8,textDecoration:"none"}}>

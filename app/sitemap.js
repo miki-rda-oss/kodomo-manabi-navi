@@ -313,45 +313,49 @@ export default function sitemap() {
   const now = new Date().toISOString();
 
   const top = [
-    { url: BASE_URL, lastModified: now, priority: 1.0 },
-    { url: `${BASE_URL}/editors`, lastModified: now, priority: 0.7 },
-    { url: `${BASE_URL}/about`, lastModified: now, priority: 0.6 },
+    { url: BASE_URL, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
+    { url: `${BASE_URL}/editors`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
   ];
 
   const genres = GENRE_SLUGS.map(slug => ({
     url: `${BASE_URL}/genre/${slug}`,
     lastModified: now,
+    changeFrequency: 'weekly',
     priority: 0.8,
   }));
 
   const prefs = PREF_PATHS.map(path => ({
     url: `${BASE_URL}${path}`,
     lastModified: now,
+    changeFrequency: 'weekly',
     priority: 0.75,
   }));
 
   const areas = AREA_PATHS.map(path => ({
     url: `${BASE_URL}${path}`,
     lastModified: now,
+    changeFrequency: 'monthly',
     priority: 0.6,
   }));
 
   const blogs = [
-    { url: `${BASE_URL}/blog`, lastModified: now, priority: 0.9 },
+    { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
     ...BLOG_SLUGS.map(slug => ({
       url: `${BASE_URL}/blog/${slug}`,
       lastModified: now,
+      changeFrequency: 'monthly',
       priority: 0.85,
     })),
   ];
 
   // 既存: soccer / english
-  const soccerTop = [{ url: `${BASE_URL}/soccer`, lastModified: now, priority: 0.85 }];
-  const soccerPrefs = SOCCER_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
-  const soccerAreas = SOCCER_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.65 }));
-  const englishTop = [{ url: `${BASE_URL}/english`, lastModified: now, priority: 0.85 }];
-  const englishPrefs = ENGLISH_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
-  const englishAreas = ENGLISH_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.65 }));
+  const soccerTop = [{ url: `${BASE_URL}/soccer`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 }];
+  const soccerPrefs = SOCCER_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 }));
+  const soccerAreas = SOCCER_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 }));
+  const englishTop = [{ url: `${BASE_URL}/english`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 }];
+  const englishPrefs = ENGLISH_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 }));
+  const englishAreas = ENGLISH_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 }));
 
   // ダンス専用ページ（dance/）
   const DANCE_PREF_PATHS = [
@@ -389,14 +393,14 @@ export default function sitemap() {
     '/dance/tokyo/shibuya', '/dance/tokyo/shinagawa', '/dance/tokyo/shinjuku', '/dance/tokyo/suginami',
     '/dance/wakayama/wakayama-city',
   ];
-  const danceTop = [{ url: `${BASE_URL}/dance`, lastModified: now, priority: 0.9 }];
-  const dancePrefs = DANCE_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.8 }));
-  const danceAreas = DANCE_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, priority: 0.75 }));
+  const danceTop = [{ url: `${BASE_URL}/dance`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 }];
+  const dancePrefs = DANCE_PREF_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 }));
+  const danceAreas = DANCE_AREA_PATHS.map(path => ({ url: `${BASE_URL}${path}`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 }));
 
   // リディア専用ページ・年齢別ページ
   const danceSpecial = [
-    { url: `${BASE_URL}/dance/redia`, lastModified: now, priority: 0.95 },
-    ...([3,4,5,6,7,8,9,10].map(age => ({ url: `${BASE_URL}/dance/age/${age}`, lastModified: now, priority: 0.85 }))),
+    { url: `${BASE_URL}/dance/redia`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    ...([3,4,5,6,7,8,9,10].map(age => ({ url: `${BASE_URL}/dance/age/${age}`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 }))),
   ];
 
   // 新規ジャンル（各ジャンルのトップ・都道府県・エリアページ）
@@ -406,9 +410,9 @@ export default function sitemap() {
     'karate', 'juku',
   ];
   const activityPages = ACTIVITY_SLUGS.flatMap(slug => [
-    { url: `${BASE_URL}/${slug}`, lastModified: now, priority: 0.85 },
-    ...PREF_PATHS.map(p => ({ url: `${BASE_URL}/${slug}${p}`, lastModified: now, priority: 0.75 })),
-    ...AREA_PATHS.map(p => ({ url: `${BASE_URL}/${slug}${p}`, lastModified: now, priority: 0.65 })),
+    { url: `${BASE_URL}/${slug}`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    ...PREF_PATHS.map(p => ({ url: `${BASE_URL}/${slug}${p}`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 })),
+    ...AREA_PATHS.map(p => ({ url: `${BASE_URL}/${slug}${p}`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 })),
   ]);
 
   return [...top, ...blogs, ...genres, ...prefs, ...areas,

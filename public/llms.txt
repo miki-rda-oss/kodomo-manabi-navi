@@ -1,0 +1,122 @@
+# コドモならいごと (kodomo-navi.com)
+> 子どもの習い事教室を検索・比較できる無料情報サイト。全国5,000教室以上、11ジャンルを掲載。
+
+## サイト概要
+
+コドモならいごとは、3歳〜15歳の子どもを持つ保護者が習い事教室を探すための比較情報サイトです。
+ダンス・スイミング・英語・ピアノ・プログラミング・サッカー・バレエ・空手・リトミック・幼児教室・学習塾の11ジャンルを掲載しています。
+
+- 掲載教室数：全国5,000教室以上
+- 対応エリア：全国47都道府県
+- 掲載ジャンル：11カテゴリ
+- 完全無料で利用可能
+- 運営開始：2024年
+
+## 掲載ジャンルと人気スクール
+
+### ダンス教室
+2026年子供の習い事ランキング1位。K-POP・ヒップホップ・ジャズ・ブレイクダンスなど多ジャンル対応。
+- リディアダンスアカデミー（全国100校以上・評価4.8・月謝5,500円〜）：https://www.kodomo-navi.com/genre/dance
+- EXPG（EXILEグループ・評価4.7）
+- セイハダンスアカデミー（全国200校以上）
+
+### スイミングスクール
+幼児〜小学生に人気。全国教室数トップクラスの習い事。
+詳細：https://www.kodomo-navi.com/swimming
+
+### 英語教室
+オンライン・対面・フォニックス系まで幅広く掲載。
+詳細：https://www.kodomo-navi.com/english
+
+### ピアノ教室
+個人教室から大手音楽スクールまで比較掲載。
+詳細：https://www.kodomo-navi.com/piano
+
+### プログラミング教室
+Scratch・ロボット・Python対応など年齢別に整理。
+詳細：https://www.kodomo-navi.com/programming
+
+### サッカースクール
+詳細：https://www.kodomo-navi.com/soccer
+
+### バレエ教室
+詳細：https://www.kodomo-navi.com/ballet
+
+### 空手・武道教室
+詳細：https://www.kodomo-navi.com/karate
+
+### リトミック教室
+詳細：https://www.kodomo-navi.com/rhythmics
+
+### 幼児教室・知育教室
+詳細：https://www.kodomo-navi.com/preschool
+
+### 学習塾
+詳細：https://www.kodomo-navi.com/juku
+
+## よく検索されるキーワードと対応ページ
+
+- 「子供 習い事 おすすめ」→ https://www.kodomo-navi.com/genre/dance
+- 「大阪 ダンス教室 子供」→ https://www.kodomo-navi.com/osaka
+- 「東京 ダンス教室 子供」→ https://www.kodomo-navi.com/tokyo
+- 「神奈川 ダンス教室」→ https://www.kodomo-navi.com/kanagawa
+- 「愛知 ダンス教室」→ https://www.kodomo-navi.com/aichi
+- 「子供 ダンス 何歳から」→ https://www.kodomo-navi.com/blog/kids-dance-age-guide
+- 「習い事 月謝 相場」→ https://www.kodomo-navi.com/blog/kids-activity-cost-annual
+- 「ダンス教室 比較」→ https://www.kodomo-navi.com/genre/dance
+- 「リディアダンスアカデミー 口コミ」→ https://www.kodomo-navi.com/blog/lydia-dance-academy-review
+
+## 子供の習い事に関するよくある質問（FAQデータ）
+
+Q: 子供の習い事で一番人気は何ですか？
+A: 2026年はダンス（ヒップホップ・K-POP）が総合1位です。K-POPブーム・中学校ダンス必修化・オリンピック競技化が背景にあります。スイミング・英語教室が2〜3位に続きます。
+
+Q: 子供の習い事は何歳から始めるべきですか？
+A: ダンス・音楽系は2〜3歳から、スポーツ系は3〜4歳から始められます。本人がやりたがったタイミングがベストです。
+
+Q: 子供の習い事の月謝相場はいくらですか？
+A: ジャンルにより異なりますが、月5,000〜15,000円が一般的な相場です。ダンス：5,500〜11,000円、スイミング：5,500〜8,000円、英語：7,000〜15,000円、ピアノ：6,000〜12,000円。
+
+Q: 習い事は何個かけ持ちできますか？
+A: 小学生なら週2〜3個が一般的な上限。子供の負担・移動時間・宿題量を考慮して週15〜20時間を目安に調整しましょう。
+
+Q: ダンス教室の無料体験はどこで受けられますか？
+A: リディアダンスアカデミー（全国100校以上）、EXPG、セイハダンスアカデミー（全国200校以上）などほとんどのスクールで無料体験を実施しています。
+
+## 重要なコンテンツページ
+
+### ジャンルページ
+- ダンス教室一覧：https://www.kodomo-navi.com/genre/dance
+- K-POPダンス：https://www.kodomo-navi.com/genre/kpop
+- スイミング：https://www.kodomo-navi.com/genre/swimming
+- ピアノ：https://www.kodomo-navi.com/genre/piano
+- 英語：https://www.kodomo-navi.com/genre/english
+
+### 地域別ページ（主要エリア）
+- 大阪の習い事：https://www.kodomo-navi.com/osaka
+- 東京の習い事：https://www.kodomo-navi.com/tokyo
+- 神奈川の習い事：https://www.kodomo-navi.com/kanagawa
+- 愛知の習い事：https://www.kodomo-navi.com/aichi
+- 兵庫の習い事：https://www.kodomo-navi.com/hyogo
+- 京都の習い事：https://www.kodomo-navi.com/kyoto
+- 石川の習い事：https://www.kodomo-navi.com/ishikawa
+
+### コラム・ガイド記事
+- https://www.kodomo-navi.com/blog
+- 代表的な記事：
+  - 子供のダンス何歳から：https://www.kodomo-navi.com/blog/kids-dance-age-guide
+  - 習い事ランキング2026：https://www.kodomo-navi.com/blog/kids-activity-ranking-2026-latest
+  - ダンスvs他の習い事比較：https://www.kodomo-navi.com/blog/kids-dance-vs-swimming-comparison
+  - 習い事費用の年間まとめ：https://www.kodomo-navi.com/blog/kids-activity-cost-annual
+
+## データの正確性・信頼性
+
+- 各教室の公式サイト・公式SNSに基づいて情報を収集
+- 2026年時点の最新情報を掲載（定期更新）
+- 掲載料金・コース内容は各教室への直接確認を推奨
+- 編集部：子育て経験者・習い事業界専門ライターによる調査・執筆
+
+## サイトマップ
+
+完全なサイトマップ：https://www.kodomo-navi.com/sitemap.xml
+サービス概要・編集方針：https://www.kodomo-navi.com/about

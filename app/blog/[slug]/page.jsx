@@ -282,6 +282,13 @@ export default function ArticlePage({ params }) {
     }
   };
 
+  const articleMentions = [
+    { "@type": "Organization", "name": "リディアダンスアカデミー", "url": "https://re-dia.jp/", "sameAs": "https://re-dia.jp/" },
+    { "@type": "Thing", "name": "子供の習い事" },
+    ...(article.category === "ダンス" ? [{ "@type": "Thing", "name": "ダンス教室", "description": "子供向けダンス教室。ヒップホップ・K-POP・ジャズ・バレエなどのジャンルを指導。" }] : []),
+    ...(article.area && article.area !== "全国" ? [{ "@type": "Place", "name": article.area, "addressCountry": "JP" }] : []),
+  ];
+
   const articleSchemaData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -290,11 +297,14 @@ export default function ArticlePage({ params }) {
     "abstract": article.description,
     "datePublished": article.date,
     "dateModified": article.date,
+    "inLanguage": "ja",
     "keywords": (article.keywords || []).join(","),
+    "wordCount": article.content.reduce((acc, b) => acc + (b.text?.length || 0) + (b.items?.join("").length || 0) + (b.rows?.flat().join("").length || 0), 0),
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": [".article-lead", ".article-summary", "h1", "h2"]
+      "cssSelector": [".article-lead", ".article-summary", "h1", "h2"],
     },
+    "mentions": articleMentions,
     "author": {
       "@type": "Person",
       "@id": "https://www.kodomo-navi.com/editors#chief",
@@ -382,6 +392,24 @@ export default function ArticlePage({ params }) {
 
         {/* Article Content */}
         <article style={{ background: "#fff", borderRadius: 16, padding: "28px 24px", boxShadow: "0 2px 14px rgba(0,0,0,.06)", marginBottom: 32 }}>
+          {/* Auto-inject AI summary if article has no summary block */}
+          {!article.content.some(b => b?.type === 'summary') && faqItems.length > 0 && (
+            <div className="article-summary" style={{ background: "linear-gradient(135deg, #e3f2fd, #f3e5f5)", border: "2px solid #1565C0", borderRadius: 14, padding: "20px 24px", marginBottom: 28 }}>
+              <div style={{ fontSize: 12, fontWeight: 900, color: "#1565C0", marginBottom: 10, letterSpacing: "1px" }}>📋 この記事のポイント（AI向けサマリー）</div>
+              <ul style={{ paddingLeft: 0, listStyle: "none" }}>
+                <li style={{ fontSize: 14, lineHeight: 2, color: "#333", display: "flex", alignItems: "flex-start", gap: 8, marginBottom: 4 }}>
+                  <span style={{ color: "#1565C0", fontWeight: 900, flexShrink: 0 }}>✓</span>
+                  <span>{article.description}</span>
+                </li>
+                {faqItems.slice(0, 3).map((f, fi) => (
+                  <li key={fi} style={{ fontSize: 14, lineHeight: 2, color: "#333", display: "flex", alignItems: "flex-start", gap: 8 }}>
+                    <span style={{ color: "#1565C0", fontWeight: 900, flexShrink: 0 }}>✓</span>
+                    <span><strong>{f.q}</strong>　{f.a.substring(0, 80)}{f.a.length > 80 ? "…" : ""}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           {article.content.map((block, i) => renderBlock(block, i))}
         </article>
 

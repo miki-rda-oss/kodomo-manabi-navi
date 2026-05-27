@@ -47,6 +47,32 @@ export default function DancePrefPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `https://www.kodomo-navi.com/dance/${pref}`,
+        "name": `${data.name}の子供向けダンス教室おすすめ一覧`,
+        "description": `${data.name}の子ども向けダンス教室を比較。月謝・口コミ・無料体験情報を掲載。`,
+        "url": `https://www.kodomo-navi.com/dance/${pref}`,
+        "inLanguage": "ja",
+        "isPartOf": { "@id": "https://www.kodomo-navi.com/#website" },
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2"] },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": `${data.name}の子供ダンス教室おすすめ一覧`,
+        "description": `${data.name}の子ども向けダンス教室を口コミ・料金で比較。`,
+        "url": `https://www.kodomo-navi.com/dance/${pref}`,
+        "numberOfItems": data.schools.length,
+        "itemListElement": data.schools.map((s, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": s.name,
+          "description": s.desc,
+          "url": s.url || "https://re-dia.jp/",
+        })),
+      }) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
