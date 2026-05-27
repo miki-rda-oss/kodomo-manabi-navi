@@ -143,6 +143,24 @@ export default function DanceTopPage() {
           </a>
         </div>
 
+        {/* 保護者満足度調査バナー */}
+        <Link href="/dance/survey" style={{ display: "block", textDecoration: "none", marginBottom: 28 }}>
+          <div style={{ background: "linear-gradient(135deg,#1a1a2e 0%,#2d2d4e 100%)", borderRadius: 16, padding: "20px 24px", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", boxShadow: "0 4px 20px rgba(0,0,0,0.2)" }}>
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <div style={{ fontSize: 11, color: "#FF6B35", fontWeight: 700, marginBottom: 4, letterSpacing: "0.06em" }}>📊 保護者アンケート調査 2026年5月</div>
+              <div style={{ fontSize: 17, fontWeight: 900, color: "#fff", lineHeight: 1.4 }}>ダンスで子どもは変わる？保護者169名が回答</div>
+              <div style={{ fontSize: 13, color: "#bbb", marginTop: 4 }}>満足度平均8.7点・44%が10点満点・自信がついた41%</div>
+            </div>
+            <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 28, fontWeight: 900, color: "#FF6B35", lineHeight: 1 }}>44%</div>
+                <div style={{ fontSize: 10, color: "#888" }}>10点満点</div>
+              </div>
+              <div style={{ background: "#E8003D", color: "#fff", fontSize: 12, fontWeight: 700, padding: "8px 16px", borderRadius: 8, whiteSpace: "nowrap" }}>調査結果を見る →</div>
+            </div>
+          </div>
+        </Link>
+
         {/* 都道府県グリッド */}
         <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 28, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
           <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 20, paddingBottom: 12, borderBottom: "2px solid #E5393520" }}>
