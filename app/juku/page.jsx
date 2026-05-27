@@ -77,6 +77,40 @@ export default function JukuTopPage() {
           "url": s.trialUrl || s.url || "https://www.kodomo-navi.com/juku",
         })),
       }) } } />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        })),
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "子供向け学習塾",
+        "description": "全国の子ども向け学習塾を比較。月謝・対象年齢・無料体験情報で選べます。",
+        "url": "https://www.kodomo-navi.com/juku",
+        "inLanguage": "ja",
+        "provider": {
+          "@type": "Organization",
+          "name": popularSchools[0].name,
+          "url": popularSchools[0].url || popularSchools[0].trialUrl || "https://www.kodomo-navi.com/juku",
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": String(popularSchools[0].fee),
+          "priceCurrency": "JPY",
+          "availability": "https://schema.org/InStock",
+        },
+        "hasCourseInstance": popularSchools.slice(0, 3).map(s => ({
+          "@type": "CourseInstance",
+          "name": s.name,
+          "courseMode": "Blended",
+          "instructor": { "@type": "Organization", "name": s.name },
+        })),
+      }) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -1,4 +1,12 @@
 import "./globals.css";
+import { Noto_Sans_JP } from "next/font/google";
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-noto",
+});
 
 const BASE_URL = 'https://www.kodomo-navi.com';
 
@@ -81,8 +89,10 @@ const websiteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={notoSansJP.variable}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G63RRC650F"></script>
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
@@ -91,7 +101,7 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-G63RRC650F');
         `}} />
       </head>
-      <body>
+      <body className={notoSansJP.className}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         {children}

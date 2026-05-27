@@ -68,6 +68,43 @@ export default function DanceAreaPage({ params }) {
 
   const featuredSchool = data.schools[0];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": areaFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+    })),
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `https://www.kodomo-navi.com/dance/${pref}/${area}#local`,
+    "name": featuredSchool ? `${featuredSchool.name} ${data.name}校` : `${data.name}のダンス教室`,
+    "description": featuredSchool ? featuredSchool.desc : `${data.name}エリアの子ども向けダンス教室`,
+    "url": "https://re-dia.jp/",
+    "priceRange": "¥¥",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": data.name,
+      "addressRegion": data.prefName,
+      "addressCountry": "JP",
+    },
+    "areaServed": { "@type": "City", "name": data.name },
+    "openingHours": "Mo-Sa 10:00-21:00",
+    ...(featuredSchool?.rating ? {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": featuredSchool.rating,
+        "reviewCount": featuredSchool.reviews || 100,
+        "bestRating": 5,
+        "worstRating": 1,
+      },
+    } : {}),
+  };
+
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -96,6 +133,8 @@ export default function DanceAreaPage({ params }) {
           "url": s.url || "https://re-dia.jp/",
         })),
       }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
@@ -226,17 +265,57 @@ export default function DanceAreaPage({ params }) {
           </div>
         </div>
 
+        {/* 比較テーブル */}
+        {data.schools.length > 0 && (
+          <section style={{ marginBottom: 24 }}>
+            <div style={{ textAlign: "center", marginBottom: 16 }}>
+              <div style={{ display: "inline-block", background: "#1B2A4A", color: "#fff", padding: "3px 14px", borderRadius: 6, fontSize: 11, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>COMPARE</div>
+              <h2 style={{ fontSize: 17, fontWeight: 900, color: "#1B2A4A", margin: 0 }}>{data.name}のダンス教室 料金・特徴を一覧比較</h2>
+            </div>
+            <div style={{ overflowX: "auto", background: "#fff", borderRadius: 16, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 520 }}>
+                <thead>
+                  <tr style={{ background: "#1B2A4A" }}>
+                    {["スクール名", "月謝", "対象年齢", "無料体験", "口コミ評価"].map((h, i) => (
+                      <th key={i} style={{ padding: "12px 14px", fontSize: 12, fontWeight: 700, color: "#fff", textAlign: "left", whiteSpace: "nowrap" }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.schools.map((s, i) => (
+                    <tr key={i} style={{ background: s.featured ? "#FFF8F0" : (i % 2 === 0 ? "#f8f9fb" : "#fff"), borderBottom: "1px solid #f0f0f0" }}>
+                      <td style={{ padding: "12px 14px", fontSize: 13, fontWeight: s.featured ? 800 : 600, color: "#1B2A4A" }}>
+                        {s.featured && <span style={{ background: "#E53935", color: "#fff", fontSize: 10, fontWeight: 700, padding: "2px 7px", borderRadius: 4, marginRight: 6 }}>No.1</span>}
+                        {s.url ? <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ color: "#E53935", textDecoration: "none" }}>{s.name}</a> : s.name}
+                      </td>
+                      <td style={{ padding: "12px 14px", fontSize: 13, fontWeight: 700, color: "#E53935", whiteSpace: "nowrap" }}>¥{s.fee?.toLocaleString()}〜</td>
+                      <td style={{ padding: "12px 14px", fontSize: 12, color: "#555", whiteSpace: "nowrap" }}>{s.age}</td>
+                      <td style={{ padding: "12px 14px", fontSize: 12, color: "#555", whiteSpace: "nowrap" }}>{s.tags?.includes("無料体験あり") ? "✓ 無料" : "要確認"}</td>
+                      <td style={{ padding: "12px 14px", fontSize: 12, color: "#555", whiteSpace: "nowrap" }}>★ {s.rating} ({s.reviews}件)</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
         {/* FAQ */}
         <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 24, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
           <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 18, paddingBottom: 12, borderBottom: "2px solid #E5393520" }}>
             ❓ よくある質問（{data.name}のダンス教室）
           </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {areaFaqs.map((faq, i) => (
-              <div key={i} style={{ background: "#f8f9fb", borderRadius: 12, padding: "18px 20px", border: "1.5px solid #e8edf4" }}>
-                <div style={{ fontSize: 14, fontWeight: 800, color: "#1B2A4A", marginBottom: 8 }}>Q. {faq.q}</div>
-                <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>A. {faq.a}</div>
-              </div>
+              <details key={i} style={{ background: "#f8f9fb", borderRadius: 12, border: "1.5px solid #e8edf4", overflow: "hidden" }}>
+                <summary style={{ padding: "16px 20px", fontSize: 14, fontWeight: 800, color: "#1B2A4A", cursor: "pointer", listStyle: "none", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <span>Q. {faq.q}</span>
+                  <span style={{ color: "#E53935", fontSize: 18, flexShrink: 0, marginLeft: 8 }}>＋</span>
+                </summary>
+                <div style={{ padding: "0 20px 16px", fontSize: 13, color: "#555", lineHeight: 1.8, borderTop: "1px solid #e8edf4" }}>
+                  A. {faq.a}
+                </div>
+              </details>
             ))}
           </div>
         </div>

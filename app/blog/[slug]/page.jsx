@@ -252,19 +252,25 @@ export default function ArticlePage({ params }) {
       .filter(b => b && b.type === 'faq')
       .flatMap(b => b.items ? b.items : (b.q ? [{ q: b.q, a: b.a }] : []));
 
-  // Auto-detect HowTo schema from 'step' blocks
+  // HowTo schema: 'step' blocks OR guide articles using TOC/h2 headings
   const stepBlocks = article.content.filter(b => b && b.type === 'step');
-  const howToSchemaData = stepBlocks.length >= 2 ? {
+  const isGuideArticle = /guide|選び方|始め方|how-to|ガイド/.test(article.slug + (article.category || ''));
+  const tocBlock = article.content.find(b => b && b.type === 'toc');
+  const h2Blocks = article.content.filter(b => b && b.type === 'h2');
+  const howToSteps = stepBlocks.length >= 2
+    ? stepBlocks.map((b, i) => ({ "@type": "HowToStep", "position": i + 1, "name": b.label || b.text?.substring(0, 60) || `ステップ${i+1}`, "text": b.text || "" }))
+    : isGuideArticle && tocBlock?.items?.length >= 3
+    ? tocBlock.items.slice(0, 7).map((item, i) => ({ "@type": "HowToStep", "position": i + 1, "name": item, "text": item }))
+    : isGuideArticle && h2Blocks.length >= 3
+    ? h2Blocks.slice(0, 7).map((b, i) => ({ "@type": "HowToStep", "position": i + 1, "name": b.text || `ポイント${i+1}`, "text": b.text || "" }))
+    : null;
+  const howToSchemaData = howToSteps ? {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "name": article.title,
     "description": article.description,
-    "step": stepBlocks.map((b, i) => ({
-      "@type": "HowToStep",
-      "position": i + 1,
-      "name": b.label || b.text?.substring(0, 50) || `ステップ${i+1}`,
-      "text": b.text || "",
-    })),
+    "inLanguage": "ja",
+    "step": howToSteps,
   } : null;
 
   const authorSchema = {
@@ -333,7 +339,6 @@ export default function ArticlePage({ params }) {
 
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f5f6fa", minHeight: "100vh" }}>
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap');*{box-sizing:border-box;margin:0;padding:0}`}</style>
 
       {/* Header */}
       <header style={{ background: "linear-gradient(135deg,#2a7cc8,#0D47A1)", color: "#fff", position: "sticky", top: 0, zIndex: 100, boxShadow: "0 4px 20px rgba(0,0,0,.15)" }}>

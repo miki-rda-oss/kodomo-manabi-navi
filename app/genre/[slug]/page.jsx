@@ -776,16 +776,19 @@ export default function GenrePage({ params }) {
             <div style={{ display: "inline-block", background: "#fff7ee", borderRadius: 6, padding: "3px 12px", fontSize: 11, fontWeight: 700, color: "#FF8A00", marginBottom: 8, letterSpacing: ".5px" }}>FAQ</div>
             <h2 style={{ fontSize: 20, fontWeight: 900, color: "#1B2A4A" }}>{genre.name}教室によくある質問</h2>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {(GENRE_FAQ[slug] || GENRE_FAQ.default).map((faq, i) => (
-              <div key={i} style={{ background: "#fff", borderRadius: 14, padding: "18px 20px", border: "1.5px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.04)" }}>
-                <div style={{ fontSize: 14, fontWeight: 800, color: "#1B2A4A", marginBottom: 8, display: "flex", gap: 8 }}>
-                  <span style={{ color: "#FF8A00", flexShrink: 0 }}>Q.</span>{faq.q}
-                </div>
-                <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8, display: "flex", gap: 8 }}>
+              <details key={i} style={{ background: "#fff", borderRadius: 14, border: "1.5px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.04)", overflow: "hidden" }}>
+                <summary style={{ padding: "16px 20px", fontSize: 14, fontWeight: 800, color: "#1B2A4A", cursor: "pointer", listStyle: "none", display: "flex", alignItems: "center", gap: 8, justifyContent: "space-between" }}>
+                  <span style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                    <span style={{ color: "#FF8A00", flexShrink: 0 }}>Q.</span>{faq.q}
+                  </span>
+                  <span style={{ color: "#FF8A00", fontSize: 18, flexShrink: 0 }}>＋</span>
+                </summary>
+                <div style={{ padding: "0 20px 16px", fontSize: 13, color: "#555", lineHeight: 1.8, borderTop: "1px solid #e8edf4", display: "flex", gap: 8 }}>
                   <span style={{ color: "#4CAF50", fontWeight: 800, flexShrink: 0 }}>A.</span>{faq.a}
                 </div>
-              </div>
+              </details>
             ))}
           </div>
         </div>
@@ -883,6 +886,42 @@ export default function GenrePage({ params }) {
             "reviewCount": "312",
             "bestRating": "5",
           },
+        }) }} />
+      )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": (GENRE_FAQ[slug] || GENRE_FAQ.default).map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+        })),
+      }) }} />
+      {schools.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": `子供向け${genre.name}教室`,
+          "description": `${genre.desc}。月謝・対象年齢・無料体験情報で比較できます。`,
+          "url": `${BASE_URL}/genre/${slug}`,
+          "inLanguage": "ja",
+          "provider": {
+            "@type": "Organization",
+            "name": schools[0].name,
+            "url": schools[0].url || BASE_URL,
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": schools[0].fee?.replace(/[^0-9]/g, "") || "5500",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock",
+          },
+          "hasCourseInstance": schools.slice(0, 3).map(s => ({
+            "@type": "CourseInstance",
+            "name": s.name,
+            "courseMode": "Blended",
+            "instructor": { "@type": "Organization", "name": s.name },
+          })),
         }) }} />
       )}
     </div>
