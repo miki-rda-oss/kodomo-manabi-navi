@@ -57,14 +57,12 @@ const otherPrefs = [
   { href: '/shiga', name: '滋賀県' },
 ];
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"和歌山県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"和歌山県の子供ダンス教室は月4,000円〜7,000円程度が相場です。都市部に比べてリーズナブルな教室が多い傾向があります。"}},{"@type":"Question","name":"和歌山市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"和歌山市はリディアダンスアカデミーが展開しています。JR和歌山駅・南海和歌山市駅周辺に教室情報を掲載しています。"}},{"@type":"Question","name":"和歌山でダンス以外の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スイミング・英語・ピアノ・空手など幅広い習い事情報を和歌山市エリアで掲載しています。"}},{"@type":"Question","name":"和歌山県内のエリア情報を増やす予定はありますか？","acceptedAnswer":{"@type":"Answer","text":"田辺市・橋本市など和歌山県内の他エリアも順次情報を追加予定です。お待ちください。"}}]};
 
 export default function WakayamaPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>

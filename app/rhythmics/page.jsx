@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "リトミックは何歳から始めるのがベストですか？", acceptedAnswer: { "@type": "Answer", text: "0歳から始められます。脳が最も柔軟な0〜3歳に始めるのが最適です。" } },
-    { "@type": "Question", name: "子供のリトミック教室の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "4,000〜8,000円が相場で、習い事の中でも比較的リーズナブルです。" } },
-    { "@type": "Question", name: "リトミックとダンスの違いは？", acceptedAnswer: { "@type": "Answer", text: "リトミックは音楽に反応して体を動かす音楽教育メソッド。ダンスは振付を習得します。" } },
-    { "@type": "Question", name: "リトミックを習う効果は？", acceptedAnswer: { "@type": "Answer", text: "音感・リズム感・集中力・社会性・表現力が自然に育まれます。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "ヤマハリトミック教室", rating: 4.5, fee: 5500, age: "0歳〜3歳", desc: "音楽の大手ヤマハが提供するリトミック。音楽に合わせた体の動きで感性を育てる。", emoji: "🎵" },
@@ -55,7 +45,6 @@ export default function RhythmicsTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

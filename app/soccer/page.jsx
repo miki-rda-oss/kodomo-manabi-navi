@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "子供のサッカースクールは何歳から始めるべき？", acceptedAnswer: { "@type": "Answer", text: "3歳からのキッズクラスを設けているスクールもあります。一般的には4〜5歳からが始めどきとされており、多くのスクールが幼児コースを充実させています。" } },
-    { "@type": "Question", name: "子供のサッカースクールの月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回通塾タイプで月5,000〜12,000円が相場です。Jリーグ系スクールは月8,000円〜が多く、地域クラブはリーズナブルに始められます。" } },
-    { "@type": "Question", name: "サッカーを幼少期から習う効果は？", acceptedAnswer: { "@type": "Answer", text: "幼少期はボール感覚・運動神経が発達しやすい時期です。チームプレーを通じて協調性やコミュニケーション力も自然に育てられます。" } },
-    { "@type": "Question", name: "Jリーグ系のサッカースクールはありますか？", acceptedAnswer: { "@type": "Answer", text: "多くのJリーグクラブが地域向けスクールを開校しています。プロ指導者のメソッドで本格的なサッカーを学べます。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "ヴェルディSSアカデミー", rating: 4.3, fee: 9900, age: "3歳〜", desc: "東京ヴェルディが運営する本格スクール。Jリーグクラブのメソッドで技術・戦術を体系的に指導。全国各地に教室展開。", emoji: "⚽" },
@@ -58,7 +48,6 @@ export default function SoccerTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

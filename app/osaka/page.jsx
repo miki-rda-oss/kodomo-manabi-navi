@@ -65,14 +65,12 @@ const otherPrefs = [
   { href: '/hyogo', name: '兵庫県' },
 ];
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"大阪府内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"大阪府の子供ダンス教室は月5,000円〜8,000円程度が相場です。リディアダンスアカデミーは月会員プランが5,500円〜と比較的リーズナブルです。"}},{"@type":"Question","name":"大阪で3歳から通えるダンス教室はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。リディアダンスアカデミーをはじめ、大阪府内のダンス教室の多くが3歳（年少）から入会できるリトルクラスを設けています。"}},{"@type":"Question","name":"大阪の有名なダンス教室はどこですか？","acceptedAnswer":{"@type":"Answer","text":"リディアダンスアカデミー（大阪6校展開）、JDACダンススクール（8校）、セイハダンスアカデミーなどが人気です。口コミ評価・実績ともに高評価を得ています。"}},{"@type":"Question","name":"大阪府北部（豊中・吹田・高槻）の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。当サイトでは豊中市・吹田市・高槻市・箕面市・茨木市など大阪北部の習い事情報を詳しく掲載しています。各エリアページからご確認ください。"}}]};
 
 export default function OsakaPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

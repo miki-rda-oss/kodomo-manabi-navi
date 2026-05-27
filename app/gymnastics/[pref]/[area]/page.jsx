@@ -57,16 +57,7 @@ export default function GymnasticsAreaPage({ params }) {
     { q: "体操を習う効果は？", a: "体幹・柔軟性・バランス感覚・運動神経が育ちます。姿勢の改善や転倒予防にも効果的で、他のスポーツへの基礎能力向上にもつながります。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-activity-ranking-all", text: "子供の習い事人気ランキング" },
     { href: "/blog/kids-activity-cost-annual", text: "子供の習い事年間費用" },
@@ -75,7 +66,6 @@ export default function GymnasticsAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -62,14 +62,12 @@ const otherPrefs = [
   { href: '/shiga', name: '滋賀県' },
 ];
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"愛知県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"愛知県の子供ダンス教室は月4,500円〜7,500円程度が相場です。名古屋市内は交通の便が良く、通いやすい立地の教室が多いです。"}},{"@type":"Question","name":"名古屋市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"名古屋市内はリディアダンスアカデミー（守山区・天白区）のほか多数の教室が展開しています。各エリアページでご確認ください。"}},{"@type":"Question","name":"愛知県で豊田市・日進市の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。豊田市・日進市・安城市・尾張旭市の習い事情報を掲載しています。車での送迎が多い地域特性を踏まえた駐車場完備教室も紹介しています。"}},{"@type":"Question","name":"愛知でダンス以外の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スイミング・英語・ピアノ・プログラミングなど幅広い習い事情報を愛知各エリアで掲載中です。"}}]};
 
 export default function AichiPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

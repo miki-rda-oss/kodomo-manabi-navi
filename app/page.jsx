@@ -832,18 +832,7 @@ export default function TopPage() {
             {"@type": "ListItem", "position": 12, "name": "学習塾", "url": "https://www.kodomo-navi.com/genre/juku", "description": "基礎学力・思考力・受験対策の定番習い事。"}
           ],
         }) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            { "@type": "Question", "name": "コドモならいごととはどんなサービスですか？", "acceptedAnswer": { "@type": "Answer", "text": "全国の子ども向け習い事教室を口コミ・料金・体験情報で検索・比較できる無料サービスです。ダンス・スイミング・英語・ピアノ・プログラミングなど11カテゴリ、5,000教室以上を掲載しています。" } },
-            { "@type": "Question", "name": "子どもの習い事はいつから始めるのがいいですか？", "acceptedAnswer": { "@type": "Answer", "text": "習い事の種類によりますが、3〜5歳頃から始める方が多いです。本人が興味を持ったタイミングが最適です。" } },
-            { "@type": "Question", "name": "習い事の月謝の相場はいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "習い事の種類によって異なりますが、月5,000〜15,000円程度が一般的です。" } },
-            { "@type": "Question", "name": "無料体験はできますか？", "acceptedAnswer": { "@type": "Answer", "text": "掲載している多くの教室では無料体験レッスンを実施しています。" } },
-            { "@type": "Question", "name": "子どもの習い事で一番人気は？", "acceptedAnswer": { "@type": "Answer", "text": "ダンスです。近年K-POPブームも影響し、特に女の子に人気が急上昇しています。" } },
-            { "@type": "Question", "name": "口コミ評価が高いダンス教室は？", "acceptedAnswer": { "@type": "Answer", "text": "当サイトの口コミ件数・評価ともにNo.1はリディアダンスアカデミー（評価4.8 / 312件）です。全国100校以上展開で無料体験も受付中です。" } },
-          ],
-        }) }} />
+
       </section>
 
       {/* ===== FOOTER ===== */}

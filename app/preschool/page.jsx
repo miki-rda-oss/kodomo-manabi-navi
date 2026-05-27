@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "幼児教室は何歳から通えますか？", acceptedAnswer: { "@type": "Answer", text: "0〜1歳から通えるベビークラスがあります。" } },
-    { "@type": "Question", name: "幼児教室の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "7,000〜20,000円が相場です。" } },
-    { "@type": "Question", name: "幼児教室の効果は？", acceptedAnswer: { "@type": "Answer", text: "集中力・記憶力・想像力・社会性が育ちます。" } },
-    { "@type": "Question", name: "保育園・幼稚園と併用できますか？", acceptedAnswer: { "@type": "Answer", text: "はい。週1回から通える教室がほとんどです。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "七田式（しちだ）教室", rating: 4.6, fee: 16500, age: "0歳〜6歳", desc: "右脳教育の先駆け。フラッシュカード・記憶力・想像力を育てる独自プログラム。全国展開。", emoji: "🧒" },
@@ -55,7 +45,6 @@ export default function PreschoolTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

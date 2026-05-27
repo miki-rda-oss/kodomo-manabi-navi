@@ -60,14 +60,12 @@ const otherPrefs = [
   { href: '/ishikawa', name: '石川県' },
 ];
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"岐阜県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"岐阜県の子供ダンス教室は月4,000円〜7,000円程度が相場です。都市部より比較的リーズナブルな傾向があります。"}},{"@type":"Question","name":"岐阜市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"岐阜市内はリディアダンスアカデミーをはじめ複数の教室が展開しています。JR岐阜駅周辺と岐阜市北部に教室が集まっています。"}},{"@type":"Question","name":"可児市・美濃加茂市の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。岐阜県中濃地区の可児市・美濃加茂市の習い事情報を掲載しています。名古屋へのアクセスも良い地域です。"}},{"@type":"Question","name":"岐阜県でダンス教室を探すコツは？","acceptedAnswer":{"@type":"Answer","text":"岐阜県はJR・名鉄沿線沿いに教室が多い傾向があります。駅からの距離・駐車場の有無を確認しながら選ぶのがポイントです。"}}]};
 
 export default function GifuPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>

@@ -57,16 +57,7 @@ export default function ProgrammingAreaPage({ params }) {
     { q: "パソコンを持っていないと通えませんか？", a: "教室のパソコンを使うので不要な場合がほとんどです。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-programming-school-guide-2026", text: "子供プログラミング教室おすすめ2026年版" },
     { href: "/blog/kids-programming-age-guide", text: "プログラミングは何歳から始める？" },
@@ -76,7 +67,6 @@ export default function ProgrammingAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

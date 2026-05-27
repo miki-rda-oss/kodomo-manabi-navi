@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "プログラミング教室は何歳から？", acceptedAnswer: { "@type": "Answer", text: "5〜6歳からビジュアルプログラミング（Scratch等）で始められます。" } },
-    { "@type": "Question", name: "月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "8,000〜22,000円が相場です。オンライン型は比較的リーズナブル。" } },
-    { "@type": "Question", name: "プログラミングを習う効果は？", acceptedAnswer: { "@type": "Answer", text: "論理的思考力・問題解決力・創造力が育ちます。将来の理系キャリアにも直結。" } },
-    { "@type": "Question", name: "パソコンを持っていないと通えませんか？", acceptedAnswer: { "@type": "Answer", text: "教室のパソコンを使うので不要な場合がほとんどです。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "LITALICOワンダー", rating: 4.6, fee: 19800, age: "3歳〜", desc: "個性を大切にした創造的なプログラミング・デジタル教室。全国展開。ロボット・ゲーム・アプリ制作を楽しく学ぶ。", emoji: "💻" },
@@ -55,7 +45,6 @@ export default function ProgrammingTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

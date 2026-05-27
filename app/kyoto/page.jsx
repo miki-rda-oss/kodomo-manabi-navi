@@ -57,14 +57,12 @@ const otherPrefs = [
   { href: '/nara', name: '奈良県' },
 ];
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"京都府内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"京都府の子供ダンス教室は月5,000円〜8,000円程度が相場です。京都市内は地下鉄・バス沿線に教室が多く通いやすい立地が多いです。"}},{"@type":"Question","name":"京都市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"京都市はリディアダンスアカデミーが展開しています。市内は四条・烏丸・北区・伏見区など各エリアに教室が点在しています。"}},{"@type":"Question","name":"京都でダンス以外の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スイミング・英語・ピアノ・バレエなど伝統的な習い事から最新のプログラミングまで幅広く掲載しています。"}},{"@type":"Question","name":"京都市内の習い事、おすすめの選び方は？","acceptedAnswer":{"@type":"Answer","text":"京都市内は交通機関が発達していますが、エリアによって混雑状況が異なります。最寄り駅・バス停からの距離と曜日・時間帯の混雑を確認してから選ぶのがおすすめです。"}}]};
 
 export default function KyotoPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>

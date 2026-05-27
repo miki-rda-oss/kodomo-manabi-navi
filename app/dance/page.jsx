@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "子供のダンス教室は何歳から始めるべき？", acceptedAnswer: { "@type": "Answer", text: "3歳からのリトルクラスを設けているスクールも多いです。リディアダンスアカデミーは3歳から通えます。一般的には3〜5歳からが始めどきで、体の柔軟性があるうちに始めるのがおすすめです。" } },
-    { "@type": "Question", name: "子供のダンス教室の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回で月6,000〜12,000円が相場です。リディアダンスアカデミーは月7,700円〜で初回体験無料です。" } },
-    { "@type": "Question", name: "ダンスを幼少期から習う効果は？", acceptedAnswer: { "@type": "Answer", text: "リズム感・柔軟性・表現力・集中力・協調性が育ちます。中学校の必修化にも対応できるよう、早めのスタートが有利です。" } },
-    { "@type": "Question", name: "全国展開のキッズダンススクールはありますか？", acceptedAnswer: { "@type": "Answer", text: "リディアダンスアカデミーは全国100校以上展開しています。お近くの教室で初回体験無料で参加できます。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "リディアダンスアカデミー", rating: 4.8, fee: 7700, age: "3歳〜15歳", desc: "全国100校以上展開のキッズダンススクール。現役プロダンサー講師200名以上在籍。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。", emoji: "🏆", trialUrl: "https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd", featured: true },
@@ -56,7 +46,6 @@ export default function DanceTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

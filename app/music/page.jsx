@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "音楽教室は何歳から通えますか？", acceptedAnswer: { "@type": "Answer", text: "0歳から通えるリトミック・親子コースがあります。一般コースは3歳から多いです。" } },
-    { "@type": "Question", name: "子供の音楽教室の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回で7,000〜15,000円が相場です。楽器の種類によって異なります。" } },
-    { "@type": "Question", name: "どの楽器から始めるのがおすすめですか？", acceptedAnswer: { "@type": "Answer", text: "ピアノは音楽の基礎を学ぶのに最適です。ギターやドラムは少し大きくなってから始める子が多いです。" } },
-    { "@type": "Question", name: "音楽を習う効果は？", acceptedAnswer: { "@type": "Answer", text: "音感・集中力・表現力・忍耐力が育ちます。脳の発達にも良い影響があります。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "ヤマハ音楽教室（総合）", rating: 4.5, fee: 7700, age: "0歳〜", desc: "国内最大手の総合音楽教室。ピアノ・エレクトーン・ギター・バイオリン・ドラム・ボーカルなど多彩なコース。", emoji: "🎸" },
@@ -55,7 +45,6 @@ export default function MusicTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

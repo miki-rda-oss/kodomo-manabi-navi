@@ -58,16 +58,7 @@ export default function PreschoolAreaPage({ params }) {
     { q: "保育園・幼稚園と併用できますか？", a: "はい。週1回から通える教室がほとんどです。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/preschool-activity-ranking-2026", text: "幼児の習い事人気ランキング2026" },
     { href: "/blog/kids-activity-ranking-all", text: "子供の習い事人気ランキング" },
@@ -77,7 +68,6 @@ export default function PreschoolAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

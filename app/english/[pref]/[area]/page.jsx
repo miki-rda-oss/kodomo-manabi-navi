@@ -57,16 +57,7 @@ export default function EnglishAreaPage({ params }) {
     { q: "英検対策ができる英語スクールはありますか？", a: "多くの英語スクールで英検5〜3級対策コースを設けています。小学生のうちに英検3級以上を取得する子どもも増えています。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-english-guide", text: "子供の英語教室の選び方完全ガイド" },
     { href: "/blog/kids-english-school-guide-2026", text: "子供英語スクールおすすめ2026年版" },
@@ -78,7 +69,6 @@ export default function EnglishAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

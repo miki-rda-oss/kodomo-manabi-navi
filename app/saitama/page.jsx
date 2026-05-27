@@ -57,14 +57,12 @@ const otherPrefs = [
   { href: '/ibaraki', name: '茨城県' },
 ];
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"埼玉県内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"埼玉県の子供ダンス教室は月5,000円〜8,000円程度が相場です。東京へのアクセスも良く、都内の教室との比較検討もおすすめです。"}},{"@type":"Question","name":"さいたま市でおすすめの子供ダンス教室は？","acceptedAnswer":{"@type":"Answer","text":"さいたま市南区はリディアダンスアカデミーが展開しています。JR武蔵浦和駅・浦和駅周辺に教室が集まっています。"}},{"@type":"Question","name":"埼玉でダンス以外の習い事情報はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スイミング・英語・ピアノ・サッカーなど幅広い習い事情報を埼玉各エリアで掲載しています。"}},{"@type":"Question","name":"埼玉県内のエリア情報を増やす予定はありますか？","acceptedAnswer":{"@type":"Answer","text":"川口市・川越市・越谷市など埼玉県内の他エリアも順次情報を追加予定です。お待ちください。"}}]};
 
 export default function SaitamaPrefPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", gap: 10, height: 56 }}>

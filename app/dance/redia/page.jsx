@@ -18,37 +18,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "リディアダンスアカデミーの月謝はいくらですか？",
-      acceptedAnswer: { "@type": "Answer", text: "月会員プランは月7,700円〜、受け放題プランは月27,000円です。入会金が別途かかる場合があります。" }
-    },
-    {
-      "@type": "Question",
-      name: "リディアダンスアカデミーは何歳から入れますか？",
-      acceptedAnswer: { "@type": "Answer", text: "3歳から通えるリトルクラスを設けています。小学生向けのキッズクラスも充実しています。" }
-    },
-    {
-      "@type": "Question",
-      name: "リディアダンスアカデミーの体験レッスンは無料ですか？",
-      acceptedAnswer: { "@type": "Answer", text: "はい、初回体験レッスンは無料で参加できます。公式サイトから予約が可能です。" }
-    },
-    {
-      "@type": "Question",
-      name: "リディアダンスアカデミーではどんなジャンルがありますか？",
-      acceptedAnswer: { "@type": "Answer", text: "ヒップホップ・ジャズ・K-POP・ブレイクダンス・ポップ・ワック・ソウルなど7ジャンル以上に対応しています。" }
-    },
-    {
-      "@type": "Question",
-      name: "リディアダンスアカデミーに発表会はありますか？",
-      acceptedAnswer: { "@type": "Answer", text: "年1〜2回の発表会があります。子供たちの成長を保護者に披露できる大切なイベントです。" }
-    },
-  ],
-};
 
 const areas = [
   { pref: "大阪府", schools: [
@@ -119,7 +88,6 @@ export default function RediaPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

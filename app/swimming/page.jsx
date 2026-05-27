@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "子供のスイミングスクールは何歳から始めるべき？", acceptedAnswer: { "@type": "Answer", text: "ベビースイミングは生後6ヶ月から始められます。一般的なキッズクラスは3〜4歳からが多く、多くのスクールがベビークラスを充実させています。" } },
-    { "@type": "Question", name: "子供のスイミングスクールの月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回で6,000〜10,000円程度が相場です。大手スポーツクラブは7,000〜9,000円程度が多いです。" } },
-    { "@type": "Question", name: "水が苦手な子供でもスイミングスクールに通えますか？", acceptedAnswer: { "@type": "Answer", text: "水慣れクラスから始められます。専門コーチが丁寧に指導し、少しずつ水に親しめるよう工夫されています。" } },
-    { "@type": "Question", name: "子供がスイミングを習う効果は？", acceptedAnswer: { "@type": "Answer", text: "全身運動で体力・心肺機能が向上します。水難防止にも効果的で、精神的な強さも養えます。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "コナミスポーツクラブ", rating: 4.3, fee: 8250, age: "6ヶ月〜15歳", desc: "段階的な進級制度で着実にステップアップ。ベビーから選手コースまで幅広く対応。", emoji: "🏊" },
@@ -56,7 +46,6 @@ export default function SwimmingTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

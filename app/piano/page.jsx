@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "子供のピアノ教室は何歳から始めるべき？", acceptedAnswer: { "@type": "Answer", text: "多くの教室は3歳から対応しています。ヤマハ・カワイは1歳からの親子コースも設けています。" } },
-    { "@type": "Question", name: "子供のピアノ教室の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回で7,000〜12,000円が相場です。グループレッスンは比較的リーズナブルです。" } },
-    { "@type": "Question", name: "家にピアノがないと習えませんか？", acceptedAnswer: { "@type": "Answer", text: "最初は電子ピアノや61鍵キーボードで十分です。教室に確認しましょう。" } },
-    { "@type": "Question", name: "ピアノを習うと脳の発達に良いですか？", acceptedAnswer: { "@type": "Answer", text: "両手を独立して動かすことで脳の左右を刺激。集中力・記憶力向上に効果的です。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "ヤマハ音楽教室", rating: 4.5, fee: 7700, age: "1歳〜", desc: "国内最大手の音楽教室。グループレッスンで音楽の楽しさを学ぶ。幼児科・ジュニアスクールなどコースが充実。", emoji: "🎹" },
@@ -56,7 +46,6 @@ export default function PianoTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

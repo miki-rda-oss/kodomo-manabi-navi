@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "子供の英語教室は何歳から始めるべき？", acceptedAnswer: { "@type": "Answer", text: "1歳半からのベビークラスを設けているスクールもあります。一般的には2〜3歳からが始めどきとされており、多くのスクールが幼児コースを充実させています。" } },
-    { "@type": "Question", name: "子供の英語教室の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回通塾タイプで月8,000〜15,000円が相場です。オンラインスクールは月5,500円〜とリーズナブルに始められます。" } },
-    { "@type": "Question", name: "英語を幼少期から習う効果は？", acceptedAnswer: { "@type": "Answer", text: "幼少期は耳が柔軟で発音・リスニング力が身につきやすい時期です。英語への抵抗感をなくし、グローバルな感覚を自然に育てられます。" } },
-    { "@type": "Question", name: "英検対策ができる英語スクールはありますか？", acceptedAnswer: { "@type": "Answer", text: "多くの英語スクールで英検5〜3級対策コースを設けています。小学生のうちに英検3級以上を取得する子どもも増えています。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "ECCジュニア", rating: 4.3, fee: 9900, age: "1歳半〜", desc: "全国8,700以上の教室数を誇る業界最大手。外国人講師とバイリンガル講師のペアティーチングで4技能を育成。英検対策も充実。", emoji: "🌍" },
@@ -58,7 +48,6 @@ export default function EnglishTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

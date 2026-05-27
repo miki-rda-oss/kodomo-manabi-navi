@@ -58,16 +58,7 @@ export default function PianoAreaPage({ params }) {
     { q: "ピアノを習うと脳の発達に良いですか？", a: "両手を独立して動かすことで脳の左右を刺激。集中力・記憶力向上に効果的です。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-piano-guide", text: "子供のピアノ教室の選び方完全ガイド" },
     { href: "/blog/kids-piano-school-guide-2026", text: "子供ピアノ教室おすすめ2026年版" },
@@ -78,7 +69,6 @@ export default function PianoAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -252,16 +252,6 @@ export default function ArticlePage({ params }) {
       .filter(b => b && b.type === 'faq')
       .flatMap(b => b.items ? b.items : (b.q ? [{ q: b.q, a: b.a }] : []));
 
-  const faqSchemaData = faqItems.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(faq => ({
-      "@type": "Question",
-      "name": faq.q,
-      "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-    })),
-  } : null;
-
   // Auto-detect HowTo schema from 'step' blocks
   const stepBlocks = article.content.filter(b => b && b.type === 'step');
   const howToSchemaData = stepBlocks.length >= 2 ? {
@@ -476,7 +466,7 @@ export default function ArticlePage({ params }) {
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(authorSchema) }} />
-      {faqSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />}
+
       {howToSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchemaData) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     </div>

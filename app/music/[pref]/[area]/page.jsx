@@ -57,16 +57,7 @@ export default function MusicAreaPage({ params }) {
     { q: "どの楽器から始めるのがおすすめですか？", a: "ピアノは音楽の基礎を学ぶのに最適です。ギターやドラムは少し大きくなってから始める子が多いです。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-piano-guide", text: "子供のピアノ教室選び方完全ガイド" },
     { href: "/blog/toddler-dance-rhythmics-guide", text: "音楽系習い事の選び方ガイド" },
@@ -76,7 +67,6 @@ export default function MusicAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

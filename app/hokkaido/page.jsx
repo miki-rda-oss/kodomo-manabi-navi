@@ -7,8 +7,7 @@ export const metadata = {
 };
 export default function PrefPage() {
   const breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://www.kodomo-navi.com"},{"@type":"ListItem","position":2,"name":"北海道の習い事","item":"https://www.kodomo-navi.com/hokkaido"}]};
-  const faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"北海道内の子供ダンス教室の月謝相場は？","acceptedAnswer":{"@type":"Answer","text":"北海道の子供ダンス教室は月5,000円〜8,000円程度が相場です。リディアダンスアカデミーは月会員プランが5,500円〜です。"}},{"@type":"Question","name":"北海道で3歳から通えるダンス教室はありますか？","acceptedAnswer":{"@type":"Answer","text":"はい。北海道内のダンス教室の多くが3歳から入会できるリトルクラスを設けています。"}},{"@type":"Question","name":"北海道の人気ダンス教室はどこですか？","acceptedAnswer":{"@type":"Answer","text":"リディアダンスアカデミーをはじめ、北海道には体験レッスン無料の人気教室が多数あります。"}}]};
-  return (
+    return (
     <div style={{fontFamily:"'Noto Sans JP',sans-serif",background:"#f4f7fc",minHeight:"100vh"}}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}} />

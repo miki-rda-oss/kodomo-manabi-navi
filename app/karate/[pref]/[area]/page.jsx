@@ -57,16 +57,7 @@ export default function KarateAreaPage({ params }) {
     { q: "空手を習うと喧嘩っ早くなりますか？", a: "反対です。空手は礼儀・規律を最重視する武道です。「礼に始まり礼に終わる」精神が日常生活にも活かされます。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-karate-guide", text: "子供の空手教室選び方完全ガイド" },
     { href: "/blog/kids-karate-school-guide-2026", text: "子供空手教室おすすめ2026年版" },
@@ -77,7 +68,6 @@ export default function KarateAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

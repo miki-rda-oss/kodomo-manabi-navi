@@ -63,16 +63,7 @@ export default function JukuAreaPage({ params }) {
     { q: "公文式と学研教室の違いは？", a: "公文式はプリント学習中心の自学自習方式。学研は先生が丁寧に指導する少人数グループ形式。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kumon-vs-gakken-complete-comparison", text: "公文式 vs 学研教室 徹底比較2026" },
     { href: "/blog/kids-activity-ranking-all", text: "子供の習い事人気ランキング" },
@@ -82,7 +73,6 @@ export default function JukuAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "子供の学習塾は何歳から始めるべき？", acceptedAnswer: { "@type": "Answer", text: "公文式・学研教室は2〜3歳から通えるコースがあります。一般的な学習塾は小学生からが多いです。" } },
-    { "@type": "Question", name: "学習塾の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1〜2回で月7,000〜16,000円が目安。個別指導は高め、グループ指導は比較的リーズナブルです。" } },
-    { "@type": "Question", name: "公文式と学研教室の違いは？", acceptedAnswer: { "@type": "Answer", text: "公文式はプリント学習中心の自学自習方式で先取り学習が特徴。学研教室は先生が丁寧に指導する少人数グループ形式です。" } },
-    { "@type": "Question", name: "中学受験対策はいつから始めるべき？", acceptedAnswer: { "@type": "Answer", text: "小学3〜4年生から始めるのが一般的です。難関校を目指す場合はSAPIXなど専門塾への早めの入塾をおすすめします。" } },
-  ],
-};
 
 const ALL_PREFS_LIST = Object.entries(JUKU_PREFS).map(([slug, data]) => ({ slug, name: data.name }));
 
@@ -61,7 +51,6 @@ export default function JukuTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

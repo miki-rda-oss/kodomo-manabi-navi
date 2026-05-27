@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "何歳から始めるのがベストですか？", acceptedAnswer: { "@type": "Answer", text: "3〜4歳が最適です。多くのスクールで3歳から入会できる幼児クラスを設けています。" } },
-    { "@type": "Question", name: "月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回で7,000〜15,000円。発表会費用別途。" } },
-    { "@type": "Question", name: "男の子でもバレエを習えますか？", acceptedAnswer: { "@type": "Answer", text: "はい。体幹・バランス感覚が身につきます。" } },
-    { "@type": "Question", name: "バレエの効果は？", acceptedAnswer: { "@type": "Answer", text: "姿勢・柔軟性・表現力・集中力が育ちます。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "Kバレエスクール", rating: 4.4, fee: 8800, age: "3歳〜", desc: "熊川哲也が主宰する本格バレエスクール。全国展開で質の高い指導。", emoji: "🩰" },
@@ -57,7 +47,6 @@ export default function BalletTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

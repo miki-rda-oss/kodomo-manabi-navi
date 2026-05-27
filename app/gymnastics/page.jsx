@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "体操教室は何歳から？", acceptedAnswer: { "@type": "Answer", text: "2〜3歳から通えます。幼児向けクラスを設けているスクールが多く、早い時期から体幹・柔軟性・バランス感覚を育てられます。" } },
-    { "@type": "Question", name: "月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回で4,000〜8,000円が一般的です。スポーツクラブ運営のスクールは7,000〜9,000円程度、地域の体操クラブは4,000〜6,000円程度が相場です。" } },
-    { "@type": "Question", name: "体操を習う効果は？", acceptedAnswer: { "@type": "Answer", text: "体幹・柔軟性・バランス感覚・運動神経が育ちます。姿勢の改善や転倒予防にも効果的で、他のスポーツへの基礎能力向上にもつながります。" } },
-    { "@type": "Question", name: "女の子にも体操はおすすめですか？", acceptedAnswer: { "@type": "Answer", text: "はい。柔軟性・姿勢が良くなります。また集中力や身体コントロール能力が高まり、ダンスや他のスポーツにも役立つ能力が身につきます。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "コナミスポーツ体操教室", rating: 4.3, fee: 7700, age: "2歳〜", desc: "全国展開のスポーツクラブが運営。マット運動・跳び箱・鉄棒など基礎体操を楽しく学ぶ。", emoji: "🤸" },
@@ -55,7 +45,6 @@ export default function GymnasticsTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "そろばんは何歳から始めるのがベストですか？", acceptedAnswer: { "@type": "Answer", text: "4〜6歳が最適です。数の概念が身につく時期に始めると効果的。" } },
-    { "@type": "Question", name: "そろばん教室の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1〜2回で4,000〜7,000円が一般的です。" } },
-    { "@type": "Question", name: "そろばんを習う効果は？", acceptedAnswer: { "@type": "Answer", text: "計算力・集中力・暗算力・忍耐力が育ちます。脳の活性化にも効果的。" } },
-    { "@type": "Question", name: "電卓の時代にそろばんは必要ですか？", acceptedAnswer: { "@type": "Answer", text: "そろばんで培われる暗算力・集中力・忍耐力は生涯にわたって役立ちます。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "石戸珠算学園", rating: 4.5, fee: 5500, age: "4歳〜", desc: "全国最大規模のそろばん教室チェーン。段位取得まで体系的に学べる。", emoji: "🧮" },
@@ -55,7 +45,6 @@ export default function SorobanTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

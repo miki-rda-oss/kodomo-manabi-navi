@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "何歳からバスケを習えますか？", acceptedAnswer: { "@type": "Answer", text: "3〜4歳から通えるキッズクラスがあります。ミニバスケットボール対応の幼児コースを設けているスクールも多くあります。" } },
-    { "@type": "Question", name: "子供のバスケットボールスクールの月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1回で3,000〜7,000円が一般的です。Bリーグクラブ運営のスクールは5,000〜8,000円程度が多いです。" } },
-    { "@type": "Question", name: "女の子でもバスケを習えますか？", acceptedAnswer: { "@type": "Answer", text: "もちろんです。女子バスケも人気が高まっており、多くのスクールで男女問わず受け入れています。" } },
-    { "@type": "Question", name: "バスケを習う効果は？", acceptedAnswer: { "@type": "Answer", text: "瞬発力・判断力・チームワーク・背が伸びやすくなる効果も期待できます。運動能力全般が向上します。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "千葉ジェッツ バスケットボールスクール", rating: 4.7, fee: 7700, age: "3歳〜", desc: "Bリーグ・千葉ジェッツが運営する公式スクール。プロの指導メソッドで基礎から本格的に学べる。", emoji: "🏀" },
@@ -56,7 +46,6 @@ export default function BasketballTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -57,16 +57,7 @@ export default function RhythmicsAreaPage({ params }) {
     { q: "リトミックを習う効果は？", a: "音感・リズム感・集中力・社会性・表現力が自然に育まれます。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-rhythmics-guide", text: "子供のリトミック教室選び方完全ガイド" },
     { href: "/blog/toddler-dance-rhythmics-guide", text: "リトミックとダンス、幼児はどちらを選ぶ？" },
@@ -76,7 +67,6 @@ export default function RhythmicsAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -19,16 +19,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "子供の空手教室は何歳から始めるべき？", acceptedAnswer: { "@type": "Answer", text: "3〜4歳から少年部クラスに通える道場が多いです。礼儀作法を早い時期から学べるため、幼少期から始めることを推奨する道場が多くあります。" } },
-    { "@type": "Question", name: "子供の空手道場の月謝相場は？", acceptedAnswer: { "@type": "Answer", text: "週1〜2回で5,000〜8,000円が相場です。道着代が別途5,000〜10,000円ほどかかります。" } },
-    { "@type": "Question", name: "空手を習うと喧嘩っ早くなりますか？", acceptedAnswer: { "@type": "Answer", text: "反対です。空手は礼儀・規律を最重視する武道です。「礼に始まり礼に終わる」精神が日常生活にも活かされます。" } },
-    { "@type": "Question", name: "女の子でも空手を習えますか？", acceptedAnswer: { "@type": "Answer", text: "はい。護身術・精神力・集中力を育て女の子にも人気があります。" } },
-  ],
-};
 
 const popularSchools = [
   { name: "極真会館加盟道場", rating: 4.4, fee: 7700, age: "4歳〜", desc: "世界最大の空手団体・極真会館加盟道場。礼儀作法・精神力・忍耐力を鍛える本格空手指導。フルコンタクト空手で鍛えられた強さと礼節を子どもに。", emoji: "🥋" },
@@ -57,7 +47,6 @@ export default function KarateTopPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

@@ -787,15 +787,6 @@ export default function GenrePage({ params }) {
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": (GENRE_FAQ[slug] || GENRE_FAQ.default).map(faq => ({
-          "@type": "Question",
-          "name": faq.q,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-        })),
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
         "@type": "ItemList",
         "name": `子供の${genre.name}教室おすすめ一覧`,
         "description": `全国の子ども向け${genre.name}教室を口コミ・料金で比較。${genre.desc}。`,
@@ -812,13 +803,11 @@ export default function GenrePage({ params }) {
       {slug === "dance" && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": "Organization",
           "@id": "https://re-dia.jp/",
           "name": "リディアダンスアカデミー",
           "url": "https://re-dia.jp/",
           "description": "現役プロダンサー講師200名以上在籍。初心者クラスから本格コースまで充実。ヒップホップ・ジャズ・K-POP・ブレイクダンスなど多ジャンル対応。全国100校以上展開。",
-          "priceRange": "¥¥",
-          "telephone": "",
           "areaServed": "JP",
           "hasOfferCatalog": {
             "@type": "OfferCatalog",

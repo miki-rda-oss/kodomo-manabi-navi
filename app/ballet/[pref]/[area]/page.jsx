@@ -57,16 +57,7 @@ export default function BalletAreaPage({ params }) {
     { q: "男の子でもバレエを習えますか？", a: "はい。体幹・バランス感覚が身につきます。男の子向けクラスを設けているスクールもあります。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-ballet-guide", text: "子供のバレエ教室選び方" },
     { href: "/blog/kids-ballet-school-guide-2026", text: "子供バレエ教室おすすめ2026年版" },
@@ -77,7 +68,6 @@ export default function BalletAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>

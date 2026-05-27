@@ -57,16 +57,7 @@ export default function SoccerAreaPage({ params }) {
     { q: "Jリーグ系のサッカースクールはありますか？", a: "多くのJリーグクラブが地域向けスクールを開校しています。プロ指導者のメソッドで本格的なサッカーを学べます。" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: areaFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
+  
   const blogs = [
     { href: "/blog/kids-soccer-guide", text: "子供のサッカースクールの選び方完全ガイド" },
     { href: "/blog/kids-soccer-school-guide-2026", text: "子供サッカースクールおすすめ2026年版" },
@@ -78,7 +69,6 @@ export default function SoccerAreaPage({ params }) {
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
       <header style={{ background: "#fff", borderBottom: "1px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.05)", position: "sticky", top: 0, zIndex: 100 }}>
