@@ -564,47 +564,6 @@ const danceSchema = {
   },
 };
 
-const danceItemListSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "2026年子供のダンス習い事おすすめ教室ランキング",
-  "description": "2026年最新・子供に人気のダンス教室TOP5。K-POPブームで習い事1位を獲得したダンスの人気教室を徹底比較。",
-  "numberOfItems": 5,
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "リディアダンスアカデミー", "url": "https://re-dia.jp/", "description": "全国100校以上展開・プロ講師200名以上・月5,500円〜・初心者OK" },
-    { "@type": "ListItem", "position": 2, "name": "EXPG（エグザイルプロフェッショナルジム）", "description": "EXILEが設立・業界トップ講師陣・本格志向" },
-    { "@type": "ListItem", "position": 3, "name": "EYS-Kids ダンスアカデミー", "description": "マンツーマンレッスン・子ども専門" },
-    { "@type": "ListItem", "position": 4, "name": "セイハダンスアカデミー", "description": "全国200校以上・パパイヤ鈴木氏監修" },
-    { "@type": "ListItem", "position": 5, "name": "NOAダンスアカデミー", "description": "プロ輩出実績・名門スクール" },
-  ],
-};
-
-const danceFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "子供の習い事でダンスはなぜ1位なのですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "2026年にダンスが習い事1位になった理由は、K-POPブームによる需要急増、中学校ダンス必修化への対応ニーズ、ブレイクダンスのオリンピック競技化、脳科学的な学習効果の証明の4点が主な要因です。表現力・自己肯定感・リズム感・協調性を同時に育てられる総合的な教育効果が高く評価されています。" },
-    },
-    {
-      "@type": "Question",
-      "name": "キッズダンス教室の月謝はいくらですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "キッズダンス教室の月謝相場は月5,000〜10,000円程度です。大手チェーンのリディアダンスアカデミーは月5,500円〜、EXPGは月11,000円〜、セイハダンスアカデミーは月6,600円〜です。発表会費用は年1〜2回で1〜3万円程度かかることが多いです。" },
-    },
-    {
-      "@type": "Question",
-      "name": "何歳からダンスを習い始めるのがよいですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "ダンスは一般的に3歳から始められます。リトミック系は2歳からも対応しています。K-POP・ヒップホップなどの本格ジャンルは5〜6歳頃からが目安です。中学校でダンスが必修のため、小学生のうちに基礎を習得しておくと学校の授業でも役立ちます。" },
-    },
-    {
-      "@type": "Question",
-      "name": "ダンスと他の習い事を掛け持ちできますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "はい、ダンスは週1回から通えるため、他の習い事との掛け持ちがしやすい習い事です。水泳・英語・ピアノとの組み合わせが人気で、「週に2〜3つの習い事」のうちの1つとしてダンスを選ぶ家庭が増えています。" },
-    },
-  ],
-};
 
 export default function GenrePage({ params }) {
   const { slug } = params;
@@ -667,8 +626,6 @@ export default function GenrePage({ params }) {
         {slug === 'dance' && (
           <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(danceSchema) }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(danceItemListSchema) }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(danceFaqSchema) }} />
             <div className="dance-summary" style={{ background: "linear-gradient(135deg, #fff7ee 0%, #fff0f5 100%)", borderRadius: 16, padding: "24px", marginBottom: 28, border: "2px solid #FFD9A0" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
                 <span style={{ background: "#FF8A00", color: "#fff", fontWeight: 900, fontSize: 12, padding: "3px 12px", borderRadius: 20 }}>🥇 2026年習い事ランキング1位</span>
