@@ -51,11 +51,11 @@ export default function DanceAreaPage({ params }) {
     ],
   };
 
-  const areaFaqs = [
+  const areaFaqs = (data.faqs && data.faqs.length ? data.faqs : []).concat([
     { q: `${data.name}でダンス教室は何歳から通えますか？`, a: "リディアダンスアカデミーをはじめ、多くのスクールは3歳から通えます。リトルクラス・幼児コースを充実させているスクールが増えています。" },
     { q: `${data.name}のダンス教室の月謝相場は？`, a: "週1回で月6,000〜12,000円が相場です。リディアダンスアカデミーは月7,700円〜で、初回体験無料です。" },
     { q: `${data.name}のダンス教室はどのジャンルがありますか？`, a: "ヒップホップ・ジャズ・K-POP・バレエ・ブレイクダンスなど多ジャンル対応しています。リディアダンスアカデミーは7ジャンル以上対応しています。" },
-  ];
+  ]);
 
   
   const blogs = [
@@ -175,8 +175,9 @@ export default function DanceAreaPage({ params }) {
             {data.name}のダンス教室おすすめ<br />比較ランキング
           </h1>
           <p style={{ fontSize: 14, color: "rgba(255,255,255,.9)", lineHeight: 1.9 }}>
-            {data.prefName}{data.name}エリアの子ども向けダンス教室を比較。<br />
-            月謝・無料体験情報を掲載しています。
+            {data.intro
+              ? data.intro
+              : <>{data.prefName}{data.name}エリアの子ども向けダンス教室を比較。<br />月謝・無料体験情報を掲載しています。</>}
           </p>
         </div>
       </section>
@@ -251,6 +252,27 @@ export default function DanceAreaPage({ params }) {
             ))}
           </div>
         </div>
+
+        {/* 地域固有コンテンツ（アクセス・エリア解説） */}
+        {(data.access || (data.body && data.body.length > 0)) && (
+          <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 24, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+            <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #E5393520" }}>
+              📍 {data.name}でダンス教室を選ぶなら
+            </h2>
+            {data.access && (
+              <div style={{ background: "#f8f9fb", borderRadius: 12, padding: "14px 18px", marginBottom: 18, border: "1.5px solid #e8edf4", fontSize: 13, color: "#555", lineHeight: 1.9 }}>
+                🚃 <b style={{ color: "#1B2A4A" }}>アクセス・通いやすさ</b><br />
+                {data.access}
+              </div>
+            )}
+            {data.body && data.body.map((sec, i) => (
+              <div key={i} style={{ marginBottom: 18 }}>
+                {sec.h2 && <h3 style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A", marginBottom: 8 }}>{sec.h2}</h3>}
+                <p style={{ fontSize: 14, color: "#555", lineHeight: 1.95, margin: 0 }}>{sec.p}</p>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* 都道府県ページへ戻る */}
         <div style={{ background: "linear-gradient(135deg, #FFF5F5, #FFEBEE)", borderRadius: 18, padding: "22px 24px", marginBottom: 24, border: "1.5px solid #E5393520" }}>

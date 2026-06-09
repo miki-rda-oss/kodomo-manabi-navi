@@ -433,6 +433,37 @@ export default function ArticlePage({ params }) {
           </div>
         )}
 
+        {/* 人気エリアのダンス教室（ダンス系記事のみ）*/}
+        {(() => {
+          const isDance = article.category === "ダンス"
+            || (article.keywords || []).some(k => String(k).includes("ダンス"))
+            || (article.slug || "").includes("dance");
+          if (!isDance) return null;
+          const areaLinks = [
+            { href: "/dance", text: "🗾 全国の子供ダンス教室をエリア別に探す" },
+            { href: "/dance/osaka/osaka-city", text: "大阪市の子供ダンス教室" },
+            { href: "/dance/tokyo/setagaya", text: "世田谷区の子供ダンス教室" },
+            { href: "/dance/kanagawa/nakahara", text: "武蔵小杉（中原区）の子供ダンス教室" },
+            { href: "/dance/aichi/tenpaku", text: "名古屋市天白区の子供ダンス教室" },
+            { href: "/dance/saitama/urawa", text: "さいたま市浦和の子供ダンス教室" },
+            { href: "/dance/chiba/kashiwa", text: "柏市の子供ダンス教室" },
+            { href: "/dance/hyogo/nishinomiya", text: "西宮市の子供ダンス教室" },
+            { href: "/dance/fukuoka", text: "福岡県の子供ダンス教室" },
+          ];
+          return (
+            <div style={{ background: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24, boxShadow: "0 2px 8px rgba(0,0,0,.04)" }}>
+              <h2 style={{ fontSize: 16, fontWeight: 800, color: "#1a1a2e", marginBottom: 14 }}>📍 エリアから子供のダンス教室を探す</h2>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {areaLinks.map((link, i) => (
+                  <Link key={i} href={link.href} style={{ display: "inline-flex", alignItems: "center", padding: "9px 14px", background: i === 0 ? "#FFF1F1" : "#f8f9fb", borderRadius: 20, textDecoration: "none", color: i === 0 ? "#E53935" : "#2a7cc8", fontSize: 13, fontWeight: 600, border: i === 0 ? "1.5px solid #E5393533" : "1px solid #e8f0fe" }}>
+                    {link.text}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
+
         {/* 関連記事セクション */}
         {(() => {
           const related = getRelatedArticles(article, ARTICLES);

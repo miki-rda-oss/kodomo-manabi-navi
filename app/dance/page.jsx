@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ALL_PREFS_LIST } from "./danceData";
 
 export const metadata = {
-  title: "子供のダンス教室おすすめ｜全国都道府県別比較【コドモならいごと】",
-  description: "全国の子ども向けダンス教室を都道府県・エリア別に徹底比較。リディアダンスアカデミー・EXPG・エイベックスなど人気スクールの月謝・コース・無料体験情報を掲載。",
+  title: "子供のダンス教室おすすめ比較2026｜月謝・口コミ・無料体験【コドモならいごと】",
+  description: "子供のダンス教室を全国エリア別に徹底比較。月謝・口コミ・対象年齢・無料体験で選べる人気キッズダンススクールを厳選。3歳から通える教室の探し方も解説します。",
   keywords: ["子供 ダンス教室", "キッズダンス", "ダンス教室 比較", "リディアダンスアカデミー", "子ども ダンス おすすめ"],
   alternates: {
     canonical: "https://www.kodomo-navi.com/dance",
@@ -101,7 +101,7 @@ export default function DanceTopPage() {
             💃 全国47都道府県対応
           </div>
           <h1 style={{ fontSize: 30, fontWeight: 900, color: "#fff", marginBottom: 14, lineHeight: 1.4 }}>
-            子供のダンス教室<br />全国・都道府県別比較
+            子供のダンス教室おすすめ<br />全国エリア別に徹底比較
           </h1>
           <p style={{ fontSize: 14, color: "rgba(255,255,255,.92)", lineHeight: 2, marginBottom: 24 }}>
             お近くのダンス教室を探そう。全国100校以上のリディアダンスアカデミーをはじめ人気スクールを比較できます。
