@@ -4,7 +4,7 @@ const LYDIA = {
   name: "リディアダンスアカデミー",
   rating: 4.8, fee: 7700, age: "3歳〜15歳",
   featured: true,
-  trialUrl: "https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd",
+  trialUrl: "https://lin.ee/v9q2QAX",
   url: "https://re-dia.jp/",
   desc: "全国100校以上展開のキッズダンススクール。現役プロダンサー講師200名以上在籍。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。発表会・コンクールも充実。",
   color: "#E53935", emoji: "🏆",

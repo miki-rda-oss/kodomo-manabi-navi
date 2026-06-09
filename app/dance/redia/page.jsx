@@ -126,7 +126,7 @@ export default function RediaPage() {
           <p style={{ fontSize: 14, color: "rgba(255,255,255,.92)", lineHeight: 2, marginBottom: 24 }}>
             全国100校以上・3歳〜・初回体験無料
           </p>
-          <a href="https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://lin.ee/v9q2QAX" target="_blank" rel="noopener noreferrer" style={{
             display: 'block', background: '#fff', color: '#E53935',
             textAlign: 'center', padding: '18px 32px', borderRadius: '12px',
             fontWeight: '900', fontSize: '1.2rem', textDecoration: 'none',
@@ -149,7 +149,7 @@ export default function RediaPage() {
         <div style={{ background: "linear-gradient(135deg, #FFF5F5, #FFEBEE)", borderRadius: 20, padding: "32px 24px", marginBottom: 32, border: "2px solid #E5393530", textAlign: "center", boxShadow: "0 4px 20px rgba(229,57,53,.12)" }}>
           <div style={{ fontSize: 16, fontWeight: 900, color: "#E53935", marginBottom: 8 }}>今すぐ無料体験レッスンに参加しよう</div>
           <p style={{ fontSize: 14, color: "#666", marginBottom: 20 }}>全国100校以上、初回体験は完全無料。お近くの校舎でお子さんの反応を確かめてください。</p>
-          <a href="https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://lin.ee/v9q2QAX" target="_blank" rel="noopener noreferrer" style={{
             display: 'block', background: '#E53935', color: '#fff',
             textAlign: 'center', padding: '18px 32px', borderRadius: '12px',
             fontWeight: '900', fontSize: '1.2rem', textDecoration: 'none',
@@ -242,7 +242,7 @@ export default function RediaPage() {
             ))}
           </div>
           <div style={{ marginTop: 20, textAlign: "center" }}>
-            <a href="https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://lin.ee/v9q2QAX" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-block', background: '#E53935', color: '#fff',
               textAlign: 'center', padding: '14px 32px', borderRadius: '10px',
               fontWeight: '900', fontSize: '14px', textDecoration: 'none',
@@ -275,7 +275,7 @@ export default function RediaPage() {
             全国100校以上展開のリディアダンスアカデミーで、お子さんの可能性を広げましょう。
             初回体験は無料。体験後の入会義務はありません。
           </p>
-          <a href="https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://lin.ee/v9q2QAX" target="_blank" rel="noopener noreferrer" style={{
             display: 'block', background: '#fff', color: '#E53935',
             textAlign: 'center', padding: '18px 32px', borderRadius: '12px',
             fontWeight: '900', fontSize: '1.2rem', textDecoration: 'none',

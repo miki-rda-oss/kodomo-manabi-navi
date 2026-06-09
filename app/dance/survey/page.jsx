@@ -23,7 +23,7 @@ export const metadata = {
   },
 };
 
-const TRIAL_URL = "https://liff.line.me/2001597193-pyJx1bKd/landing?follow=%40084nrdoa&lp=L1pmYU&liff_id=2001597193-pyJx1bKd";
+const TRIAL_URL = "https://lin.ee/v9q2QAX";
 
 // Schema: BreadcrumbList
 const breadcrumbSchema = {
