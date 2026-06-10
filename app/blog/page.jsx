@@ -135,6 +135,14 @@ export default function BlogIndex() {
         </div>
       </main>
 
+      {/* LINE CTA */}
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 20px 44px" }}>
+        <a href="https://lin.ee/v9q2QAX" target="_blank" rel="noopener noreferrer"
+           style={{ display: "block", background: "linear-gradient(135deg,#06C755,#04A647)", color: "#fff", textAlign: "center", padding: "20px 24px", borderRadius: 16, fontWeight: 900, fontSize: 16, textDecoration: "none", boxShadow: "0 6px 20px rgba(6,199,85,.3)" }}>
+          💬 LINEで気軽に相談・無料体験を予約する →
+        </a>
+      </div>
+
       {/* Footer */}
       <footer style={{ background: "linear-gradient(135deg,#1a1a2e,#16213e)", color: "#aab", padding: "36px 20px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>

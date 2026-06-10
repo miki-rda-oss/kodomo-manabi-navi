@@ -224,6 +224,13 @@ export default function GymnasticsTopPage() {
           </div>
         </div>
 
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 20px 44px" }}>
+          <a href="https://lin.ee/v9q2QAX" target="_blank" rel="noopener noreferrer"
+             style={{ display: "block", background: "linear-gradient(135deg,#06C755,#04A647)", color: "#fff", textAlign: "center", padding: "20px 24px", borderRadius: 16, fontWeight: 900, fontSize: 16, textDecoration: "none", boxShadow: "0 6px 20px rgba(6,199,85,.3)" }}>
+            💬 LINEで気軽に相談・無料体験を予約する →
+          </a>
+        </div>
+
         <div style={{ textAlign: "center", display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/genre/gymnastics" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 24px", background: "#fff", border: "1.5px solid #FFCC80", borderRadius: 20, color: "#FF6F00", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
             🤸 体操スクール一覧

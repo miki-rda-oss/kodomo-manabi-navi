@@ -192,6 +192,13 @@ export default function PianoPrefPage({ params }) {
           </div>
         </div>
 
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 20px 44px" }}>
+          <a href="https://lin.ee/v9q2QAX" target="_blank" rel="noopener noreferrer"
+             style={{ display: "block", background: "linear-gradient(135deg,#06C755,#04A647)", color: "#fff", textAlign: "center", padding: "20px 24px", borderRadius: 16, fontWeight: 900, fontSize: 16, textDecoration: "none", boxShadow: "0 6px 20px rgba(6,199,85,.3)" }}>
+            💬 LINEで気軽に相談・無料体験を予約する →
+          </a>
+        </div>
+
         <div style={{ textAlign: "center" }}>
           <Link href="/piano" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 28px", background: "linear-gradient(135deg, #7B1FA2, #9C27B0)", borderRadius: 20, color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 16px rgba(123,31,162,.3)" }}>
             ← ピアノ教室トップへ戻る
