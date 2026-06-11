@@ -4,7 +4,7 @@ const CAT_SLUG={"ダンス":"dance","K-POP":"kpop","スイミング":"swimming",
 
 const S = {
   "ダンス": [
-    { id:"d0", name:"リディアダンスアカデミー", rating:4.8, rc:312, age:"3歳〜15歳", featured:true, trialUrl:"https://lin.ee/v9q2QAX", url:"https://re-dia.jp/",
+    { id:"d0", name:"リディアダンスアカデミー", rating:4.8, rc:312, age:"3歳〜15歳", featured:true, trialUrl:"https://re-dia.jp/contact", url:"https://re-dia.jp/",
       desc:"箕面市内に5校展開する人気No.1ダンススクール。現役プロダンサー講師200名以上在籍、全国100校以上展開。3歳のリトルクラスから本格コースまで充実。ヒップホップ・ジャズ・K-POPなど多ジャンル対応。",
       tags:["箕面市内6校","口コミ312件","評価4.8","初回体験無料","少人数制","プロ講師","全国100校以上","塾代助成カード対応"],
       genres:["ヒップホップ","ジャズ","K-POP","ブレイクダンス","ポップ","ワック","ソウル"],

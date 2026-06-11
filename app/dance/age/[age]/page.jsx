@@ -121,7 +121,7 @@ const popularSchools = [
     rating: 4.8,
     fee: "7,700円〜（月会員）",
     featured: true,
-    trialUrl: "https://lin.ee/v9q2QAX",
+    trialUrl: "https://re-dia.jp/contact",
     points: ["現役プロダンサー講師200名以上", "全国100校以上展開", "多ジャンル対応", "発表会充実"],
   },
   {
