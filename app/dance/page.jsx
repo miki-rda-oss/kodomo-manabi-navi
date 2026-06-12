@@ -35,6 +35,7 @@ const faqs = [
 ];
 
 const blogs = [
+  { href: "/dance/kpop", text: "子どものK-POPダンス完全ガイド（何歳から・選び方・月謝）" },
   { href: "/blog/kids-dance-age-guide", text: "子供ダンスは何歳から始める？完全ガイド" },
   { href: "/blog/osaka-kids-dance-school-ranking", text: "大阪キッズダンス教室おすすめランキング" },
   { href: "/blog/kids-hiphop-dance-guide", text: "子供ヒップホップダンス教室の選び方" },

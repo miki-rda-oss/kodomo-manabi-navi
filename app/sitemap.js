@@ -400,6 +400,7 @@ export default function sitemap() {
   // リディア専用ページ・年齢別ページ
   const danceSpecial = [
     { url: `${BASE_URL}/dance/redia`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/dance/kpop`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     ...([3,4,5,6,7,8,9,10].map(age => ({ url: `${BASE_URL}/dance/age/${age}`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 }))),
   ];
 
