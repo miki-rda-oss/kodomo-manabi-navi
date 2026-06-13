@@ -20,6 +20,19 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// 保護者の声（リディアダンスアカデミー保護者アンケート2026・回答169名・掲載許可を得た回答より）
+const PARENT_VOICES = [
+  { tag: "自信がついた", text: "とても飽き性で継続が苦手だった娘が、ダンスの体験に行ったその日から毎日かかさずストレッチとその日のダンスの復習を自らするようになった！" },
+  { tag: "自信がついた", text: "ダンスが上手く出来ないと、すぐに泣いて中断する事が度々ありましたが、今は出来るようになるまで練習をたくさんするようになり、自信もついたようです。" },
+  { tag: "度胸がついた", text: "学校のイベント等で、大勢の人前でもひるまず積極的にダンスをしたり、英語のスピーチをしたりと、ダンスで自分に自信がついたおかげで度胸が身に付いた！" },
+  { tag: "居場所ができた", text: "発表会に出ることが大きな自信になり、大切な仲間もできて、学校で嫌なことがあっても違う居場所が心の支えになっている。" },
+  { tag: "自主性が育った", text: "練習を重ねてどんどん上達することをダンスを通じて学べたため、何事にも自ら練習したり、努力を重ねることを、言われなくてもできるようになった。" },
+  { tag: "夢中になれた", text: "初めて自分からやりたいと言った事がダンスです。習い始めてからは家でも自主的に練習をしている様子を見て、初めて主体的に出来る事に出会えたなと思いました。" },
+  { tag: "友達ができた", text: "学校以外にも仲間がいる、と思えることが出来たからか、メンタルが安定して少々嫌なことがあっても気にしない性格になった。" },
+  { tag: "積極的になった", text: "引っ込み思案なところがある娘でしたが、夢中になれるダンスと出会え、少しずつ積極的になってきたようにも感じています。先生とクラスのみんなに心から感謝しています！" },
+  { tag: "毎日が変わった", text: "登校拒否をしている中で、ダンスを始めたいと言った事がきっかけで通い始めました。少しずつですが学校に行く時間が増え、今では毎日学校に遅刻もせず通えるようになりました。" },
+];
+
 function Stars({ r }) {
   if (!r) return null;
   return (
@@ -94,16 +107,14 @@ export default function DanceAreaPage({ params }) {
     },
     "areaServed": { "@type": "City", "name": data.name },
     "openingHours": "Mo-Sa 10:00-21:00",
-    ...(featuredSchool?.rating ? {
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": featuredSchool.rating,
-        "reviewCount": featuredSchool.reviews || 100,
-        "bestRating": 5,
-        "worstRating": 1,
-      },
-    } : {}),
   };
+
+  // 非featuredスクールの外部リンクは /go/ 経由（スクール別の送客計測）
+  const outHref = (s) => s.featured ? (s.trialUrl || s.url) : `/go/?u=${encodeURIComponent(s.url)}&s=${encodeURIComponent(s.name)}`;
+
+  // 保護者の声：エリアごとに安定して3件選ぶ（キーのハッシュでローテーション）
+  const voiceSeed = key.split("").reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+  const voices = [0, 1, 2].map((i) => PARENT_VOICES[(voiceSeed + i * 3) % PARENT_VOICES.length]);
 
   return (
     <div style={{ fontFamily: "'Noto Sans JP','Hiragino Sans',sans-serif", background: "#f4f7fc", minHeight: "100vh" }}>
@@ -274,6 +285,40 @@ export default function DanceAreaPage({ params }) {
           </div>
         )}
 
+        {/* エリアマップ */}
+        <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 24, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+          <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 14, paddingBottom: 12, borderBottom: "2px solid #E5393520" }}>
+            🗺 {data.name}のダンス教室マップ
+          </h2>
+          <div style={{ borderRadius: 12, overflow: "hidden", border: "1.5px solid #e8edf4" }}>
+            <iframe
+              title={`${data.prefName}${data.name}の子供向けダンス教室マップ`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(`${data.prefName}${data.name} 子供 ダンス教室`)}&output=embed&z=13`}
+              width="100%" height="320" style={{ border: 0, display: "block" }}
+              loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen
+            />
+          </div>
+          <p style={{ fontSize: 11, color: "#999", marginTop: 8 }}>※Googleマップで「{data.name}の子ども向けダンス教室」を表示しています。</p>
+        </div>
+
+        {/* 保護者の声 */}
+        <div style={{ background: "#fff", borderRadius: 18, padding: "28px 24px", marginBottom: 24, border: "1.5px solid #e8edf4", boxShadow: "0 2px 12px rgba(0,0,0,.05)" }}>
+          <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1B2A4A", marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #E5393520" }}>
+            💬 ダンスを習う保護者の方の声
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {voices.map((v, i) => (
+              <div key={i} style={{ background: "#f8f9fb", borderRadius: 12, padding: "16px 18px", border: "1.5px solid #e8edf4" }}>
+                <div style={{ fontSize: 11, fontWeight: 800, color: "#E53935", marginBottom: 6 }}>✓ {v.tag}</div>
+                <p style={{ fontSize: 13.5, color: "#444", lineHeight: 1.9, margin: 0 }}>「{v.text}」</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontSize: 11, color: "#999", marginTop: 10, lineHeight: 1.7 }}>
+            出典：リディアダンスアカデミー保護者アンケート2026（回答169名）より、掲載許可を得た回答を抜粋。
+          </p>
+        </div>
+
         {/* 都道府県ページへ戻る */}
         <div style={{ background: "linear-gradient(135deg, #FFF5F5, #FFEBEE)", borderRadius: 18, padding: "22px 24px", marginBottom: 24, border: "1.5px solid #E5393520" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
@@ -298,7 +343,7 @@ export default function DanceAreaPage({ params }) {
               <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 520 }}>
                 <thead>
                   <tr style={{ background: "#1B2A4A" }}>
-                    {["スクール名", "月謝", "対象年齢", "無料体験", "口コミ評価"].map((h, i) => (
+                    {["スクール名", "月謝", "対象年齢", "無料体験", "編集部評価"].map((h, i) => (
                       <th key={i} style={{ padding: "12px 14px", fontSize: 12, fontWeight: 700, color: "#fff", textAlign: "left", whiteSpace: "nowrap" }}>{h}</th>
                     ))}
                   </tr>
@@ -308,17 +353,20 @@ export default function DanceAreaPage({ params }) {
                     <tr key={i} style={{ background: s.featured ? "#FFF8F0" : (i % 2 === 0 ? "#f8f9fb" : "#fff"), borderBottom: "1px solid #f0f0f0" }}>
                       <td style={{ padding: "12px 14px", fontSize: 13, fontWeight: s.featured ? 800 : 600, color: "#1B2A4A" }}>
                         {s.featured && <span style={{ background: "#E53935", color: "#fff", fontSize: 10, fontWeight: 700, padding: "2px 7px", borderRadius: 4, marginRight: 6 }}>No.1</span>}
-                        {s.url ? <a href={s.url} target="_blank" rel="noopener noreferrer" style={{ color: "#E53935", textDecoration: "none" }}>{s.name}</a> : s.name}
+                        {s.url ? <a href={outHref(s)} target="_blank" rel="noopener noreferrer" style={{ color: "#E53935", textDecoration: "none" }}>{s.name}</a> : s.name}
                       </td>
                       <td style={{ padding: "12px 14px", fontSize: 13, fontWeight: 700, color: "#E53935", whiteSpace: "nowrap" }}>¥{s.fee?.toLocaleString()}〜</td>
                       <td style={{ padding: "12px 14px", fontSize: 12, color: "#555", whiteSpace: "nowrap" }}>{s.age}</td>
                       <td style={{ padding: "12px 14px", fontSize: 12, color: "#555", whiteSpace: "nowrap" }}>{s.tags?.includes("無料体験あり") ? "✓ 無料" : "要確認"}</td>
-                      <td style={{ padding: "12px 14px", fontSize: 12, color: "#555", whiteSpace: "nowrap" }}>★ {s.rating} ({s.reviews}件)</td>
+                      <td style={{ padding: "12px 14px", fontSize: 12, color: "#555", whiteSpace: "nowrap" }}>★ {s.rating}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+            <p style={{ fontSize: 11, color: "#999", marginTop: 8, lineHeight: 1.7 }}>
+              ※評価は各スクールの公式サイト・公開情報をもとに編集部が独自に算出したものです。月謝は税込・週1回の目安で、校舎・クラスにより異なります。
+            </p>
           </section>
         )}
 

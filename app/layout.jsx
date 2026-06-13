@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Noto_Sans_JP } from "next/font/google";
+import CtaTracker from "./components/CtaTracker";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -104,6 +105,7 @@ export default function RootLayout({ children }) {
       <body className={notoSansJP.className}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+        <CtaTracker />
         {children}
       </body>
     </html>

@@ -567,7 +567,7 @@ export default function TopPage() {
                 { icon: "🏫", val: "5,000+", unit: "教室", label: "掲載教室数" },
                 { icon: "🗾", val: "47", unit: "都道府県", label: "全国対応" },
                 { icon: "📚", val: "11", unit: "カテゴリ", label: "人気ジャンル" },
-                { icon: "💬", val: "10,000+", unit: "件", label: "口コミ・体験情報" },
+                { icon: "📝", val: "120+", unit: "本", label: "習い事ガイド記事" },
               ].map((s, i) => (
                 <div key={i} style={{ background: "#fff", borderRadius: 14, padding: "13px 18px", minWidth: 108, border: "1.5px solid #deeaf7", boxShadow: "0 2px 10px rgba(27,42,74,.06)", textAlign: "center" }}>
                   <div style={{ fontSize: 18, marginBottom: 2 }}>{s.icon}</div>

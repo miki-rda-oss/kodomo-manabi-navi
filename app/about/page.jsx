@@ -36,7 +36,7 @@ const editorsSchema = [
     "name": "田中 美咲",
     "jobTitle": "編集長",
     "worksFor": { "@id": `${BASE_URL}/#organization` },
-    "description": "子育て経験10年以上を持つ習い事ライター。2人の子どもをダンス・スイミング・英語教室に通わせた保護者として、教室選びのリアルな視点で執筆。習い事業界取材歴7年。",
+    "description": "子育て中の編集者。保護者として複数の習い事を経験した視点で、教室選びの情報整理・編集を担当。",
     "knowsAbout": ["子供の習い事", "ダンス教室選び", "習い事比較"],
   },
   {
@@ -46,7 +46,7 @@ const editorsSchema = [
     "name": "鈴木 健太",
     "jobTitle": "ダンス情報監修",
     "worksFor": { "@id": `${BASE_URL}/#organization` },
-    "description": "元プロダンサー。HIP HOP・K-POPダンスを20年以上指導。子ども向けダンス教室の選び方・年齢別アドバイス・ジャンル解説を監修。",
+    "description": "ダンス経験のある編集スタッフ。子ども向けダンス教室の選び方・年齢別ガイド・ジャンル解説の編集を担当。",
     "knowsAbout": ["ダンス", "HIPHOPダンス", "K-POPダンス", "子供ダンス教育"],
   },
 ];
@@ -124,7 +124,7 @@ export default function AboutPage() {
             { icon: "🏫", val: "5,000+", label: "掲載教室数" },
             { icon: "🗾", val: "全国", label: "47都道府県対応" },
             { icon: "📚", val: "11", label: "習い事カテゴリ" },
-            { icon: "💬", val: "10,000+", label: "口コミ・体験情報" },
+            { icon: "📝", val: "120+", label: "習い事ガイド記事" },
           ].map((s, i) => (
             <div key={i} style={{ background: "#fff", borderRadius: 14, padding: "16px 12px", textAlign: "center", border: "1.5px solid #e8edf4", boxShadow: "0 2px 8px rgba(0,0,0,.04)" }}>
               <div style={{ fontSize: 22, marginBottom: 4 }}>{s.icon}</div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
               {
                 icon: "🔍",
                 title: "一次情報に基づく正確な情報収集",
-                desc: "各教室の公式ウェブサイト・公式SNS・直接取材をもとに掲載内容を作成しています。情報の正確性を最優先としています。",
+                desc: "各教室の公式ウェブサイト・公式SNSなどの公開情報をもとに掲載内容を作成しています。情報の正確性を最優先としています。",
               },
               {
                 icon: "🔄",
@@ -232,12 +232,12 @@ export default function AboutPage() {
                   <span style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A" }}>田中 美咲</span>
                   <span style={{ fontSize: 11, background: "#FF8A0015", color: "#E65100", borderRadius: 6, padding: "2px 8px", fontWeight: 700 }}>編集長</span>
                 </div>
-                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>子育て経験10年以上・習い事業界取材歴7年</div>
+                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>子育て中の編集者</div>
                 <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
-                  2人の子どもをダンス・スイミング・英語教室に通わせた保護者として、教室選びのリアルな視点で取材・執筆を担当。全国200校以上の習い事教室を直接取材し、保護者が本当に知りたい情報を届けることをモットーにしています。
+                  保護者として複数の習い事を経験した視点で、教室選びの情報整理・編集を担当。各教室の公式サイト・公開情報を調査し、保護者が本当に知りたい情報を届けることをモットーにしています。
                 </div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 10 }}>
-                  {["子育て経験10年", "200校以上取材", "11カテゴリ担当"].map((t, i) => (
+                  {["保護者目線", "公開情報を調査・編集", "11カテゴリ担当"].map((t, i) => (
                     <span key={i} style={{ fontSize: 11, background: "#f0f4ff", color: "#3949AB", borderRadius: 20, padding: "2px 10px", fontWeight: 600 }}>{t}</span>
                   ))}
                 </div>
@@ -251,12 +251,12 @@ export default function AboutPage() {
                   <span style={{ fontSize: 15, fontWeight: 800, color: "#1B2A4A" }}>鈴木 健太</span>
                   <span style={{ fontSize: 11, background: "#7B1FA215", color: "#7B1FA2", borderRadius: 6, padding: "2px 8px", fontWeight: 700 }}>ダンス監修</span>
                 </div>
-                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>元プロダンサー・子どもダンス指導歴20年以上</div>
+                <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>ダンス経験のある編集スタッフ</div>
                 <div style={{ fontSize: 13, color: "#555", lineHeight: 1.8 }}>
-                  HIP HOP・K-POPダンスを専門とする元プロダンサー。子どもへのダンス指導歴20年以上。ダンス教室の選び方・年齢別の取り組み方・ジャンル解説を担当。「3〜4歳から始めるリトミックダンスの重要性」「小学生のHIPHOP入門」など多数のコンテンツを監修。
+                  HIP HOP・K-POPダンスの経験をもとに、ダンス教室の選び方・年齢別の取り組み方・ジャンル解説の編集を担当。「3〜4歳から始めるリトミックダンスの重要性」「小学生のHIPHOP入門」などのコンテンツを編集。
                 </div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 10 }}>
-                  {["元プロダンサー", "HIPHOP/K-POP", "指導歴20年+"].map((t, i) => (
+                  {["ダンス経験者", "HIPHOP/K-POP", "ガイド編集"].map((t, i) => (
                     <span key={i} style={{ fontSize: 11, background: "#f5f0ff", color: "#7B1FA2", borderRadius: 20, padding: "2px 10px", fontWeight: 600 }}>{t}</span>
                   ))}
                 </div>

@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { DANCE_PREFS } from "../danceData";
 
 const LINE_URL = "https://lin.ee/v9q2QAX";
+const KN_SHINDAN = "https://162.43.31.198.nip.io/kn/api/shindan";
 
 const AGES = ["3〜5歳（未就学）", "小学1〜3年生", "小学4〜6年生", "中学生"];
 const GENDERS = ["男の子", "女の子", "どちらでも"];
@@ -48,15 +49,38 @@ const card = {
 export default function ShindanClient() {
   const [step, setStep] = useState(0);
   const [a, setA] = useState({ age: "", pref: "", gender: "", seikaku: "", mitsuketai: "" });
+  const [lineCode, setLineCode] = useState(null);
+  const postedRef = useRef(false);
 
   const total = 5;
   const set = (key, val) => {
     setA((p) => ({ ...p, [key]: val }));
     setStep((s) => s + 1);
   };
-  const reset = () => { setA({ age: "", pref: "", gender: "", seikaku: "", mitsuketai: "" }); setStep(0); };
+  const reset = () => { setA({ age: "", pref: "", gender: "", seikaku: "", mitsuketai: "" }); setStep(0); setLineCode(null); postedRef.current = false; };
 
   const prefData = a.pref ? DANCE_PREFS[a.pref] : null;
+
+  // 診断完了時：回答を保存し、LINE引き継ぎ用の4桁コードを受け取る
+  useEffect(() => {
+    if (step < total || postedRef.current) return;
+    postedRef.current = true;
+    try {
+      window.gtag && window.gtag("event", "shindan_complete", { pref: a.pref, age: a.age });
+    } catch (_) {}
+    fetch(KN_SHINDAN, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({
+        age: a.age, pref: a.pref,
+        prefName: a.pref && DANCE_PREFS[a.pref] ? DANCE_PREFS[a.pref].name : "",
+        gender: a.gender, seikaku: a.seikaku, mitsuketai: a.mitsuketai,
+      }),
+    })
+      .then((r) => r.json())
+      .then((j) => { if (j && j.code) setLineCode(j.code); })
+      .catch(() => {});
+  }, [step, a]);
   const genderWord = a.gender === "男の子" ? "男の子" : a.gender === "女の子" ? "女の子" : "お子さん";
 
   const Q = ({ title, children }) => (
@@ -184,10 +208,18 @@ export default function ShindanClient() {
             <div style={{ background: "linear-gradient(135deg,#FFF5F5,#FFEBEE)", borderRadius: 16, padding: "22px", marginBottom: 18, border: "1.5px solid #E5393520", textAlign: "center" }}>
               <div style={{ fontSize: 15, fontWeight: 900, color: "#1B2A4A", marginBottom: 4 }}>まずは無料体験から</div>
               <div style={{ fontSize: 13, color: "#666", lineHeight: 1.7, marginBottom: 16 }}>リディアダンスアカデミーは初回体験無料。3歳から、手ぶらで参加できます。</div>
-              <a href={LINE_URL} target="_blank" rel="noopener noreferrer"
+              <a href={LINE_URL} target="_blank" rel="noopener noreferrer" data-cta="shindan-result"
                 style={{ display: "block", background: "#E53935", color: "#fff", padding: "15px", borderRadius: 12, fontWeight: 900, fontSize: 16, textDecoration: "none", boxShadow: "0 6px 20px rgba(229,57,53,.35)" }}>
                 🎵 無料体験を申し込む →
               </a>
+              {lineCode && (
+                <div style={{ marginTop: 14, background: "#fff", borderRadius: 12, padding: "12px 16px", border: "1.5px dashed #E5393566", textAlign: "center" }}>
+                  <div style={{ fontSize: 12.5, color: "#555", lineHeight: 1.7, marginBottom: 4 }}>
+                    LINE友だち追加後、下の番号を送ると<br />診断結果に合わせた教室案内が届きます
+                  </div>
+                  <div style={{ fontSize: 26, fontWeight: 900, color: "#E53935", letterSpacing: 4 }}>{lineCode}</div>
+                </div>
+              )}
             </div>
 
             <button onClick={reset} style={{ display: "block", width: "100%", background: "#fff", color: "#888", padding: "12px", borderRadius: 10, fontWeight: 700, fontSize: 14, border: "1.5px solid #e8edf4", cursor: "pointer" }}>

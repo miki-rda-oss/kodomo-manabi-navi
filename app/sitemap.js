@@ -316,6 +316,7 @@ export default function sitemap() {
     { url: BASE_URL, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
     { url: `${BASE_URL}/editors`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/for-schools`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   const genres = GENRE_SLUGS.map(slug => ({
